@@ -1,0 +1,4396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Folawe O. — Leadership. Discipleship. Innovation.</title>
+    <meta name="description" content="Matthew Folawe O. helps young people grow in leadership, discipleship, and innovation for real-life impact. Join the movement.">
+    <meta property="og:title" content="Matthew Folawe O. — Leadership. Discipleship. Innovation.">
+    <meta property="og:description" content="Helping young people grow in leadership, discipleship, and innovation for real-life impact.">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+     :root {
+            --gold: #D4A843;
+            --gold-light: #F0C96A;
+            --gold-dark: #A07820;
+            --black: #0a0a0a;
+            --dark: #111111;
+            --dark2: #1a1a1a;
+            --dark3: #242424;
+            --gray: #888;
+            --gray-light: #ccc;
+            --white: #ffffff;
+            --green: #2ECC71;
+            --blue-wa: #25D366;
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        /* PAGES */
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        /* NAV */
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 168, 67, 0.15);
+            padding: 0 1.25rem;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .nav-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--gold);
+            cursor: pointer;
+        }
+        
+        .nav-logo span {
+            color: var(--white);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--gray-light);
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+        
+        .nav-wa {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--blue-wa);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 7px 14px;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .nav-wa:hover {
+            opacity: 0.88;
+        }
+        
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 62px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: var(--dark);
+            border-bottom: 1px solid rgba(212, 168, 67, 0.15);
+            padding: 1rem 1.25rem;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .mobile-nav.open {
+            display: flex;
+        }
+        
+        .mobile-nav a {
+            padding: 10px 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--gray-light);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--gold);
+            background: rgba(212, 168, 67, 0.07);
+        }
+        /* UTILITY */
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+        
+        .section {
+            padding: 4.5rem 0;
+        }
+        
+        .section-sm {
+            padding: 3rem 0;
+        }
+        
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.85rem;
+        }
+        
+        .tag::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .section-title {
+            font-size: clamp(1.7rem, 5vw, 2.5rem);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-sub {
+            color: var(--gray);
+            font-size: 1rem;
+            max-width: 520px;
+        }
+        
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 0;
+        }
+        /* BUTTONS */
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 24px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+        
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+        }
+        
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            color: var(--white);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        
+        .btn-wa {
+            background: var(--blue-wa);
+            color: #000;
+        }
+        
+        .btn-wa:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+        
+        .btn-sm {
+            padding: 9px 18px;
+            font-size: 0.85rem;
+        }
+        
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+        }
+        /* CARDS */
+        
+        .card {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        
+        .card:hover {
+            border-color: rgba(212, 168, 67, 0.3);
+            transform: translateY(-2px);
+        }
+        /* HERO */
+        
+        .hero {
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 1.25rem 3rem;
+            background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 168, 67, 0.08) 0%, transparent 70%), var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a843' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.1s forwards;
+        }
+        
+        .hero-eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.3)
+            }
+        }
+        
+        .hero-headline {
+            font-size: clamp(2.3rem, 9vw, 4rem);
+            font-weight: 800;
+            line-height: 1.08;
+            margin-bottom: 1.25rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.25s forwards;
+        }
+        
+        .hero-headline .gold {
+            color: var(--gold);
+        }
+        
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--gray);
+            max-width: 480px;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.4s forwards;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.55s forwards;
+        }
+        
+        .hero-signature {
+            font-size: 0.78rem;
+            color: var(--gray);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 1.25rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.7s forwards;
+        }
+        
+        .hero-signature strong {
+            color: var(--gray-light);
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        /* STATS STRIP */
+        
+        .stats-strip {
+            background: var(--dark2);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 1.5rem 1.25rem;
+        }
+        
+        .stats-grid {
+            max-width: 700px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .stat-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        
+        .stat-label {
+            font-size: 0.78rem;
+            color: var(--gray);
+            margin-top: 2px;
+        }
+        /* PILLARS */
+        
+        .pillars-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .pillar-card {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.25s;
+            cursor: pointer;
+        }
+        
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--pillar-color, var(--gold));
+        }
+        
+        .pillar-card:hover {
+            border-color: rgba(212, 168, 67, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            width: 52px;
+            height: 52px;
+            background: rgba(212, 168, 67, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pillar-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pillar-desc {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .pillar-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        /* COMMUNITY */
+        
+        .community-section {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(212, 168, 67, 0.06) 100%);
+            border: 1px solid rgba(37, 211, 102, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 2.25rem 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .wa-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(37, 211, 102, 0.15);
+            color: var(--blue-wa);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 5px 12px;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        .community-title {
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .community-sub {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .wa-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        /* PROGRAMS */
+        
+        .program-card {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: all 0.25s;
+        }
+        
+        .program-card:hover {
+            border-color: rgba(212, 168, 67, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .program-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(212, 168, 67, 0.12);
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 100px;
+            width: fit-content;
+        }
+        
+        .program-title {
+            font-size: 1.15rem;
+        }
+        
+        .program-detail {
+            font-size: 0.88rem;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .program-detail strong {
+            color: var(--gray-light);
+        }
+        /* CONTENT */
+        
+        .content-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .yt-embed {
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            background: var(--dark3);
+        }
+        
+        .yt-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .platform-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+        
+        .chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .chip:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        /* NEWSLETTER */
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .newsletter-input {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 13px 16px;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: 'Instrument Sans', sans-serif;
+            width: 100%;
+            transition: border-color 0.2s;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .newsletter-input::placeholder {
+            color: var(--gray);
+        }
+        
+        .newsletter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .nl-tag {
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: rgba(212, 168, 67, 0.1);
+            color: var(--gold);
+            border: 1px solid rgba(212, 168, 67, 0.2);
+        }
+        /* FOOTER */
+        
+        footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 3rem 1.25rem 2rem;
+        }
+        
+        .footer-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+        
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: var(--gray);
+            max-width: 280px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-link {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
+            color: var(--white);
+        }
+        
+        .footer-socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .social-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.82rem;
+            color: var(--gray);
+            transition: all 0.2s;
+        }
+        
+        .social-pill:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding-top: 1.25rem;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        /* ABOUT PAGE */
+        
+        .about-hero {
+            padding: 7rem 1.25rem 3rem;
+            background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 168, 67, 0.06) 0%, transparent 60%);
+        }
+        
+        .about-name {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-name span {
+            color: var(--gold);
+        }
+        
+        .about-bio {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+        
+        .identity-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .identity-card {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .identity-icon {
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            background: rgba(212, 168, 67, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .identity-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        
+        .identity-role {
+            font-size: 0.82rem;
+            color: var(--gray);
+        }
+        
+        .values-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .values-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+        
+        .values-list li::before {
+            content: '→';
+            color: var(--gold);
+            font-weight: 700;
+            margin-top: 1px;
+        }
+        /* PROGRAMS PAGE */
+        
+        .programs-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .event-card {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem 1.5rem;
+            transition: all 0.25s;
+        }
+        
+        .event-card:hover {
+            border-color: rgba(212, 168, 67, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .event-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .event-type {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            background: rgba(212, 168, 67, 0.1);
+            padding: 4px 10px;
+            border-radius: 100px;
+        }
+        
+        .event-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .event-meta {
+            font-size: 0.88rem;
+            color: var(--gray);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .event-desc {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1.25rem;
+        }
+        
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.82rem;
+            color: var(--gray);
+            background: var(--dark3);
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            margin-right: 6px;
+        }
+        /* CONTENT HUB */
+        
+        .content-tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .content-tab {
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--gray);
+            background: transparent;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+        
+        .content-tab.active,
+        .content-tab:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 168, 67, 0.07);
+        }
+        
+        .content-panel {
+            display: none;
+        }
+        
+        .content-panel.active {
+            display: block;
+        }
+        
+        .platform-card {
+            background: var(--dark2);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .platform-card:hover {
+            border-color: rgba(212, 168, 67, 0.3);
+        }
+        
+        .platform-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+        
+        .platform-name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        
+        .platform-handle {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        /* COMMUNITY PAGE */
+        
+        .community-hero {
+            padding: 7rem 1.25rem 2rem;
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 0%, rgba(37, 211, 102, 0.08) 0%, transparent 60%);
+        }
+        
+        .wa-invite-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        background: linear-gradient(135deg,
+        rgba(37, 211, 102, 0.1) 0%,
+        rgba(212, 168, 67, 0.07) 100%);
+        border: 1px solid rgba(37,
+        211,
+        102,
+        0.2);
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .wa-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .wa-card-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    .wa-card-desc {
+        font-size: 0.9rem;
+        color: var(--gray);
+        margin-bottom: 1.25rem;
+    }
+    /* MISSION IN ACTION — SLIDERS */
+    .mission-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .mission-card {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: border-color 0.25s, transform 0.25s;
+    }
+    .mission-card:hover {
+        border-color: rgba(212, 168, 67, 0.25);
+        transform: translateY(-2px);
+    }
+    /* Slider */
+    .ms-slider {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        background: var(--dark3);
+    }
+    .ms-track {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .ms-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+    }
+    .ms-slide.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .ms-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    /* Arrows */
+    .ms-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+        font-size: 1.5rem;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        transition: background 0.2s;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    .ms-arrow:hover {
+        background: rgba(212, 168, 67, 0.7);
+    }
+    .ms-prev {
+        left: 10px;
+    }
+    .ms-next {
+        right: 10px;
+    }
+    /* Dots */
+    .ms-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 6px;
+        z-index: 10;
+    }
+    .ms-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        border: none;
+        display: inline-block;
+    }
+    .ms-dot.active {
+        background: var(--gold);
+        transform: scale(1.3);
+    }
+    /* Slide counter */
+    .ms-count {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.8);
+        background: rgba(0, 0, 0, 0.45);
+        padding: 3px 9px;
+        border-radius: 100px;
+        z-index: 10;
+        letter-spacing: 0.05em;
+    }
+    /* Info below slider */
+    .mission-info {
+        padding: 1.4rem 1.5rem 1.5rem;
+    }
+    .mission-type-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        padding: 4px 12px;
+        border-radius: 100px;
+        margin-bottom: 0.7rem;
+        width: fit-content;
+    }
+    .mission-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.45rem;
+    }
+    .mission-desc {
+        font-size: 0.88rem;
+        color: var(--gray);
+        line-height: 1.7;
+        margin-bottom: 1.1rem;
+    }
+    .mission-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    @media (min-width: 640px) {
+        .mission-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+    }
+    @media (max-width: 374px) {
+        .ms-arrow {
+            width: 30px;
+            height: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .mission-info {
+            padding: 1rem;
+        }
+        
+        .mission-actions {
+            flex-direction: column;
+        }
+        
+        .mission-actions .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    /* BOOKS */
+    .books-hero {
+        padding: 7rem 1.25rem 2rem;
+    }
+    .coming-soon-card {
+        background: var(--dark2);
+        border: 1px dashed rgba(212, 168, 67, 0.3);
+        border-radius: var(--radius-lg);
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+    .cs-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .cs-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .cs-sub {
+        font-size: 0.9rem;
+        color: var(--gray);
+        max-width: 320px;
+        margin: 0 auto 1.5rem;
+    }
+    /* AI ASSISTANT */
+    .ai-fab {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 900;
+        width: 56px;
+        height: 56px;
+        background: var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(212, 168, 67, 0.4);
+        transition: all 0.3s;
+        border: none;
+        font-size: 1.4rem;
+    }
+    .ai-fab:hover {
+        transform: scale(1.08);
+        background: var(--gold-light);
+    }
+    .ai-fab.open {
+        border-radius: 50%;
+        transform: rotate(45deg);
+    }
+    .ai-panel {
+        position: fixed;
+        bottom: 5rem;
+        right: 1.25rem;
+        z-index: 900;
+        width: min(360px, calc(100vw - 2.5rem));
+        background: var(--dark2);
+        border: 1px solid rgba(212, 168, 67, 0.25);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        display: none;
+        flex-direction: column;
+        max-height: min(540px, 80svh);
+    }
+    .ai-panel.open {
+        display: flex;
+    }
+    .ai-header {
+        background: linear-gradient(135deg, var(--dark3), var(--dark2));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .ai-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: #000;
+        font-weight: 800;
+        font-family: 'Syne', sans-serif;
+    }
+    .ai-name {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+    .ai-status {
+        font-size: 0.75rem;
+        color: var(--green);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .ai-status::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+        display: inline-block;
+    }
+    .ai-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        scrollbar-width: thin;
+    }
+    .ai-msg {
+        max-width: 85%;
+        padding: 10px 14px;
+        border-radius: 14px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+    .ai-msg.bot {
+        background: var(--dark3);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        align-self: flex-start;
+    }
+    .ai-msg.user {
+        background: var(--gold);
+        color: #000;
+        align-self: flex-end;
+    }
+    .ai-options {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 0.5rem;
+    }
+    .ai-option {
+        background: rgba(212, 168, 67, 0.1);
+        border: 1px solid rgba(212, 168, 67, 0.2);
+        border-radius: 10px;
+        padding: 9px 12px;
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: var(--gold);
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: left;
+        font-family: 'Instrument Sans', sans-serif;
+    }
+    .ai-option:hover {
+        background: rgba(212, 168, 67, 0.2);
+    }
+    .ai-input-area {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 0.75rem 1rem;
+        display: flex;
+        gap: 8px;
+    }
+    .ai-input {
+        flex: 1;
+        background: var(--dark3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 100px;
+        padding: 8px 14px;
+        color: var(--white);
+        font-size: 0.88rem;
+        font-family: 'Instrument Sans', sans-serif;
+    }
+    .ai-input:focus {
+        outline: none;
+        border-color: rgba(212, 168, 67, 0.4);
+    }
+    .ai-send {
+        width: 36px;
+        height: 36px;
+        background: var(--gold);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+        transition: opacity 0.2s;
+    }
+    .ai-send:hover {
+        opacity: 0.85;
+    }
+    /* TOAST */
+    .toast {
+        position: fixed;
+        bottom: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--dark2);
+        border: 1px solid rgba(212, 168, 67, 0.3);
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        color: var(--white);
+        z-index: 2000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+        max-width: calc(100vw - 2.5rem);
+    }
+    .toast.show {
+        opacity: 1;
+    }
+    /* PAGE HEADER */
+    .page-header {
+        padding: 7rem 1.25rem 3rem;
+        background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 168, 67, 0.07) 0%, transparent 60%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .page-header .tag {
+        margin-bottom: 0.75rem;
+    }
+    .page-header h1 {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+        margin-bottom: 0.6rem;
+    }
+    .page-header p {
+        color: var(--gray);
+        max-width: 480px;
+    }
+    /* =============================================
+     RESPONSIVE — MOBILE FIRST
+     xs:  320–374px  (small phones)
+     sm:  375–539px  (standard phones)
+     md:  540–767px  (large phones / small tablets)
+     lg:  768–1023px (tablets)
+     xl:  1024px+    (desktop)
+  ============================================= */
+    /* --- ALWAYS mobile: nav hamburger shown, nav-links hidden by default --- */
+    .nav-links {
+        display: none;
+    }
+    .nav-hamburger {
+        display: flex;
+    }
+    .nav-wa {
+        display: none;
+    }
+    /* --- XS: 320–374px --- */
+    @media (max-width: 374px) {
+        nav {
+            padding: 0 0.85rem;
+        }
+        
+        .nav-logo {
+            font-size: 0.95rem;
+        }
+        
+        .hero {
+            padding: 5.5rem 0.85rem 2.5rem;
+        }
+        
+        .hero-headline {
+            font-size: 1.9rem;
+        }
+        
+        .hero-sub {
+            font-size: 0.92rem;
+        }
+        
+        .hero-buttons {
+            flex-direction: column;
+        }
+        
+        .hero-buttons .btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 0.88rem;
+            padding: 12px 18px;
+        }
+        
+        .container {
+            padding: 0 0.85rem;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+        }
+        
+        .stats-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+        
+        .stat-num {
+            font-size: 1.4rem;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+        }
+        
+        .pillars-grid,
+        .programs-grid,
+        .identity-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .pillar-card,
+        .card,
+        .program-card,
+        .event-card,
+        .wa-invite-card {
+            padding: 1.25rem 1rem;
+        }
+        
+        .community-section {
+            padding: 1.5rem 1rem;
+        }
+        
+        .wa-buttons {
+            flex-direction: column;
+        }
+        
+        .wa-buttons .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+        
+        .footer-socials {
+            gap: 6px;
+        }
+        
+        .social-pill {
+            font-size: 0.75rem;
+            padding: 6px 10px;
+        }
+        
+        .btn {
+            font-size: 0.88rem;
+            padding: 11px 18px;
+        }
+        
+        .btn-sm {
+            padding: 8px 14px;
+            font-size: 0.8rem;
+        }
+        
+        .newsletter-input {
+            font-size: 0.88rem;
+        }
+        
+        .page-header {
+            padding: 5.5rem 0.85rem 2rem;
+        }
+        
+        .page-header h1 {
+            font-size: 1.6rem;
+        }
+        
+        .hero-signature {
+            font-size: 0.72rem;
+            line-height: 1.7;
+        }
+        
+        .ai-panel {
+            right: 0.5rem;
+            width: calc(100vw - 1rem);
+            bottom: 4.5rem;
+        }
+        
+        .ai-fab {
+            bottom: 1rem;
+            right: 0.85rem;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+        
+        .toast {
+            font-size: 0.8rem;
+            padding: 10px 14px;
+            white-space: normal;
+            max-width: calc(100vw - 2rem);
+            text-align: center;
+        }
+        
+        .platform-card {
+            padding: 1rem;
+        }
+        
+        .content-tabs {
+            gap: 4px;
+        }
+        
+        .content-tab {
+            font-size: 0.78rem;
+            padding: 7px 12px;
+        }
+        
+        .location-tag {
+            font-size: 0.75rem;
+        }
+        
+        .wa-invite-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .coming-soon-card {
+            padding: 2rem 1rem;
+        }
+    }
+    /* --- SM: 375–539px (standard phones, most users) --- */
+    @media (min-width: 375px) and (max-width: 539px) {
+        .hero {
+            padding: 6rem 1.25rem 3rem;
+        }
+        
+        .hero-headline {
+            font-size: clamp(2rem, 8.5vw, 2.6rem);
+        }
+        
+        .hero-buttons {
+            flex-direction: column;
+        }
+        
+        .hero-buttons .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .pillars-grid,
+        .programs-grid,
+        .identity-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .wa-buttons {
+            flex-direction: column;
+        }
+        
+        .wa-buttons .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .wa-invite-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .toast {
+            white-space: normal;
+            max-width: calc(100vw - 2.5rem);
+            text-align: center;
+        }
+        
+        .ai-panel {
+            right: 0.75rem;
+            width: calc(100vw - 1.5rem);
+        }
+    }
+    /* --- MD: 540–767px (large phones, phablets) --- */
+    @media (min-width: 540px) and (max-width: 767px) {
+        .pillars-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .programs-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .identity-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .footer-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .stats-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .wa-invite-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .hero-buttons {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .hero-headline {
+            font-size: clamp(2.2rem, 6vw, 3rem);
+        }
+        
+        .toast {
+            white-space: nowrap;
+        }
+    }
+    /* --- LG: 768–1023px (tablets) --- */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .nav-links {
+            display: flex;
+        }
+        
+        .nav-hamburger {
+            display: none;
+        }
+        
+        .nav-wa {
+            display: flex;
+        }
+        
+        .nav-links a {
+            font-size: 0.78rem;
+            padding: 6px 8px;
+        }
+        
+        .pillars-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .programs-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .identity-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .footer-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .stats-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .wa-invite-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .hero-headline {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        }
+        
+        .hero-buttons {
+            flex-direction: row;
+        }
+        
+        .container {
+            max-width: 720px;
+        }
+    }
+    /* --- XL: 1024px+ (desktop) --- */
+    @media (min-width: 1024px) {
+        .nav-links {
+            display: flex;
+        }
+        
+        .nav-hamburger {
+            display: none;
+        }
+        
+        .nav-wa {
+            display: flex;
+        }
+        
+        .pillars-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .programs-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .identity-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .footer-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .stats-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .wa-invite-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .hero-buttons {
+            flex-direction: row;
+        }
+        
+        .container {
+            max-width: 760px;
+        }
+        
+        .hero {
+            padding: 7rem 2rem 4rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+    }
+    /* --- TOUCH TARGET: minimum 44px tap targets on all interactive elements --- */
+    @media (hover: none) and (pointer: coarse) {
+        .btn {
+            min-height: 44px;
+        }
+        
+        .btn-sm {
+            min-height: 40px;
+        }
+        
+        .ai-option {
+            min-height: 42px;
+            padding: 10px 14px;
+        }
+        
+        .nav-hamburger {
+            padding: 8px;
+        }
+        
+        .chip {
+            min-height: 40px;
+        }
+        
+        .content-tab {
+            min-height: 40px;
+        }
+        
+        .footer-link {
+            padding: 4px 0;
+        }
+        
+        .social-pill {
+            min-height: 40px;
+        }
+    }
+    /* --- SAFE AREAS: iPhone notch / home indicator --- */
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+        .ai-fab {
+            bottom: calc(1.5rem + env(safe-area-inset-bottom));
+        }
+        
+        .ai-panel {
+            bottom: calc(5rem + env(safe-area-inset-bottom));
+        }
+        
+        footer {
+            padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+        }
+        
+        .mobile-nav {
+            padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+        }
+    }
+    /* --- OVERFLOW GUARD: prevent anything from breaking horizontal scroll --- */
+    .hero-eyebrow {
+        flex-wrap: wrap;
+    }
+    .hero-signature {
+        word-break: break-word;
+    }
+    .platform-chips {
+        flex-wrap: wrap;
+    }
+    .footer-socials {
+        flex-wrap: wrap;
+    }
+    .wa-buttons {
+        flex-wrap: wrap;
+    }
+    .newsletter-tags {
+        flex-wrap: wrap;
+    }
+    .content-tabs {
+        flex-wrap: wrap;
+    }
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+    /* =============================================
+     TDT — TEEN DISCIPLESHIP TRAINING
+     Primary: Green (#1DB954 / #16a34a)
+     Accent: Gold (existing --gold)
+  ============================================= */
+     :root {
+        --tdt-green: #16a34a;
+        --tdt-green-light: #22c55e;
+        --tdt-green-dim: rgba(22, 163, 74, 0.12);
+        --tdt-green-glow: rgba(22, 163, 74, 0.08);
+    }
+    /* TDT HERO */
+    .tdt-hero {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6.5rem 1.25rem 3.5rem;
+        background: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(22, 163, 74, 0.1) 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(212, 168, 67, 0.06) 0%, transparent 60%), var(--black);
+        position: relative;
+        overflow: hidden;
+    }
+    .tdt-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2316a34a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+    .tdt-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--tdt-green-dim);
+        border: 1px solid rgba(22, 163, 74, 0.25);
+        color: var(--tdt-green-light);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 6px 14px;
+        border-radius: 100px;
+        margin-bottom: 1.5rem;
+        width: fit-content;
+    }
+    .tdt-badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--tdt-green-light);
+        animation: pulse 2s infinite;
+    }
+    .tdt-hero-headline {
+        font-size: clamp(2.2rem, 8.5vw, 4rem);
+        font-weight: 800;
+        line-height: 1.08;
+        margin-bottom: 1.2rem;
+    }
+    .tdt-hero-headline .green {
+        color: var(--tdt-green-light);
+    }
+    .tdt-hero-headline .gold {
+        color: var(--gold);
+    }
+    .tdt-hero-sub {
+        font-size: 1rem;
+        color: var(--gray);
+        max-width: 500px;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+    }
+    .tdt-hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 2.5rem;
+    }
+    .btn-tdt-green {
+        background: var(--tdt-green);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 24px;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: 'Instrument Sans', sans-serif;
+    }
+    .btn-tdt-green:hover {
+        background: var(--tdt-green-light);
+        transform: translateY(-1px);
+    }
+    .btn-tdt-outline {
+        background: transparent;
+        border: 1.5px solid rgba(22, 163, 74, 0.4);
+        color: var(--tdt-green-light);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 24px;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: 'Instrument Sans', sans-serif;
+    }
+    .btn-tdt-outline:hover {
+        border-color: var(--tdt-green-light);
+        background: var(--tdt-green-dim);
+    }
+    .tdt-verse {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        background: var(--tdt-green-dim);
+        border-left: 3px solid var(--tdt-green);
+        border-radius: 0 10px 10px 0;
+        padding: 12px 16px;
+        max-width: 480px;
+    }
+    .tdt-verse-text {
+        font-size: 0.88rem;
+        color: var(--gray-light);
+        font-style: italic;
+        line-height: 1.6;
+    }
+    .tdt-verse-ref {
+        font-size: 0.78rem;
+        color: var(--tdt-green-light);
+        font-weight: 700;
+        margin-top: 4px;
+        font-style: normal;
+    }
+    /* TDT STATS */
+    .tdt-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    .tdt-stat {
+        background: var(--dark2);
+        padding: 1.25rem 1rem;
+        text-align: center;
+    }
+    .tdt-stat-num {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--tdt-green-light);
+    }
+    .tdt-stat-label {
+        font-size: 0.75rem;
+        color: var(--gray);
+        margin-top: 2px;
+    }
+    /* SECTION TAGS */
+    .tdt-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--tdt-green-light);
+        margin-bottom: 0.85rem;
+    }
+    .tdt-tag::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 2px;
+        background: var(--tdt-green-light);
+    }
+    /* ABOUT TDT */
+    .tdt-about-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-about-card {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+    .tdt-about-card:hover {
+        border-color: rgba(22, 163, 74, 0.3);
+        transform: translateY(-2px);
+    }
+    .tdt-about-icon {
+        width: 46px;
+        height: 46px;
+        background: var(--tdt-green-dim);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .tdt-about-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+    }
+    .tdt-about-desc {
+        font-size: 0.88rem;
+        color: var(--gray);
+        line-height: 1.7;
+    }
+    .tdt-bible-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 1.75rem;
+    }
+    .tdt-bible-chip {
+        padding: 6px 14px;
+        border-radius: 100px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        background: var(--tdt-green-dim);
+        border: 1px solid rgba(22, 163, 74, 0.2);
+        color: var(--tdt-green-light);
+    }
+    /* 5 PILLARS */
+    .tdt-pillars-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-pillar {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.25s;
+    }
+    .tdt-pillar::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--pillar-color, var(--tdt-green));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+    }
+    .tdt-pillar:hover::after {
+        transform: scaleX(1);
+    }
+    .tdt-pillar:hover {
+        border-color: rgba(22, 163, 74, 0.3);
+        transform: translateY(-3px);
+    }
+    .tdt-pillar-num {
+        font-family: 'Syne', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: rgba(22, 163, 74, 0.12);
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+    }
+    .tdt-pillar-icon {
+        font-size: 1.6rem;
+        width: 46px;
+        height: 46px;
+        background: var(--tdt-green-dim);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .tdt-pillar-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+    }
+    .tdt-pillar-desc {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.65;
+    }
+    /* TRAINING STAGES */
+    .tdt-stages {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 1.75rem;
+        position: relative;
+    }
+    .tdt-stages::before {
+        content: '';
+        position: absolute;
+        left: 22px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--tdt-green), rgba(22, 163, 74, 0.1));
+    }
+    .tdt-stage {
+        display: flex;
+        gap: 1.25rem;
+        padding-bottom: 2rem;
+        position: relative;
+    }
+    .tdt-stage:last-child {
+        padding-bottom: 0;
+    }
+    .tdt-stage-dot {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        background: var(--tdt-green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.15);
+    }
+    .tdt-stage-body {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius);
+        padding: 1.25rem;
+        flex: 1;
+        transition: border-color 0.2s;
+    }
+    .tdt-stage-body:hover {
+        border-color: rgba(22, 163, 74, 0.3);
+    }
+    .tdt-stage-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--tdt-green-light);
+        margin-bottom: 0.3rem;
+    }
+    .tdt-stage-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+    }
+    .tdt-stage-desc {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.65;
+    }
+    /* MONTHLY MODEL */
+    .tdt-monthly-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-monthly-card {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        transition: border-color 0.2s;
+    }
+    .tdt-monthly-card:hover {
+        border-color: rgba(22, 163, 74, 0.3);
+    }
+    .tdt-monthly-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        background: var(--tdt-green-dim);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+    .tdt-monthly-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+    }
+    .tdt-monthly-desc {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.65;
+    }
+    /* MENTORS */
+    .tdt-mentor-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-mentor-card {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        transition: all 0.25s;
+    }
+    .tdt-mentor-card:hover {
+        border-color: rgba(22, 163, 74, 0.3);
+        transform: translateY(-2px);
+    }
+    .tdt-mentor-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: var(--tdt-green-dim);
+        border: 2px solid rgba(22, 163, 74, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .tdt-mentor-role {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--tdt-green-light);
+        letter-spacing: 0.08em;
+        margin-bottom: 0.3rem;
+    }
+    .tdt-mentor-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    .tdt-mentor-desc {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.65;
+    }
+    .tdt-mentor-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 1rem;
+    }
+    .tdt-mentor-tag {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+        border-radius: 100px;
+        background: var(--tdt-green-dim);
+        color: var(--tdt-green-light);
+        border: 1px solid rgba(22, 163, 74, 0.15);
+    }
+    /* TESTIMONIES */
+    .tdt-testimony-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-testimony {
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        position: relative;
+        transition: border-color 0.2s;
+    }
+    .tdt-testimony:hover {
+        border-color: rgba(22, 163, 74, 0.25);
+    }
+    .tdt-testimony::before {
+        content: '"';
+        position: absolute;
+        top: 0.75rem;
+        right: 1.25rem;
+        font-size: 4rem;
+        line-height: 1;
+        color: rgba(22, 163, 74, 0.12);
+        font-family: 'Syne', sans-serif;
+    }
+    .tdt-testimony-text {
+        font-size: 0.9rem;
+        color: var(--gray-light);
+        line-height: 1.75;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+    .tdt-testimony-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .tdt-testimony-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--tdt-green-dim);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .tdt-testimony-name {
+        font-size: 0.88rem;
+        font-weight: 700;
+    }
+    .tdt-testimony-detail {
+        font-size: 0.78rem;
+        color: var(--gray);
+    }
+    /* JOIN FORM */
+    .tdt-form-wrap {
+        background: var(--dark2);
+        border: 1px solid rgba(22, 163, 74, 0.2);
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.5rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-form-grid {
+        display: grid;
+        gap: 1rem;
+    }
+    .tdt-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .tdt-label {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--gray-light);
+    }
+    .tdt-input,
+    .tdt-select,
+    .tdt-textarea {
+        background: var(--dark3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 12px 14px;
+        color: var(--white);
+        font-size: 0.9rem;
+        font-family: 'Instrument Sans', sans-serif;
+        width: 100%;
+        transition: border-color 0.2s;
+    }
+    .tdt-input:focus,
+    .tdt-select:focus,
+    .tdt-textarea:focus {
+        outline: none;
+        border-color: var(--tdt-green);
+    }
+    .tdt-input::placeholder,
+    .tdt-textarea::placeholder {
+        color: var(--gray);
+    }
+    .tdt-select {
+        appearance: none;
+        cursor: pointer;
+    }
+    .tdt-select option {
+        background: var(--dark2);
+    }
+    .tdt-textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+    .tdt-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    /* GALLERY */
+    .tdt-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-top: 1.75rem;
+    }
+    .tdt-gallery-item {
+        aspect-ratio: 4/3;
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--dark2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+    .tdt-gallery-item:hover {
+        transform: scale(1.02);
+        border-color: rgba(22, 163, 74, 0.3);
+    }
+    .tdt-gallery-item:first-child {
+        grid-column: span 2;
+        aspect-ratio: 16/7;
+    }
+    .tdt-gallery-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+    }
+    .tdt-gallery-icon {
+        font-size: 1.8rem;
+        opacity: 0.4;
+    }
+    .tdt-gallery-label {
+        font-size: 0.78rem;
+        color: var(--gray);
+        font-weight: 600;
+    }
+    .tdt-gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+        display: flex;
+        align-items: flex-end;
+        padding: 0.75rem;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .tdt-gallery-item:hover .tdt-gallery-overlay {
+        opacity: 1;
+    }
+    .tdt-gallery-caption {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--white);
+    }
+    /* FOOTER CTA */
+    .tdt-footer-cta {
+        background: linear-gradient(135deg, rgba(22, 163, 74, 0.12) 0%, rgba(212, 168, 67, 0.07) 100%);
+        border: 1px solid rgba(22, 163, 74, 0.2);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem 1.75rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .tdt-cta-headline {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+        margin-bottom: 0.75rem;
+    }
+    .tdt-cta-sub {
+        font-size: 0.95rem;
+        color: var(--gray);
+        max-width: 420px;
+        margin: 0 auto 1.5rem;
+    }
+    /* RESPONSIVE */
+    @media (min-width: 540px) {
+        .tdt-about-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .tdt-pillars-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .tdt-monthly-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .tdt-mentor-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .tdt-testimony-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .tdt-gallery-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .tdt-gallery-item:first-child {
+            grid-column: span 3;
+        }
+        
+        .tdt-hero-btns .btn-tdt-green,
+        .tdt-hero-btns .btn-tdt-outline,
+        .tdt-hero-btns .btn-outline {
+            min-width: auto;
+        }
+    }
+    @media (max-width: 479px) {
+        .tdt-hero-btns {
+            flex-direction: column;
+        }
+        
+        .tdt-hero-btns .btn-tdt-green,
+        .tdt-hero-btns .btn-tdt-outline,
+        .tdt-hero-btns .btn-outline {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .tdt-form-row {
+            grid-template-columns: 1fr;
+        }
+        
+        .tdt-form-wrap {
+            padding: 1.25rem 1rem;
+        }
+        
+        .tdt-footer-cta {
+            padding: 1.75rem 1rem;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo" onclick="showPage('home')">Matthew<span>Folawe</span></div>
+        <div class="nav-links">
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('about')">About</a>
+            <a onclick="showPage('programs')">Programs</a>
+            <a onclick="showPage('tdt')">TDT</a>
+            <a onclick="showPage('content')">Content</a>
+            <a onclick="showPage('community')">Community</a>
+            <a onclick="showPage('books')">Books</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+            <a class="nav-wa" href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#000"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>                Join WhatsApp
+            </a>
+            <div class="nav-hamburger" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a onclick="showPage('home');toggleMobileNav()">Home</a>
+        <a onclick="showPage('about');toggleMobileNav()">About</a>
+        <a onclick="showPage('programs');toggleMobileNav()">Programs</a>
+        <a onclick="showPage('tdt');toggleMobileNav()">TDT</a>
+        <a onclick="showPage('content');toggleMobileNav()">Content</a>
+        <a onclick="showPage('community');toggleMobileNav()">Community</a>
+        <a onclick="showPage('books');toggleMobileNav()">Books</a>
+        <div style="padding-top:0.5rem;border-top:1px solid rgba(255,255,255,0.07);margin-top:0.5rem;">
+            <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" style="color:var(--blue-wa);">Join WhatsApp Community →</a>
+        </div>
+    </div>
+
+    <!-- ============ HOME PAGE ============ -->
+    <div id="page-home" class="page active">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-dot"></span> Youth Revival Labour · Forward Thinkers · TDT · Matthew AI Creators
+                </div>
+                <h1 class="hero-headline">
+                    I help young people grow in <span class="gold">Leadership,</span> Discipleship, &amp; Innovation.
+                </h1>
+                <p class="hero-sub">Building the next generation of kingdom leaders, thinkers, and builders who create real-life impact — in Nigeria and beyond.</p>
+                <div class="hero-buttons">
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>                        Join WhatsApp Community
+                    </a>
+                    <button class="btn btn-outline" onclick="scrollToNewsletter()">Subscribe to Newsletter</button>
+                </div>
+                <p class="hero-signature">
+                    <strong>Matthew Folawe O.</strong> — Founder, Youth Revival Labour &nbsp;|&nbsp; Founder, Teen Discipleship Training (TDT) &nbsp;|&nbsp; Leader, Forward Thinkers &nbsp;|&nbsp; Visionary, Matthew AI Creators
+                </p>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <div class="stats-strip">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-num" id="counter-pillars">3</div>
+                    <div class="stat-label">Core Pillars</div>
+                </div>
+                <div>
+                    <div class="stat-num" id="counter-platforms">6+</div>
+                    <div class="stat-label">Platform Presence</div>
+                </div>
+                <div>
+                    <div class="stat-num" id="counter-lives">0</div>
+                    <div class="stat-label">Lives Impacted</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PILLARS -->
+        <section class="section">
+            <div class="container">
+                <div class="tag">The 3 Pillars</div>
+                <h2 class="section-title">One mission. Three dimensions.</h2>
+                <p class="section-sub" style="margin-bottom:2rem;">Everything I do is built around these three pillars — the DNA of the movement.</p>
+                <div class="pillars-grid">
+                    <div class="pillar-card" style="--pillar-color:#D4A843;" onclick="showPage('about')">
+                        <div class="pillar-icon">👑</div>
+                        <h3 class="pillar-title">Leadership</h3>
+                        <p class="pillar-desc">Student development, personal growth, and building influence that shapes the next generation of thinkers and builders.</p>
+                        <div class="pillar-link">Explore →</div>
+                    </div>
+                    <div class="pillar-card" style="--pillar-color:#2ECC71;" onclick="showPage('programs')">
+                        <div class="pillar-icon">✝️</div>
+                        <h3 class="pillar-title">Discipleship</h3>
+                        <p class="pillar-desc">Evangelism, spiritual growth, fellowship, and mission — building the end-time church one young person at a time.</p>
+                        <div class="pillar-link">See Programs →</div>
+                    </div>
+                    <div class="pillar-card" style="--pillar-color:#5B8FFF;" onclick="showPage('content')">
+                        <div class="pillar-icon">⚡</div>
+                        <h3 class="pillar-title">Innovation</h3>
+                        <p class="pillar-desc">Technology, AI, digital strategy, and learning systems — equipping young people to build and influence ahead of their time.</p>
+                        <div class="pillar-link">View Content →</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- COMMUNITY -->
+        <section class="section">
+            <div class="container">
+                <div class="tag">Community</div>
+                <h2 class="section-title">You don't walk this alone.</h2>
+                <p class="section-sub" style="margin-bottom:1.75rem;">Join a growing family of young people building their lives with purpose, faith, and fire.</p>
+
+                <div class="community-section">
+                    <div class="wa-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>                        WhatsApp
+                    </div>
+                    <h3 class="community-title">Join the Movement. Right now.</h3>
+                    <p class="community-sub">Two ways to connect — a live community for discussions and a channel for updates, teachings, and announcements. Both are free. Both are real.</p>
+                    <div class="wa-buttons">
+                        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">
+            Join the Community
+          </a>
+                        <a href="https://whatsapp.com/channel/0029VbAeTELKmCPWDYJqIC2M" target="_blank" class="btn btn-outline">
+            Follow the Channel
+          </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- PROGRAMS PREVIEW -->
+        <section class="section">
+            <div class="container">
+                <div class="tag">Programs</div>
+                <h2 class="section-title">Show up. Grow up. Go out.</h2>
+                <p class="section-sub" style="margin-bottom:1.75rem;">Live fellowships, online gatherings, school outreach — real spaces for real growth.</p>
+
+                <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;">
+                    <div class="program-card">
+                        <div class="program-badge">🌐 Weekly Online</div>
+                        <h3 class="program-title">Weekly Online Fellowship</h3>
+                        <p class="program-detail"><strong>Every Saturday</strong> — 7:30 PM WAT</p>
+                        <p class="program-detail" style="color:var(--gray);">Join via WhatsApp or YouTube Live. Teachings, worship, and discipleship every week.</p>
+                        <div style="margin-top:0.5rem;">
+                            <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-gold btn-sm">Join / Get Details</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-badge">📍 Physical</div>
+                        <h3 class="program-title">Monthly Physical Fellowships</h3>
+                        <p class="program-detail"><strong>Ikorodu, Lagos</strong> — Multiple Locations</p>
+                        <div style="margin-top:0.5rem;">
+                            <span class="location-tag">📌 Alafia Tayo Street, Isawo Rd, Agric</span>
+                            <span class="location-tag">📌 Ginti Street, Ijede Road</span>
+                            <span class="location-tag" style="background:rgba(212,168,67,0.08);color:var(--gold);">+ More coming soon</span>
+                        </div>
+                        <div style="margin-top:0.75rem;">
+                            <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-gold btn-sm">Join / Get Details</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-badge">🕊️ Special</div>
+                        <h3 class="program-title">"Come Unto Me" — Discipleship Gathering</h3>
+                        <p class="program-detail" style="color:var(--gray);">A focused 3-day discipleship experience for young people hungry for deeper encounters with God and spiritual formation.</p>
+                        <div style="margin-top:0.5rem;">
+                            <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-outline btn-sm">Get Notified</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline" onclick="showPage('programs')" style="width:100%;justify-content:center;">View All Programs →</button>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- MISSION IN ACTION -->
+        <section class="section" id="missionSection">
+            <div class="container">
+                <div class="tag">Mission in Action</div>
+                <h2 class="section-title">This is what it looks like on the ground.</h2>
+                <p class="section-sub" style="margin-bottom:2rem;">From classrooms to streets — Youth Revival Labour is active, present, and moving across Lagos.</p>
+
+                <div class="mission-grid">
+
+                    <!-- SCHOOL MISSION -->
+                    <div class="mission-card">
+                        <div class="ms-slider" data-slider="school">
+                            <div class="ms-track">
+                                <div class="ms-slide active">
+                                    <img src="https://betterYouAfrica.com/wp-content/uploads/2023/09/IMG_3612-scaled.jpg" alt="School outreach — students gathering" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80'">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&q=80" alt="Youth teaching session in school" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="Students learning together" loading="lazy">
+                                </div>
+                            </div>
+                            <button class="ms-arrow ms-prev" onclick="slideMove('school',-1)">&#8249;</button>
+                            <button class="ms-arrow ms-next" onclick="slideMove('school',1)">&#8250;</button>
+                            <div class="ms-dots" id="school-dots">
+                                <span class="ms-dot active" onclick="slideTo('school',0)"></span>
+                                <span class="ms-dot" onclick="slideTo('school',1)"></span>
+                                <span class="ms-dot" onclick="slideTo('school',2)"></span>
+                            </div>
+                            <div class="ms-count" id="school-count">1 / 3</div>
+                        </div>
+                        <div class="mission-info">
+                            <div class="mission-type-badge" style="background:rgba(91,143,255,0.12);color:#5B8FFF;">🏫 School Mission</div>
+                            <h3 class="mission-title">Reaching Students in Schools</h3>
+                            <p class="mission-desc">Taking the Gospel and leadership teaching directly into secondary schools and university campuses — meeting students where they are, before the world gets to them.</p>
+                            <div class="mission-actions">
+                                <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="btn btn-outline btn-sm">▶ Watch Online</a>
+                                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-sm">Get Involved</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TUTORIAL MISSION -->
+                    <div class="mission-card">
+                        <div class="ms-slider" data-slider="tutorial">
+                            <div class="ms-track">
+                                <div class="ms-slide active">
+                                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" alt="Youth training and tutorial session" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&q=80" alt="Teaching the next generation" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Group learning and discipleship" loading="lazy">
+                                </div>
+                            </div>
+                            <button class="ms-arrow ms-prev" onclick="slideMove('tutorial',-1)">&#8249;</button>
+                            <button class="ms-arrow ms-next" onclick="slideMove('tutorial',1)">&#8250;</button>
+                            <div class="ms-dots" id="tutorial-dots">
+                                <span class="ms-dot active" onclick="slideTo('tutorial',0)"></span>
+                                <span class="ms-dot" onclick="slideTo('tutorial',1)"></span>
+                                <span class="ms-dot" onclick="slideTo('tutorial',2)"></span>
+                            </div>
+                            <div class="ms-count" id="tutorial-count">1 / 3</div>
+                        </div>
+                        <div class="mission-info">
+                            <div class="mission-type-badge" style="background:rgba(212,168,67,0.12);color:var(--gold);">📚 Tutorial Mission</div>
+                            <h3 class="mission-title">Training the Next Generation</h3>
+                            <p class="mission-desc">Hands-on leadership, discipleship, and skills training for teenagers and young people — equipping them with tools, confidence, and a kingdom mindset to navigate life.</p>
+                            <div class="mission-actions">
+                                <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="btn btn-outline btn-sm">▶ Watch Online</a>
+                                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-sm">Get Involved</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHURCH MISSION -->
+                    <div class="mission-card">
+                        <div class="ms-slider" data-slider="church">
+                            <div class="ms-track">
+                                <div class="ms-slide active">
+                                    <img src="https://images.unsplash.com/photo-1438232992991-995b671f1bf8?w=600&q=80" alt="Church fellowship and worship gathering" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1576485375217-d6a95e34d043?w=600&q=80" alt="Youth worship and prayer" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1478147427282-58a87a433784?w=600&q=80" alt="Fellowship gathering and discipleship" loading="lazy">
+                                </div>
+                            </div>
+                            <button class="ms-arrow ms-prev" onclick="slideMove('church',-1)">&#8249;</button>
+                            <button class="ms-arrow ms-next" onclick="slideMove('church',1)">&#8250;</button>
+                            <div class="ms-dots" id="church-dots">
+                                <span class="ms-dot active" onclick="slideTo('church',0)"></span>
+                                <span class="ms-dot" onclick="slideTo('church',1)"></span>
+                                <span class="ms-dot" onclick="slideTo('church',2)"></span>
+                            </div>
+                            <div class="ms-count" id="church-count">1 / 3</div>
+                        </div>
+                        <div class="mission-info">
+                            <div class="mission-type-badge" style="background:rgba(46,204,113,0.12);color:var(--green);">⛪ Church Mission</div>
+                            <h3 class="mission-title">Building the End-Time Church</h3>
+                            <p class="mission-desc">Fellowship, worship, evangelism, and discipleship gatherings — raising a generation of young believers who are rooted, revived, and ready to be sent into the world.</p>
+                            <div class="mission-actions">
+                                <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="btn btn-outline btn-sm">▶ Watch Online</a>
+                                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-sm">Get Involved</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STREET MISSION -->
+                    <div class="mission-card">
+                        <div class="ms-slider" data-slider="street">
+                            <div class="ms-track">
+                                <div class="ms-slide active">
+                                    <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&q=80" alt="Street evangelism and gospel outreach" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80" alt="Community outreach and prayer on the streets" loading="lazy">
+                                </div>
+                                <div class="ms-slide">
+                                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&q=80" alt="Sharing the Gospel with the community" loading="lazy">
+                                </div>
+                            </div>
+                            <button class="ms-arrow ms-prev" onclick="slideMove('street',-1)">&#8249;</button>
+                            <button class="ms-arrow ms-next" onclick="slideMove('street',1)">&#8250;</button>
+                            <div class="ms-dots" id="street-dots">
+                                <span class="ms-dot active" onclick="slideTo('street',0)"></span>
+                                <span class="ms-dot" onclick="slideTo('street',1)"></span>
+                                <span class="ms-dot" onclick="slideTo('street',2)"></span>
+                            </div>
+                            <div class="ms-count" id="street-count">1 / 3</div>
+                        </div>
+                        <div class="mission-info">
+                            <div class="mission-type-badge" style="background:rgba(255,120,80,0.12);color:#FF7850;">🛣️ Street Mission</div>
+                            <h3 class="mission-title">Taking the Gospel to the Streets</h3>
+                            <p class="mission-desc">Going out into the streets, markets, and neighbourhoods of Lagos — sharing the Gospel face to face, praying for people, and bringing the kingdom to everyday spaces.</p>
+                            <div class="mission-actions">
+                                <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="btn btn-outline btn-sm">▶ Watch Online</a>
+                                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-sm">Get Involved</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end mission-grid -->
+
+                <p style="font-size:0.8rem;color:var(--gray);text-align:center;margin-top:1.5rem;">📸 Sample images shown — replace with your own real mission photos when ready.</p>
+
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONTENT PREVIEW -->
+        <section class="section">
+            <div class="container">
+                <div class="tag">Content</div>
+                <h2 class="section-title">Watch. Learn. Share.</h2>
+                <p class="section-sub" style="margin-bottom:1.5rem;">Teachings, leadership insights, and innovation content — across 6 platforms.</p>
+                <div class="yt-embed" style="margin-bottom:1rem;">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=UUMatthewFolawe" allowfullscreen title="Matthew Folawe YouTube"></iframe>
+                </div>
+                <div class="platform-chips">
+                    <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="chip">▶ YouTube</a>
+                    <a href="https://www.tiktok.com/@matthew_folawe" target="_blank" class="chip">🎵 TikTok</a>
+                    <a href="https://www.instagram.com/matthew_folawe" target="_blank" class="chip">📸 Instagram</a>
+                    <a href="https://x.com/Matthew_Folawe" target="_blank" class="chip">✕ Twitter/X</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- NEWSLETTER -->
+        <section class="section" id="newsletter">
+            <div class="container">
+                <div class="tag">Newsletter</div>
+                <h2 class="section-title">Words that build you.</h2>
+                <p class="section-sub" style="margin-bottom:1.5rem;">Get weekly insights on leadership, discipleship, and innovation — straight to your inbox. No noise, just growth.</p>
+                <div class="newsletter-tags">
+                    <span class="nl-tag">👑 Leadership</span>
+                    <span class="nl-tag">✝️ Discipleship</span>
+                    <span class="nl-tag">⚡ Innovation</span>
+                </div>
+                <div class="newsletter-form" id="nlForm">
+                    <input type="text" class="newsletter-input" placeholder="Your name" id="nlName">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" id="nlEmail">
+                    <button class="btn btn-gold btn-full" onclick="subscribeNewsletter()">
+          Subscribe — It's Free
+        </button>
+                    <p style="font-size:0.78rem;color:var(--gray);text-align:center;">No spam. Unsubscribe anytime. Built for young builders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">Matthew Folawe O.</div>
+                    <p class="footer-tagline">Leadership. Discipleship. Innovation.<br>Building the next generation.</p>
+                </div>
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-col-title">Pages</div>
+                        <a class="footer-link" onclick="showPage('about')">About</a>
+                        <a class="footer-link" onclick="showPage('programs')">Programs</a>
+                        <a class="footer-link" onclick="showPage('tdt')">TDT</a>
+                        <a class="footer-link" onclick="showPage('content')">Content Hub</a>
+                        <a class="footer-link" onclick="showPage('community')">Community</a>
+                        <a class="footer-link" onclick="showPage('books')">Books</a>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Community</div>
+                        <a class="footer-link" href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank">WhatsApp Community</a>
+                        <a class="footer-link" href="https://whatsapp.com/channel/0029VbAeTELKmCPWDYJqIC2M" target="_blank">WhatsApp Channel</a>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Brands</div>
+                        <a class="footer-link">Youth Revival Labour</a>
+                        <a class="footer-link" onclick="showPage('tdt')" style="cursor:pointer;">Teen Discipleship Training</a>
+                        <a class="footer-link">Forward Thinkers</a>
+                        <a class="footer-link">Matthew AI Creators</a>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/matthew_folawe" target="_blank" class="social-pill">📸 Instagram</a>
+                    <a href="https://www.tiktok.com/@matthew_folawe" target="_blank" class="social-pill">🎵 TikTok</a>
+                    <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="social-pill">▶ YouTube</a>
+                    <a href="https://x.com/Matthew_Folawe" target="_blank" class="social-pill">✕ Twitter/X</a>
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="social-pill" style="color:var(--blue-wa);border-color:rgba(37,211,102,0.25);">💬 WhatsApp</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Matthew Folawe O. — All rights reserved. Built for the movement.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end home page -->
+
+    <!-- ============ ABOUT PAGE ============ -->
+    <div id="page-about" class="page">
+        <div class="page-header">
+            <div class="container">
+                <div class="tag">About</div>
+                <h1>The man behind the movement.</h1>
+                <p>Minister. Content Creator. Leadership Coach. Builder.</p>
+            </div>
+        </div>
+        <section class="section">
+            <div class="container">
+                <p class="about-bio">
+                    I'm Matthew Folawe O. — a minister of the Gospel, leadership coach, content creator, and founder based in Lagos, Nigeria. My life is built around one conviction: <strong style="color:var(--white);">young people are not the future church — they are the church, right now.</strong>
+                </p>
+                <p class="about-bio">
+                    I was called to ministry at a young age, and over the years, God has graced me to build movements — not just programmes. Through school outreach, orphanage fellowships, weekly discipleship gatherings, and digital missions, I carry the Gospel to where
+                    young people actually are.
+                </p>
+                <p class="about-bio">
+                    Through <strong style="color:var(--white);">Teen Discipleship Training (TDT)</strong>, I run a holistic discipleship and formation system for teenagers — covering spiritual formation, character development, life skills, and leadership.
+                    TDT is not just a programme. It is a movement designed to raise teenagers who are prepared for God's purpose before the world defines them.
+                </p>
+                <p class="about-bio">
+                    But I don't stop at the spiritual. I believe leadership development and innovation are also kingdom assignments. Through <strong style="color:var(--white);">Forward Thinkers</strong>, I coach young people to think, build, and influence
+                    ahead of their time. Through <strong style="color:var(--white);">Matthew AI Creators</strong>, I help people leverage technology and digital tools for impact.
+                </p>
+                <p class="about-bio">
+                    I write, preach, create content, build systems, and train others. I operate in multiple spaces — and in all of them, the mission is the same: help young people become who God made them to be.
+                </p>
+
+                <div class="tag" style="margin-top:2rem;">Four Identities</div>
+                <div class="identity-grid">
+                    <div class="identity-card">
+                        <div class="identity-icon">🔥</div>
+                        <div>
+                            <div class="identity-name">Youth Revival Labour (YRL)</div>
+                            <div class="identity-role">Revival &amp; discipleship movement — reaching young people, building the end-time church through evangelism, fellowship, and mission work.</div>
+                        </div>
+                    </div>
+                    <div class="identity-card">
+                        <div class="identity-icon">🌱</div>
+                        <div>
+                            <div class="identity-name">Teen Discipleship Training (TDT)</div>
+                            <div class="identity-role">A holistic formation system for teenagers — covering spiritual formation, character, life development, and leadership across 5 pillars and 4 intentional stages.</div>
+                        </div>
+                    </div>
+                    <div class="identity-card">
+                        <div class="identity-icon">🏆</div>
+                        <div>
+                            <div class="identity-name">Forward Thinkers</div>
+                            <div class="identity-role">Leadership brand — raising leaders who think, build, and influence ahead of time. Coaching, content, and community for driven young people.</div>
+                        </div>
+                    </div>
+                    <div class="identity-card">
+                        <div class="identity-icon">🤖</div>
+                        <div>
+                            <div class="identity-name">Matthew AI Creators</div>
+                            <div class="identity-role">Digital innovation identity — leveraging AI, automation, and technology for content creation, systems building, and kingdom impact.</div>
+                        </div>
+                    </div>
+                    <div class="identity-card">
+                        <div class="identity-icon">💻</div>
+                        <div>
+                            <div class="identity-name">Web Developer</div>
+                            <div class="identity-role">Freelance web development for clients — building digital presence for businesses and ministries in the Nigerian market.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tag" style="margin-top:2rem;">What I Stand For</div>
+                <ul class="values-list">
+                    <li>Every young person carries potential that must be awakened, not managed.</li>
+                    <li>Teenagers are not too young for God — they are exactly the right age to be prepared.</li>
+                    <li>The church must reach youth in the digital age — not just in buildings.</li>
+                    <li>Discipleship is not a programme. It's a way of life, done in intentional community.</li>
+                    <li>Leadership is a stewardship, not a status. It's built in the daily, not the dramatic.</li>
+                    <li>Innovation and faith are not opposites — God created the mind to discover and build.</li>
+                    <li>Africa — especially Nigeria — is full of world-changing young people who just need the right environment.</li>
+                </ul>
+
+                <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:2.5rem;">
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join the Community</a>
+                    <button class="btn btn-outline" onclick="showPage('tdt')">Explore TDT →</button>
+                    <button class="btn btn-outline" onclick="showPage('programs')">See Programs</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-inner">
+                <div style="text-align:center;padding:1rem 0;">
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full">
+          Join WhatsApp Community
+        </a>
+                </div>
+                <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
+                    <p>© 2025 Matthew Folawe O. &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Back to Home</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============ PROGRAMS PAGE ============ -->
+    <div id="page-programs" class="page">
+        <div class="page-header">
+            <div class="container">
+                <div class="tag">Programs &amp; Events</div>
+                <h1>Come. Grow. Be sent.</h1>
+                <p>Physical and online spaces designed to form the next generation of kingdom leaders.</p>
+            </div>
+        </div>
+        <section class="section">
+            <div class="container">
+                <div class="tag">Recurring Programs</div>
+                <div class="programs-grid" style="margin-bottom:2rem;">
+                    <div class="event-card">
+                        <div class="event-header">
+                            <div>
+                                <div class="event-type">Weekly · Online</div>
+                                <h3 class="event-title" style="margin-top:0.5rem;">Weekly Online Fellowship</h3>
+                            </div>
+                        </div>
+                        <p class="event-meta">📅 Every Saturday · 7:30 PM WAT</p>
+                        <p class="event-meta">🌐 WhatsApp &amp; YouTube Live</p>
+                        <p class="event-desc">A weekly gathering of young believers for teachings, worship, and discipleship. The online fellowship is the heartbeat of the YRL digital community — come hungry, leave built.</p>
+                        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-gold btn-sm">Join / Get Details</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-header">
+                            <div>
+                                <div class="event-type">Monthly · Physical</div>
+                                <h3 class="event-title" style="margin-top:0.5rem;">Monthly Physical Fellowship</h3>
+                            </div>
+                        </div>
+                        <p class="event-meta">📅 Monthly · Ikorodu, Lagos</p>
+                        <p class="event-desc">In-person gatherings at multiple locations around Ikorodu. Teenagers, youth, and young adults gathering for face-to-face fellowship, teaching, and community.</p>
+                        <div>
+                            <span class="location-tag">📌 Alafia Tayo Street (end of Ago-Iwoye Street, Isawo Rd, Agric, Ikorodu)</span>
+                            <span class="location-tag">📌 Ginti Street (along Ijede Road, Ikorodu)</span>
+                            <span class="location-tag" style="background:rgba(212,168,67,0.08);color:var(--gold);">📍 More locations — coming soon</span>
+                        </div>
+                        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-gold btn-sm" style="margin-top:0.5rem;">Join / Get Details</a>
+                    </div>
+                </div>
+
+                <div class="tag">Special Programs</div>
+                <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+                    <div class="event-card">
+                        <div class="event-type">3-Day Gathering</div>
+                        <h3 class="event-title" style="margin-top:0.5rem;">"Come Unto Me" — Discipleship Gathering</h3>
+                        <p class="event-meta">🕊️ Online &amp; Physical</p>
+                        <p class="event-desc">An intensive 3-day discipleship experience built for young people hungry for deeper encounters with God. This is not a conference — it's a formation experience. Worship, Word, prayer, and community over 3 focused days.</p>
+                        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-outline btn-sm">Get Notified for Next Edition</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-type">Discipleship · Teenagers</div>
+                        <h3 class="event-title" style="margin-top:0.5rem;">Teen Discipleship Training (TDT)</h3>
+                        <p class="event-meta">🌱 Monthly Physical + Weekly Online Mentorship</p>
+                        <p class="event-desc">A holistic discipleship and formation system for teenagers — covering identity, spiritual formation, character, life development, and leadership across 5 pillars and 4 intentional stages. Not just a programme. A movement.</p>
+                        <button class="btn btn-gold btn-sm" onclick="showPage('tdt')">Explore TDT →</button>
+                    </div>
+                    <p class="event-meta">📍 Secondary Schools &amp; Universities, Lagos</p>
+                    <p class="event-desc">Taking the Gospel directly into schools — evangelism, discipleship teaching, and leadership sessions in secondary schools and university campuses. Meeting students where they are.</p>
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-outline btn-sm">Partner With Us</a>
+                </div>
+                <div class="event-card">
+                    <div class="event-type">Outreach · Welfare</div>
+                    <h3 class="event-title" style="margin-top:0.5rem;">Orphanage Fellowship</h3>
+                    <p class="event-meta">📍 Monthly · Lagos</p>
+                    <p class="event-desc">Monthly visits to orphanages — bringing love, Word, and community to children and teenagers in care homes. A tangible expression of the Gospel in action.</p>
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-outline btn-sm">Join This Mission</a>
+                </div>
+
+            </div>
+    </div>
+    </section>
+    <footer>
+        <div class="footer-inner">
+            <div style="text-align:center;padding:1rem 0;">
+                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full">
+          Stay Connected on WhatsApp
+        </a>
+            </div>
+            <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
+                <p>© 2025 Matthew Folawe O. &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- ============ CONTENT HUB ============ -->
+    <div id="page-content" class="page">
+        <div class="page-header">
+            <div class="container">
+                <div class="tag">Content Hub</div>
+                <h1>Built to teach. Created to reach.</h1>
+                <p>Teachings, insights, and content across 6 platforms — on Leadership, Discipleship, and Innovation.</p>
+            </div>
+        </div>
+        <section class="section">
+            <div class="container">
+                <div class="content-tabs">
+                    <button class="content-tab active" onclick="switchTab('videos',this)">Video</button>
+                    <button class="content-tab" onclick="switchTab('platforms',this)">All Platforms</button>
+                    <button class="content-tab" onclick="switchTab('topics',this)">Topics</button>
+                </div>
+
+                <div id="tab-videos" class="content-panel active">
+                    <div class="yt-embed" style="margin-bottom:1rem;">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=UUMatthewFolawe" allowfullscreen title="Matthew Folawe YouTube Channel"></iframe>
+                    </div>
+                    <p style="font-size:0.88rem;color:var(--gray);margin-bottom:1.25rem;">Subscribe to the YouTube channel for full-length teachings on discipleship, leadership, and more.</p>
+                    <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="btn btn-outline btn-full">
+          ▶ Visit YouTube Channel
+        </a>
+                </div>
+
+                <div id="tab-platforms" class="content-panel">
+                    <a href="https://www.youtube.com/@MatthewFolawe" target="_blank" class="platform-card">
+                        <div class="platform-logo" style="background:rgba(255,0,0,0.1);">▶</div>
+                        <div>
+                            <div class="platform-name">YouTube</div>
+                            <div class="platform-handle">@MatthewFolawe · Teachings &amp; Long-form</div>
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@matthew_folawe" target="_blank" class="platform-card">
+                        <div class="platform-logo" style="background:rgba(0,0,0,0.3);">🎵</div>
+                        <div>
+                            <div class="platform-name">TikTok</div>
+                            <div class="platform-handle">@matthew_folawe · Short-form &amp; Viral</div>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/matthew_folawe" target="_blank" class="platform-card">
+                        <div class="platform-logo" style="background:rgba(131,58,180,0.12);">📸</div>
+                        <div>
+                            <div class="platform-name">Instagram</div>
+                            <div class="platform-handle">@matthew_folawe · Reels &amp; Stories</div>
+                        </div>
+                    </a>
+                    <a href="https://x.com/Matthew_Folawe" target="_blank" class="platform-card">
+                        <div class="platform-logo" style="background:rgba(255,255,255,0.05);">✕</div>
+                        <div>
+                            <div class="platform-name">Twitter / X</div>
+                            <div class="platform-handle">@Matthew_Folawe · Thoughts &amp; Threads</div>
+                        </div>
+                    </a>
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="platform-card">
+                        <div class="platform-logo" style="background:rgba(37,211,102,0.1);">💬</div>
+                        <div>
+                            <div class="platform-name">WhatsApp</div>
+                            <div class="platform-handle">Community + Channel · Teachings &amp; Updates</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="tab-topics" class="content-panel">
+                    <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1.25rem;">Everything I create fits into one of these three pillars:</p>
+                    <div class="card" style="margin-bottom:0.75rem;">
+                        <h3 style="color:var(--gold);margin-bottom:0.4rem;">👑 Leadership Content</h3>
+                        <p style="font-size:0.88rem;color:var(--gray);">Student leadership, personal development, building influence, career and purpose, The Builder's Mindset, Worth &amp; Legacy — for teens, students, and young professionals.</p>
+                    </div>
+                    <div class="card" style="margin-bottom:0.75rem;">
+                        <h3 style="color:var(--green);margin-bottom:0.4rem;">✝️ Discipleship Content</h3>
+                        <p style="font-size:0.88rem;color:var(--gray);">Evangelism, spiritual growth, the church's prophetic role, salvation teaching, prayer, daily Christian living — rooted in YRL's mission to build the end-time church.</p>
+                    </div>
+                    <div class="card">
+                        <h3 style="color:#5B8FFF;margin-bottom:0.4rem;">⚡ Innovation Content</h3>
+                        <p style="font-size:0.88rem;color:var(--gray);">AI tools, web development, content creation systems, digital strategy, automation, technology for young people — especially teenagers navigating the digital age.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-inner">
+                <div style="text-align:center;padding:1rem 0;">
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full">
+          Join the Community
+        </a>
+                </div>
+                <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
+                    <p>© 2025 Matthew Folawe O. &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============ COMMUNITY PAGE ============ -->
+    <div id="page-community" class="page">
+        <div class="community-hero">
+            <div class="container" style="text-align:center;">
+                <div class="wa-badge" style="margin:0 auto 1rem;">Community</div>
+                <h1 style="font-size:clamp(2rem,7vw,3rem);margin-bottom:0.75rem;">This is your people.</h1>
+                <p style="color:var(--gray);max-width:420px;margin:0 auto 2rem;">You're not meant to build alone. Join a community of young people growing in faith, leadership, and innovation — together.</p>
+                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full">
+        Join Now — It's Free
+      </a>
+            </div>
+        </div>
+        <section class="section-sm">
+            <div class="container">
+                <div class="wa-invite-grid">
+                    <div class="wa-invite-card">
+                        <div class="wa-icon">💬</div>
+                        <h3 class="wa-card-title">WhatsApp Community</h3>
+                        <p class="wa-card-desc">A live, interactive community where members connect, share, and grow together. Discussions, prayer requests, updates, and accountability — in your pocket.</p>
+                        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-sm">
+            Join Community
+          </a>
+                    </div>
+                    <div class="wa-invite-card" style="border-color:rgba(212,168,67,0.2);background:rgba(212,168,67,0.05);">
+                        <div class="wa-icon">📢</div>
+                        <h3 class="wa-card-title">WhatsApp Channel</h3>
+                        <p class="wa-card-desc">Follow the channel for one-way broadcasts — teachings, announcements, event dates, devotionals, and inspiration delivered to your WhatsApp.</p>
+                        <a href="https://whatsapp.com/channel/0029VbAeTELKmCPWDYJqIC2M" target="_blank" class="btn btn-outline btn-sm">
+            Follow Channel
+          </a>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:1.5rem;text-align:center;">
+                    <h3 style="margin-bottom:0.5rem;">Why join?</h3>
+                    <ul class="values-list" style="text-align:left;">
+                        <li>Weekly fellowship updates and teachings dropped straight to your WhatsApp</li>
+                        <li>Real community — not bots, not silence. Actual people growing together</li>
+                        <li>Prayer support, accountability, and brotherhood/sisterhood</li>
+                        <li>First access to programs, events, and training opportunities</li>
+                        <li>Content from across all 6 platforms — curated for you</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-bottom" style="text-align:center;">
+                    <p>© 2025 Matthew Folawe O. &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============ BOOKS PAGE ============ -->
+    <div id="page-books" class="page">
+        <div class="page-header">
+            <div class="container">
+                <div class="tag">Books</div>
+                <h1>Words that outlast the moment.</h1>
+                <p>Books, devotionals, and written resources for your growth — coming soon.</p>
+            </div>
+        </div>
+        <section class="section">
+            <div class="container">
+                <div class="coming-soon-card">
+                    <div class="cs-icon">📖</div>
+                    <h2 class="cs-title">Books Coming Soon</h2>
+                    <p class="cs-sub">I'm currently writing resources on leadership, discipleship, and the Christian life — tailored for the young generation. Be the first to know when they drop.</p>
+                    <div style="max-width:320px;margin:0 auto;">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" id="bookEmail" style="margin-bottom:10px;">
+                        <button class="btn btn-gold btn-full" onclick="bookNotify()">Notify Me When Available</button>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:1.5rem;">
+                    <h3 style="margin-bottom:0.75rem;">What to expect:</h3>
+                    <ul class="values-list">
+                        <li>Practical books on leadership for young people in Nigeria and Africa</li>
+                        <li>Discipleship devotionals and guides for personal and group study</li>
+                        <li>Innovation and technology resources for Christian youth</li>
+                        <li>Free and paid resources — something for every stage of the journey</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-inner">
+                <div style="text-align:center;padding:1rem 0;">
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full">
+          Join Community for Updates
+        </a>
+                </div>
+                <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
+                    <p>© 2025 Matthew Folawe O. &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============ AI ASSISTANT ============ -->
+    <button class="ai-fab" id="aiFab" onclick="toggleAI()" title="Chat with Matthew AI">🤖</button>
+
+    <div class="ai-panel" id="aiPanel">
+        <div class="ai-header">
+            <div class="ai-avatar">M</div>
+            <div>
+                <div class="ai-name">Matthew Assistant</div>
+                <div class="ai-status">Online now</div>
+            </div>
+        </div>
+        <div class="ai-messages" id="aiMessages">
+            <div class="ai-msg bot">
+                Hey! 👋 Welcome to Matthew Folawe's space.<br><br> I'm here to help you find your way around. What would you like to do today?
+                <div class="ai-options">
+                    <button class="ai-option" onclick="aiRespond('join')">💬 Join WhatsApp Community</button>
+                    <button class="ai-option" onclick="aiRespond('teachings')">🎬 Watch Teachings</button>
+                    <button class="ai-option" onclick="aiRespond('programs')">📅 Check Programs</button>
+                    <button class="ai-option" onclick="aiRespond('mission')">🔥 Learn About the Mission</button>
+                </div>
+            </div>
+        </div>
+        <div class="ai-input-area">
+            <input type="text" class="ai-input" id="aiInput" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')sendAIMessage()">
+            <button class="ai-send" onclick="sendAIMessage()">→</button>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ── ANIMATED COUNTER ─────────────────────────────
+        function animateCounter(el, target, duration, suffix) {
+            const start = performance.now();
+            const startVal = 0;
+
+            function update(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(eased * target);
+                el.textContent = current.toLocaleString() + (progress === 1 ? suffix : '');
+                if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        }
+
+        let countersRun = false;
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersRun) {
+                    countersRun = true;
+                    animateCounter(document.getElementById('counter-lives'), 1000, 2200, '+');
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        const statsStrip = document.querySelector('.stats-strip');
+        if (statsStrip) statsObserver.observe(statsStrip);
+
+        // ── MISSION SLIDERS ──────────────────────────────
+        const sliderState = {};
+
+        function initSliders() {
+            document.querySelectorAll('.ms-slider').forEach(slider => {
+                const id = slider.dataset.slider;
+                const slides = slider.querySelectorAll('.ms-slide');
+                sliderState[id] = {
+                    current: 0,
+                    total: slides.length
+                };
+            });
+            // Autoplay every 4s
+            setInterval(() => {
+                Object.keys(sliderState).forEach(id => slideMove(id, 1));
+            }, 4000);
+        }
+
+        function slideTo(id, index) {
+            //     const slider = document.querySelector(`.ms-slider[data-slider="${id}"]`);
+            //     if (!slider) return;
+            //     const slides = slider.querySelectorAll('.ms-slide');
+            //     const dots = document.querySelectorAll(`#${id}-dots .ms-dot`);
+            //     const count = document.getElementById(`${id}-count`);
+            //     slides[sliderState[id].current].classList.remove('active');
+            //     dots[sliderState[id].current] ? .classList.remove('active');
+            //     sliderState[id].current = (index + slides.length) % slides.length;
+            //     slides[sliderState[id].current].classList.add('active');
+            //     dots[sliderState[id].current] ? .classList.add('active');
+            //     if (count) count.textContent = `${sliderState[id].current + 1} / ${slides.length}`;
+            // }
+
+            function slideMove(id, dir) {
+                if (!sliderState[id]) return;
+                slideTo(id, sliderState[id].current + dir);
+            }
+
+            // Touch/swipe support for sliders
+            function initSliderSwipe() {
+                document.querySelectorAll('.ms-slider').forEach(slider => {
+                    const id = slider.dataset.slider;
+                    let startX = 0;
+                    slider.addEventListener('touchstart', e => {
+                        startX = e.touches[0].clientX;
+                    }, {
+                        passive: true
+                    });
+                    slider.addEventListener('touchend', e => {
+                        const diff = startX - e.changedTouches[0].clientX;
+                        if (Math.abs(diff) > 40) slideMove(id, diff > 0 ? 1 : -1);
+                    });
+                });
+            }
+
+            initSliders();
+            initSliderSwipe();
+
+            // PAGE NAVIGATION
+            function showPage(id) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById('page-' + id).classList.add('active');
+                window.scrollTo(0, 0);
+                document.getElementById('mobileNav').classList.remove('open');
+            }
+
+            function toggleMobileNav() {
+                document.getElementById('mobileNav').classList.toggle('open');
+            }
+
+            function scrollToNewsletter() {
+                showPage('home');
+                setTimeout(() => {
+                    document.getElementById('newsletter').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+
+            // CONTENT TABS
+            function switchTab(id, btn) {
+                document.querySelectorAll('.content-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('tab-' + id).classList.add('active');
+            }
+
+            // NEWSLETTER
+            function subscribeNewsletter() {
+                const email = document.getElementById('nlEmail').value;
+                const name = document.getElementById('nlName').value;
+                if (!email || !email.includes('@')) {
+                    showToast('Please enter a valid email address.');
+                    return;
+                }
+                document.getElementById('nlForm').innerHTML = `
+      <div style="text-align:center;padding:2rem 1rem;">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎉</div>
+        <h3 style="margin-bottom:0.5rem;">You're in, ${name || 'friend'}!</h3>
+        <p style="color:var(--gray);font-size:0.9rem;">Welcome to the community. Check your inbox for a confirmation email.</p>
+        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa" >Join WhatsApp Too →</a>
+      </div>
+    `;
+                showToast('Subscribed! Welcome to the movement. 🔥');
+            }
+
+            function bookNotify() {
+                const email = document.getElementById('bookEmail').value;
+                if (!email || !email.includes('@')) {
+                    showToast('Enter a valid email.');
+                    return;
+                }
+                document.getElementById('bookEmail').value = '';
+                showToast("You'll be notified when the books drop! 📖");
+            }
+
+            // TOAST
+            function showToast(msg) {
+                const t = document.getElementById('toast');
+                t.textContent = msg;
+                t.classList.add('show');
+                setTimeout(() => t.classList.remove('show'), 3000);
+            }
+
+            // AI ASSISTANT
+            let aiOpen = false;
+
+            function toggleAI() {
+                aiOpen = !aiOpen;
+                document.getElementById('aiPanel').classList.toggle('open', aiOpen);
+                document.getElementById('aiFab').classList.toggle('open', aiOpen);
+                document.getElementById('aiFab').textContent = aiOpen ? '✕' : '🤖';
+            }
+
+            const aiResponses = {
+                join: {
+                    msg: "Amazing! Here are your two ways to join the community:\n\n1. WhatsApp Community — live discussions, prayer, and fellowship with real people.\n2. WhatsApp Channel — follow for teachings, announcements, and updates.\n\nWhich would you like?",
+                    options: [{
+                        label: '💬 Join the Community',
+                        action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe', '_blank')
+                    }, {
+                        label: '📢 Follow the Channel',
+                        action: () => window.open('https://whatsapp.com/channel/0029VbAeTELKmCPWDYJqIC2M', '_blank')
+                    }, ]
+                },
+                teachings: {
+                    msg: "You can find teachings across multiple platforms! 🔥\n\nFor full-length teachings → YouTube. For short, punchy content → TikTok and Instagram. For written threads → Twitter/X.\n\nWhere do you want to start?",
+                    options: [{
+                        label: '▶ Go to YouTube',
+                        action: () => window.open('https://www.youtube.com/@MatthewFolawe', '_blank')
+                    }, {
+                        label: '🎵 Open TikTok',
+                        action: () => window.open('https://www.tiktok.com/@matthew_folawe', '_blank')
+                    }, {
+                        label: '📸 Instagram',
+                        action: () => window.open('https://www.instagram.com/matthew_folawe', '_blank')
+                    }, ]
+                },
+                programs: {
+                    msg: "Here's what's running:\n\n📅 Weekly Online Fellowship — Saturdays, 7:30 PM (WhatsApp + YouTube)\n📍 Monthly Physical Fellowship — Ikorodu, Lagos\n🕊️ Come Unto Me — 3-Day Discipleship Gathering\n🏫 School Outreach + Orphanage Fellowship\n\nWant details on any of these?",
+                    options: [{
+                        label: '📅 See All Programs',
+                        action: () => {
+                            toggleAI();
+                            showPage('programs');
+                        }
+                    }, {
+                        label: '💬 Ask on WhatsApp',
+                        action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe', '_blank')
+                    }, ]
+                },
+                mission: {
+                    msg: "The mission is simple — and massive. 🔥\n\nThrough Youth Revival Labour (YRL), I'm reaching young people with the Gospel and building the end-time church. Through Teen Discipleship Training (TDT), I'm running a holistic formation system for teenagers across 5 pillars and 4 stages. Through Forward Thinkers, I'm raising leaders who think and build ahead. Through Matthew AI Creators, I'm leveraging technology for kingdom impact.\n\nFour identities. One mission.",
+                    options: [{
+                        label: '🔥 Read Full Story',
+                        action: () => {
+                            toggleAI();
+                            showPage('about');
+                        }
+                    }, {
+                        label: '💬 Join the Movement',
+                        action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe', '_blank')
+                    }, ]
+                }
+            };
+
+            function aiRespond(key) {
+                const r = aiResponses[key];
+                if (!r) return;
+                addAIMessage('bot', r.msg, r.options);
+            }
+
+            function addAIMessage(role, text, options) {
+                const msgs = document.getElementById('aiMessages');
+                const div = document.createElement('div');
+                div.className = 'ai-msg ' + role;
+                div.innerHTML = text.replace(/\n/g, '<br>');
+                if (options && options.length) {
+                    const optDiv = document.createElement('div');
+                    optDiv.className = 'ai-options';
+                    optDiv.style.marginTop = '0.5rem';
+                    options.forEach(o => {
+                        const btn = document.createElement('button');
+                        btn.className = 'ai-option';
+                        btn.textContent = o.label;
+                        btn.onclick = o.action;
+                        optDiv.appendChild(btn);
+                    });
+                    div.appendChild(optDiv);
+                }
+                msgs.appendChild(div);
+                msgs.scrollTop = msgs.scrollHeight;
+            }
+
+            function sendAIMessage() {
+                const input = document.getElementById('aiInput');
+                const text = input.value.trim();
+                if (!text) return;
+                addAIMessage('user', text);
+                input.value = '';
+                const lower = text.toLowerCase();
+                setTimeout(() => {
+                    if (lower.includes('fellowship') || lower.includes('when') || lower.includes('time') || lower.includes('saturday')) {
+                        addAIMessage('bot', "Fellowship is every Saturday at 7:30 PM WAT — online via WhatsApp and YouTube Live. Monthly physical fellowships happen in Ikorodu, Lagos. 📅\n\nWant to join?", [{
+                            label: '💬 Join WhatsApp',
+                            action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe', '_blank')
+                        }]);
+                    } else if (lower.includes('location') || lower.includes('where') || lower.includes('address')) {
+                        addAIMessage('bot', "Physical fellowships happen at two locations in Ikorodu, Lagos:\n\n📌 Alafia Tayo Street (end of Ago-Iwoye Street, Isawo Road, Agric)\n📌 Ginti Street (along Ijede Road)\n\nMore locations are coming soon! Jump on WhatsApp for the latest details.", [{
+                            label: '💬 Get Exact Details',
+                            action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe', '_blank')
+                        }]);
+                    } else if (lower.includes('join') || lower.includes('how') || lower.includes('community')) {
+                        aiRespond('join');
+                    } else if (lower.includes('book') || lower.includes('read') || lower.includes('write')) {
+                        addAIMessage('bot', "Books are coming soon! 📖 Matthew is currently writing resources on leadership, discipleship, and faith for young people.\n\nSign up to be notified when they drop!", [{
+                            label: '📖 Book Notify Page',
+                            action: () => {
+                                toggleAI();
+                                showPage('books');
+                            }
+                        }]);
+                    } else if (lower.includes('matthew') || lower.includes('who') || lower.includes('about')) {
+                        aiRespond('mission');
+                    } else {
+                        addAIMessage('bot', "Good question! For the best answer, I'd say jump into the WhatsApp community — Matthew and the team are active there and can help you directly. 💬", [{
+                            label: '💬 Join WhatsApp',
+                            action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe', '_blank')
+                        }]);
+                    }
+                }, 700);
+            }
+
+            // SCROLL ANIMATIONS
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.style.opacity = '1';
+                        e.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.08
+            });
+
+            function initAnimations() {
+                document.querySelectorAll('.card, .pillar-card, .program-card, .event-card, .wa-invite-card, .identity-card').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(16px)';
+                    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    observer.observe(el);
+                });
+            }
+            initAnimations();
+            // ── TDT FORM ─────────────────────────────────────
+            function submitTDT() {
+                const name = document.getElementById('tdt-name').value.trim();
+                const age = document.getElementById('tdt-age').value.trim();
+                const gender = document.getElementById('tdt-gender').value;
+                const role = document.getElementById('tdt-role').value;
+                const phone = document.getElementById('tdt-phone').value.trim();
+                const why = document.getElementById('tdt-why').value.trim();
+
+                if (!name) {
+                    showToast('Please enter your full name.');
+                    return;
+                }
+                if (!age) {
+                    showToast('Please enter your age.');
+                    return;
+                }
+                if (!gender) {
+                    showToast('Please select your gender.');
+                    return;
+                }
+                if (!role) {
+                    showToast('Please select your role.');
+                    return;
+                }
+                if (!phone) {
+                    showToast('Please enter your phone number.');
+                    return;
+                }
+                if (!why) {
+                    showToast('Please tell us why you want to join.');
+                    return;
+                }
+
+                // Build WhatsApp message with form data
+                const church = document.getElementById('tdt-church').value.trim() || 'Not provided';
+                const email = document.getElementById('tdt-email').value.trim() || 'Not provided';
+                const msg = encodeURIComponent(
+                    `*New TDT Application* 🙌\n\n` +
+                    `*Name:* ${name}\n` +
+                    `*Age:* ${age}\n` +
+                    `*Gender:* ${gender}\n` +
+                    `*Role:* ${role}\n` +
+                    `*Church/School:* ${church}\n` +
+                    `*Phone:* ${phone}\n` +
+                    `*Email:* ${email}\n\n` +
+                    `*Why I want to join:*\n${why}`
+                );
+
+                // Show success state
+                document.getElementById('tdtFormWrap').innerHTML = `
+      <div style="text-align:center;padding:2.5rem 1rem;">
+        <div style="font-size:3rem;margin-bottom:1rem;">🎉</div>
+        <h3 style="margin-bottom:0.6rem;font-size:1.4rem;">Application Received, ${name}!</h3>
+        <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1.5rem;max-width:340px;margin-left:auto;margin-right:auto;">
+          We'll reach out to you within 48 hours via WhatsApp or phone. In the meantime, join the community to stay connected.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+          <a href="https://wa.me/message/GpYbq2AWQOPBZ6GJFGJMFe?text=${msg}" target="_blank" class="btn-tdt-green">
+            Send via WhatsApp too →
+          </a>
+          <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join Community</a>
+        </div>
+      </div>
+    `;
+                showToast('Application submitted! Welcome to TDT 🔥');
+            }
+    </script>
+    <!-- ============ TDT PAGE ============ -->
+    <div id="page-tdt" class="page">
+
+        <!-- HERO -->
+        <section class="tdt-hero">
+            <div class="container">
+                <div class="tdt-badge">
+                    <span class="tdt-badge-dot"></span> Teen Discipleship Training — TDT
+                </div>
+                <h1 class="tdt-hero-headline">
+                    Raising Teenagers<br>for <span class="green">God's</span> <span class="gold">Purpose.</span>
+                </h1>
+                <p class="tdt-hero-sub">
+                    TDT is not just a youth program. It is a holistic discipleship and formation system — designed to help teenagers become everything God has purposed them to be, spiritually, mentally, emotionally, and practically.
+                </p>
+                <div class="tdt-hero-btns">
+                    <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">✋ Join the Training</button>
+                    <button class="btn-tdt-outline" onclick="document.getElementById('tdt-mentor').scrollIntoView({behavior:'smooth'})">🤝 Become a Mentor</button>
+                    <button class="btn btn-outline btn-sm" onclick="document.getElementById('tdt-about').scrollIntoView({behavior:'smooth'})">Learn More ↓</button>
+                </div>
+                <div class="tdt-verse">
+                    <div>
+                        <div class="tdt-verse-text">"Don't let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity."</div>
+                        <div class="tdt-verse-ref">— 1 Timothy 4:12</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <div class="container" style="padding-top:2rem;padding-bottom:0;">
+            <div class="tdt-stats">
+                <div class="tdt-stat">
+                    <div class="tdt-stat-num">5</div>
+                    <div class="tdt-stat-label">Core Pillars</div>
+                </div>
+                <div class="tdt-stat">
+                    <div class="tdt-stat-num">4</div>
+                    <div class="tdt-stat-label">Training Stages</div>
+                </div>
+                <div class="tdt-stat">
+                    <div class="tdt-stat-num">12+</div>
+                    <div class="tdt-stat-label">Months to Transform</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT TDT -->
+        <section class="section" id="tdt-about">
+            <div class="container">
+                <div class="tdt-tag">About TDT</div>
+                <h2 class="section-title">Teenagers are not too young for God.</h2>
+                <p class="section-sub">Purpose requires preparation. TDT creates the environment where that preparation happens — intentionally.</p>
+                <div class="tdt-about-grid">
+                    <div class="tdt-about-card">
+                        <div class="tdt-about-icon">🔥</div>
+                        <div class="tdt-about-title">Spiritually Grounded</div>
+                        <div class="tdt-about-desc">TDT builds teenagers on the Word of God, prayer, and a genuine relationship with Jesus — not just church attendance or religious routines.</div>
+                    </div>
+                    <div class="tdt-about-card">
+                        <div class="tdt-about-icon">🧠</div>
+                        <div class="tdt-about-title">Mentally Developed</div>
+                        <div class="tdt-about-desc">We train teenagers to think — critically, creatively, and with a kingdom perspective. A renewed mind is the foundation of a transformed life.</div>
+                    </div>
+                    <div class="tdt-about-card">
+                        <div class="tdt-about-icon">❤️</div>
+                        <div class="tdt-about-title">Emotionally Healthy</div>
+                        <div class="tdt-about-desc">Teenagers are navigating identity, peer pressure, and pain. TDT creates safe spaces for emotional growth, healing, and wholeness.</div>
+                    </div>
+                    <div class="tdt-about-card">
+                        <div class="tdt-about-icon">⚙️</div>
+                        <div class="tdt-about-title">Practically Equipped</div>
+                        <div class="tdt-about-desc">Faith without action is incomplete. TDT trains teenagers in real-life skills — discipline, goal-setting, leadership, and service — to live out their calling.</div>
+                    </div>
+                </div>
+                <div style="margin-top:1.75rem;">
+                    <p style="font-size:0.85rem;color:var(--gray);margin-bottom:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Inspired by biblical examples:</p>
+                    <div class="tdt-bible-row">
+                        <span class="tdt-bible-chip">Joseph — Prepared in the pit</span>
+                        <span class="tdt-bible-chip">Daniel — Faithful under pressure</span>
+                        <span class="tdt-bible-chip">David — Anointed before appointed</span>
+                        <span class="tdt-bible-chip">Timothy — Young but exemplary</span>
+                        <span class="tdt-bible-chip">Jesus — Grew in wisdom & stature</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- 5 PILLARS -->
+        <section class="section">
+            <div class="container">
+                <div class="tdt-tag">The 5 Core Pillars</div>
+                <h2 class="section-title">A complete formation framework.</h2>
+                <p class="section-sub">Every pillar is intentional. Together they build a teenager who is ready — not just for church, but for life.</p>
+                <div class="tdt-pillars-grid">
+                    <div class="tdt-pillar" style="--pillar-color:#16a34a;">
+                        <div class="tdt-pillar-num">01</div>
+                        <div class="tdt-pillar-icon">🪞</div>
+                        <div class="tdt-pillar-title">Identity, Purpose & Vision</div>
+                        <div class="tdt-pillar-desc">Helping teenagers discover who they are in Christ, why they exist, and where they are going — before the world defines them first.</div>
+                    </div>
+                    <div class="tdt-pillar" style="--pillar-color:#22c55e;">
+                        <div class="tdt-pillar-num">02</div>
+                        <div class="tdt-pillar-icon">📖</div>
+                        <div class="tdt-pillar-title">Spiritual Formation</div>
+                        <div class="tdt-pillar-desc">Building a consistent prayer life, Bible study habit, and sensitivity to the Holy Spirit — turning teenagers into devoted disciples, not just church attenders.</div>
+                    </div>
+                    <div class="tdt-pillar" style="--pillar-color:#D4A843;">
+                        <div class="tdt-pillar-num">03</div>
+                        <div class="tdt-pillar-icon">🏛️</div>
+                        <div class="tdt-pillar-title">Character Formation</div>
+                        <div class="tdt-pillar-desc">Integrity, discipline, humility, and excellence are not accidents — they are developed. TDT creates intentional environments for character to be built and tested.</div>
+                    </div>
+                    <div class="tdt-pillar" style="--pillar-color:#5B8FFF;">
+                        <div class="tdt-pillar-num">04</div>
+                        <div class="tdt-pillar-icon">🚀</div>
+                        <div class="tdt-pillar-title">Life Development & Excellence</div>
+                        <div class="tdt-pillar-desc">Goal-setting, study habits, time management, financial basics, and digital literacy — equipping teenagers for real-world success as kingdom representatives.</div>
+                    </div>
+                    <div class="tdt-pillar" style="--pillar-color:#FF7850;">
+                        <div class="tdt-pillar-num">05</div>
+                        <div class="tdt-pillar-icon">👑</div>
+                        <div class="tdt-pillar-title">Leadership, Service & Impact</div>
+                        <div class="tdt-pillar-desc">Every teenager is a leader somewhere. TDT trains them to lead with servant hearts — in their homes, schools, churches, and communities.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- TRAINING STAGES -->
+        <section class="section">
+            <div class="container">
+                <div class="tdt-tag">Training Structure</div>
+                <h2 class="section-title">Four stages. One destination.</h2>
+                <p class="section-sub">Every teenager enters at the Foundation and progresses through each stage at their own pace — with intentional support at every step.</p>
+                <div class="tdt-stages">
+                    <div class="tdt-stage">
+                        <div class="tdt-stage-dot">🌱</div>
+                        <div class="tdt-stage-body">
+                            <div class="tdt-stage-label">Stage 1</div>
+                            <div class="tdt-stage-title">Foundation Stage</div>
+                            <div class="tdt-stage-desc">Establishing the basics — salvation, identity in Christ, Word and prayer habits. Who am I? Whose am I? Why am I here? Every building starts with a foundation that can hold weight.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-stage">
+                        <div class="tdt-stage-dot">🔨</div>
+                        <div class="tdt-stage-body">
+                            <div class="tdt-stage-label">Stage 2</div>
+                            <div class="tdt-stage-title">Formation Stage</div>
+                            <div class="tdt-stage-desc">Character, discipline, and spiritual depth are built here. Teenagers face real challenges — assignments, accountability, mentorship — that shape who they are becoming, not just what they know.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-stage">
+                        <div class="tdt-stage-dot">⚡</div>
+                        <div class="tdt-stage-body">
+                            <div class="tdt-stage-label">Stage 3</div>
+                            <div class="tdt-stage-title">Development Stage</div>
+                            <div class="tdt-stage-desc">Skills, gifting, and leadership potential are unlocked. Teenagers discover and develop what God placed in them — through practical projects, service, and real-world application.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-stage">
+                        <div class="tdt-stage-dot">🚀</div>
+                        <div class="tdt-stage-body">
+                            <div class="tdt-stage-label">Stage 4</div>
+                            <div class="tdt-stage-title">Activation Stage</div>
+                            <div class="tdt-stage-desc">Ready to be sent. Teenagers in this stage are deployed — leading others, serving communities, representing Christ in schools, and becoming the next generation of mentors in TDT itself.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- MONTHLY MODEL -->
+        <section class="section">
+            <div class="container">
+                <div class="tdt-tag">Monthly Discipleship Model</div>
+                <h2 class="section-title">Consistent. Intentional. Relational.</h2>
+                <p class="section-sub">Transformation doesn't happen in one meeting. It happens through consistent rhythms — monthly, weekly, and daily.</p>
+                <div class="tdt-monthly-grid">
+                    <div class="tdt-monthly-card">
+                        <div class="tdt-monthly-icon">📍</div>
+                        <div>
+                            <div class="tdt-monthly-title">Monthly Physical Gathering</div>
+                            <div class="tdt-monthly-desc">One focused in-person session every month — structured teaching, group activities, worship, and community building in a safe, energetic space.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-monthly-card">
+                        <div class="tdt-monthly-icon">👥</div>
+                        <div>
+                            <div class="tdt-monthly-title">Weekly Mentorship Groups</div>
+                            <div class="tdt-monthly-desc">Small accountability groups led by mentors — checking in on growth, reviewing assignments, praying together, and building real relationships.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-monthly-card">
+                        <div class="tdt-monthly-icon">📝</div>
+                        <div>
+                            <div class="tdt-monthly-title">Assignments & Challenges</div>
+                            <div class="tdt-monthly-desc">Practical tasks given between sessions — scripture memorisation, journaling, service projects, and leadership challenges that make growth tangible.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-monthly-card">
+                        <div class="tdt-monthly-icon">🙏</div>
+                        <div>
+                            <div class="tdt-monthly-title">Prayer & Spiritual Rhythm</div>
+                            <div class="tdt-monthly-desc">Teenagers are taught to build their own personal prayer life — not dependent on the group, but deeply connected to God individually and corporately.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-monthly-card">
+                        <div class="tdt-monthly-icon">💬</div>
+                        <div>
+                            <div class="tdt-monthly-title">Digital Community (WhatsApp)</div>
+                            <div class="tdt-monthly-desc">An active WhatsApp community keeps the movement alive between sessions — daily devotionals, check-ins, updates, encouragements, and shared victories.</div>
+                        </div>
+                    </div>
+                    <div class="tdt-monthly-card">
+                        <div class="tdt-monthly-icon">🎯</div>
+                        <div>
+                            <div class="tdt-monthly-title">Goal Reviews & Growth Tracking</div>
+                            <div class="tdt-monthly-desc">Every teenager sets personal growth goals each month. Mentors review progress, celebrate wins, and help navigate setbacks — because growth is a journey, not an event.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- MENTORS -->
+        <section class="section" id="tdt-mentor">
+            <div class="container">
+                <div class="tdt-tag">Mentors</div>
+                <h2 class="section-title">Every teenager needs someone ahead of them.</h2>
+                <p class="section-sub">Mentors are the backbone of TDT. Not just teachers — guides, friends, and examples of what is possible with God.</p>
+                <div class="tdt-mentor-grid">
+                    <div class="tdt-mentor-card">
+                        <div class="tdt-mentor-avatar">🔥</div>
+                        <div class="tdt-mentor-role">Role</div>
+                        <div class="tdt-mentor-title">Spiritual Guide</div>
+                        <div class="tdt-mentor-desc">Mentors walk alongside teenagers in their faith journey — teaching, modelling, and creating space for genuine encounters with God. They point to Jesus, not themselves.</div>
+                        <div class="tdt-mentor-tags">
+                            <span class="tdt-mentor-tag">Bible teaching</span>
+                            <span class="tdt-mentor-tag">Prayer</span>
+                            <span class="tdt-mentor-tag">Discipleship</span>
+                        </div>
+                    </div>
+                    <div class="tdt-mentor-card">
+                        <div class="tdt-mentor-avatar">🤝</div>
+                        <div class="tdt-mentor-role">Role</div>
+                        <div class="tdt-mentor-title">Accountability Partner</div>
+                        <div class="tdt-mentor-desc">Mentors hold teenagers to their commitments with grace — checking in consistently, asking hard questions, and celebrating progress. Accountability is an act of love.</div>
+                        <div class="tdt-mentor-tags">
+                            <span class="tdt-mentor-tag">Weekly check-ins</span>
+                            <span class="tdt-mentor-tag">Goal tracking</span>
+                            <span class="tdt-mentor-tag">Honest feedback</span>
+                        </div>
+                    </div>
+                    <div class="tdt-mentor-card">
+                        <div class="tdt-mentor-avatar">❤️</div>
+                        <div class="tdt-mentor-role">Role</div>
+                        <div class="tdt-mentor-title">Encourager & Safe Space</div>
+                        <div class="tdt-mentor-desc">Many teenagers carry things they cannot tell their parents. Mentors create safe, confidential spaces where young people feel genuinely heard, valued, and not judged.</div>
+                        <div class="tdt-mentor-tags">
+                            <span class="tdt-mentor-tag">Emotional support</span>
+                            <span class="tdt-mentor-tag">Confidentiality</span>
+                            <span class="tdt-mentor-tag">Presence</span>
+                        </div>
+                    </div>
+                    <div class="tdt-mentor-card">
+                        <div class="tdt-mentor-avatar">👑</div>
+                        <div class="tdt-mentor-role">Role</div>
+                        <div class="tdt-mentor-title">Leadership Developer</div>
+                        <div class="tdt-mentor-desc">Mentors identify and develop leadership potential in every teenager under their care — creating opportunities to lead, fail safely, and grow into their God-given authority.</div>
+                        <div class="tdt-mentor-tags">
+                            <span class="tdt-mentor-tag">Talent discovery</span>
+                            <span class="tdt-mentor-tag">Opportunities</span>
+                            <span class="tdt-mentor-tag">Coaching</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:1.75rem;text-align:center;">
+                    <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Become a Mentor →</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- TESTIMONIES -->
+        <section class="section">
+            <div class="container">
+                <div class="tdt-tag">Impact & Testimonies</div>
+                <h2 class="section-title">Real lives. Real change.</h2>
+                <p class="section-sub">These are the stories TDT exists to produce — young people who encountered God and were never the same.</p>
+                <div class="tdt-testimony-grid">
+                    <div class="tdt-testimony">
+                        <p class="tdt-testimony-text">"Before TDT I didn't even know I had a purpose. I was just existing. Now I know who I am in Christ and I'm actually excited about my future for the first time."</p>
+                        <div class="tdt-testimony-author">
+                            <div class="tdt-testimony-avatar">👦</div>
+                            <div>
+                                <div class="tdt-testimony-name">Emmanuel, 16</div>
+                                <div class="tdt-testimony-detail">Foundation Stage · Lagos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tdt-testimony">
+                        <p class="tdt-testimony-text">"TDT taught me that prayer is not a religious duty — it's a conversation with my Father. My relationship with God completely changed in three months."</p>
+                        <div class="tdt-testimony-author">
+                            <div class="tdt-testimony-avatar">👧</div>
+                            <div>
+                                <div class="tdt-testimony-name">Grace, 15</div>
+                                <div class="tdt-testimony-detail">Formation Stage · Ikorodu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tdt-testimony">
+                        <p class="tdt-testimony-text">"I used to be the quiet one who never raised my hand anywhere. After the leadership training I led our school Bible study for the first time. I never thought that was possible for me."</p>
+                        <div class="tdt-testimony-author">
+                            <div class="tdt-testimony-avatar">👦</div>
+                            <div>
+                                <div class="tdt-testimony-name">David, 17</div>
+                                <div class="tdt-testimony-detail">Development Stage · Lagos</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tdt-testimony">
+                        <p class="tdt-testimony-text">"My mentor didn't just teach me — she showed me. Watching her live out what she preached made me believe it was actually possible for me too."</p>
+                        <div class="tdt-testimony-author">
+                            <div class="tdt-testimony-avatar">👧</div>
+                            <div>
+                                <div class="tdt-testimony-name">Favour, 14</div>
+                                <div class="tdt-testimony-detail">Foundation Stage · Ikorodu</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- GALLERY -->
+        <section class="section">
+            <div class="container">
+                <div class="tdt-tag">Activities & Gallery</div>
+                <h2 class="section-title">This is what TDT looks like.</h2>
+                <p class="section-sub">Retreats, Bible sessions, prayer meetings, workshops, outreach — movement, not just meetings.</p>
+                <div class="tdt-gallery-grid">
+                    <div class="tdt-gallery-item">
+                        <div class="tdt-gallery-placeholder">
+                            <div class="tdt-gallery-icon">🏕️</div>
+                            <div class="tdt-gallery-label">Annual Retreat</div>
+                        </div>
+                        <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Annual Retreat</span></div>
+                    </div>
+                    <div class="tdt-gallery-item">
+                        <div class="tdt-gallery-placeholder">
+                            <div class="tdt-gallery-icon">📖</div>
+                            <div class="tdt-gallery-label">Bible Study</div>
+                        </div>
+                        <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Bible Study Session</span></div>
+                    </div>
+                    <div class="tdt-gallery-item">
+                        <div class="tdt-gallery-placeholder">
+                            <div class="tdt-gallery-icon">🙏</div>
+                            <div class="tdt-gallery-label">Prayer Meeting</div>
+                        </div>
+                        <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Prayer Meeting</span></div>
+                    </div>
+                    <div class="tdt-gallery-item">
+                        <div class="tdt-gallery-placeholder">
+                            <div class="tdt-gallery-icon">👑</div>
+                            <div class="tdt-gallery-label">Leadership Workshop</div>
+                        </div>
+                        <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Leadership Workshop</span></div>
+                    </div>
+                    <div class="tdt-gallery-item">
+                        <div class="tdt-gallery-placeholder">
+                            <div class="tdt-gallery-icon">🛣️</div>
+                            <div class="tdt-gallery-label">Community Outreach</div>
+                        </div>
+                        <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Community Outreach</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- JOIN FORM -->
+        <section class="section" id="tdt-join">
+            <div class="container">
+                <div class="tdt-tag">Join TDT</div>
+                <h2 class="section-title">Ready to begin your journey?</h2>
+                <p class="section-sub">Fill in the form below and we'll reach out to you with next steps. This decision could change the rest of your life.</p>
+                <div class="tdt-form-wrap" id="tdtFormWrap">
+                    <div class="tdt-form-grid" id="tdtForm">
+                        <div class="tdt-form-row">
+                            <div class="tdt-field">
+                                <label class="tdt-label">Full Name *</label>
+                                <input type="text" class="tdt-input" id="tdt-name" placeholder="e.g. Emmanuel Okafor">
+                            </div>
+                            <div class="tdt-field">
+                                <label class="tdt-label">Age *</label>
+                                <input type="number" class="tdt-input" id="tdt-age" placeholder="e.g. 15" min="12" max="19">
+                            </div>
+                        </div>
+                        <div class="tdt-form-row">
+                            <div class="tdt-field">
+                                <label class="tdt-label">Gender *</label>
+                                <select class="tdt-select" id="tdt-gender">
+                <option value="">Select gender</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+                            </div>
+                            <div class="tdt-field">
+                                <label class="tdt-label">I am joining as *</label>
+                                <select class="tdt-select" id="tdt-role">
+                <option value="">Select role</option>
+                <option>Teenager (participant)</option>
+                <option>Mentor</option>
+                <option>Parent / Guardian</option>
+              </select>
+                            </div>
+                        </div>
+                        <div class="tdt-field">
+                            <label class="tdt-label">Church / School</label>
+                            <input type="text" class="tdt-input" id="tdt-church" placeholder="e.g. RCCG Youth Church / Lagos State Model College">
+                        </div>
+                        <div class="tdt-form-row">
+                            <div class="tdt-field">
+                                <label class="tdt-label">Phone Number *</label>
+                                <input type="tel" class="tdt-input" id="tdt-phone" placeholder="e.g. 08012345678">
+                            </div>
+                            <div class="tdt-field">
+                                <label class="tdt-label">Email Address</label>
+                                <input type="email" class="tdt-input" id="tdt-email" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="tdt-field">
+                            <label class="tdt-label">Why do you want to join TDT? *</label>
+                            <textarea class="tdt-textarea" id="tdt-why" placeholder="Tell us in a few sentences what brought you here and what you're hoping for..."></textarea>
+                        </div>
+                        <button class="btn-tdt-green" style="width:100%;justify-content:center;display:flex;font-size:1rem;padding:15px;" onclick="submitTDT()">
+            Submit My Application ✋
+          </button>
+                        <p style="font-size:0.78rem;color:var(--gray);text-align:center;">We'll reach out via WhatsApp or phone within 48 hours. No spam, ever.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER CTA -->
+        <section class="section-sm">
+            <div class="container">
+                <div class="tdt-footer-cta">
+                    <h2 class="tdt-cta-headline">"Teenage years are not years to waste.<br>They are years to <span style="color:var(--tdt-green-light);">prepare.</span>"</h2>
+                    <p class="tdt-cta-sub">Every great leader, every powerful minister, every world-changer was once a teenager who made a decision. This is yours.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+                        <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Join TDT Today →</button>
+                        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join WhatsApp Community</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-inner">
+                <div style="text-align:center;padding:1rem 0;">
+                    <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full" style="max-width:320px;margin:0 auto;">
+          Stay Connected on WhatsApp
+        </a>
+                </div>
+                <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
+                    <p>© 2025 Matthew Folawe O. · Teen Discipleship Training &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end TDT page -->
+
+</body>
+
+</html>
