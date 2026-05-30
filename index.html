@@ -3795,13 +3795,82 @@
         const statsStrip = document.querySelector('.stats-strip');
         if (statsStrip) statsObserver.observe(statsStrip);
 
-        // ── MISSION SLIDERS 
+        // ── MISSION SLIDERS ──────────────────────────────
+        const sliderState = {};
 
+        function initSliders() {
+            document.querySelectorAll('.ms-slider').forEach(slider => {
+                const id = slider.dataset.slider;
+                if (!id) return;
+                const slides = slider.querySelectorAll('.ms-slide');
+                if (!slides.length) return;
+                sliderState[id] = {
+                    current: 0,
+                    total: slides.length
+                };
+                // Make sure first slide is active
+                slides.forEach((s, i) => s.classList.toggle('active', i === 0));
+                // Sync dots
+                const dots = slider.querySelectorAll('.ms-dot');
+                dots.forEach((d, i) => d.classList.toggle('active', i === 0));
+                // Sync counter
+                const count = slider.querySelector('.ms-count');
+                if (count) count.textContent = `1 / ${slides.length}`;
+            });
 
-        // Touch/swipe support for sliders
+            // Autoplay every 4s — only advance sliders that have been initialised
+            setInterval(() => {
+                Object.keys(sliderState).forEach(id => slideMove(id, 1));
+            }, 4000);
+        }
+
+        function slideTo(id, index) {
+            // Guard: skip if not initialised yet
+            if (!sliderState[id]) return;
+
+            const slider = document.querySelector(`.ms-slider[data-slider="${id}"]`);
+            if (!slider) return;
+
+            const slides = slider.querySelectorAll('.ms-slide');
+            if (!slides.length) return;
+
+            const total = slides.length;
+            const prev = sliderState[id].current;
+            const next = ((index % total) + total) % total; // always positive mod
+
+            if (prev === next) return; // nothing to do
+
+            // Remove active from previous
+            slides[prev].classList.remove('active');
+
+            // Dots — query scoped to this slider's dots container
+            const dotsContainer = slider.querySelector('.ms-dots');
+            if (dotsContainer) {
+                const dots = dotsContainer.querySelectorAll('.ms-dot');
+                if (dots[prev]) dots[prev].classList.remove('active');
+                if (dots[next]) dots[next].classList.add('active');
+            }
+
+            // Add active to next
+            slides[next].classList.add('active');
+
+            // Update counter
+            const count = slider.querySelector('.ms-count');
+            if (count) count.textContent = `${next + 1} / ${total}`;
+
+            sliderState[id].current = next;
+        }
+
+        function slideMove(id, dir) {
+            if (!sliderState[id]) return;
+            slideTo(id, sliderState[id].current + dir);
+        }
+
+        // Touch/swipe support
         function initSliderSwipe() {
             document.querySelectorAll('.ms-slider').forEach(slider => {
                 const id = slider.dataset.slider;
+                if (!id) return;
                 let startX = 0;
                 slider.addEventListener('touchstart', e => {
                     startX = e.touches[0].clientX;
@@ -3815,8 +3884,16 @@
             });
         }
 
-        initSliders();
-        initSliderSwipe();
+        // Init after DOM is fully ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initSliders();
+                initSliderSwipe();
+            });
+        } else {
+            initSliders();
+            initSliderSwipe();
+        }
 
         // PAGE NAVIGATION
         function showPage(id) {
@@ -4102,7 +4179,6 @@
             showToast('Application submitted! Welcome to TDT 🔥');
         }
     </script>
-
     <!-- ============ TDT PAGE ============ -->
     <div id="page-tdt" class="page">
 
@@ -4593,52 +4669,4 @@
 
 </body>
 
-</html> <input type="email" class="tdt-input" id="tdt-email" placeholder="your@email.com">
-</div>
-</div>
-<div class="tdt-field">
-    <label class="tdt-label">Why do you want to join TDT? *</label>
-    <textarea class="tdt-textarea" id="tdt-why" placeholder="Tell us in a few sentences what brought you here and what you're hoping for..."></textarea>
-</div>
-<button class="btn-tdt-green" style="width:100%;justify-content:center;display:flex;font-size:1rem;padding:15px;" onclick="submitTDT()">
-            Submit My Application ✋
-          </button>
-<p style="font-size:0.78rem;color:var(--gray);text-align:center;">We'll reach out via WhatsApp or phone within 48 hours. No spam, ever.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FOOTER CTA -->
-<section class="section-sm">
-    <div class="container">
-        <div class="tdt-footer-cta">
-            <h2 class="tdt-cta-headline">"Teenage years are not years to waste.<br>They are years to <span style="color:var(--tdt-green-light);">prepare.</span>"</h2>
-            <p class="tdt-cta-sub">Every great leader, every powerful minister, every world-changer was once a teenager who made a decision. This is yours.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-                <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Join TDT Today →</button>
-                <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join WhatsApp Community</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-inner">
-        <div style="text-align:center;padding:1rem 0;">
-            <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa btn-full" style="max-width:320px;margin:0 auto;">
-          Stay Connected on WhatsApp
-        </a>
-        </div>
-        <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
-            <p>© 2025 Matthew Folawe O. · Teen Discipleship Training &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
-        </div>
-    </div>
-</footer>
-
-</div>
-<!-- end TDT page -->
-
-</body>
-
-</html>n
+</html>
