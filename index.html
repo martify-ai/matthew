@@ -34,7 +34,7 @@
     --radius-xl: 30px;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
   body {
     background: var(--black);
     color: var(--white);
@@ -247,6 +247,7 @@
   .hero::before {
     content: '';
     position: absolute; inset: 0;
+    width: 100%;
     background:
       radial-gradient(ellipse 70% 55% at 15% 20%, rgba(139,92,246,0.12) 0%, transparent 60%),
       radial-gradient(ellipse 60% 50% at 85% 70%, rgba(245,183,49,0.1) 0%, transparent 55%),
@@ -1383,6 +1384,46 @@
     .tdt-form-wrap { padding: 1.25rem 1rem; }
     .tdt-footer-cta { padding: 1.75rem 1rem; }
   }
+  /* TYDT HOME INTRO */
+  .tydt-home-grid {
+    display: grid; grid-template-columns: 1fr;
+    gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .tydt-home-card {
+    background: rgba(19,19,31,0.9);
+    border: 1px solid rgba(22,163,74,0.15);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.25rem;
+    display: flex; flex-direction: column; gap: 0.4rem;
+    transition: all 0.25s; backdrop-filter: blur(10px);
+  }
+  .tydt-home-card:hover { border-color: rgba(22,163,74,0.35); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+  .tydt-home-card-icon { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  .tydt-home-card-title { font-size: 1rem; font-weight: 700; color: var(--tdt-green-light); }
+  .tydt-home-card-desc { font-size: 0.87rem; color: var(--gray); line-height: 1.65; }
+
+  .tydt-home-cta {
+    background: linear-gradient(135deg, rgba(22,163,74,0.1) 0%, rgba(6,214,160,0.05) 100%);
+    border: 1px solid rgba(22,163,74,0.2);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem 1.5rem;
+    display: flex; flex-direction: column; gap: 1.25rem;
+  }
+  .tydt-home-cta h3 { font-size: 1.2rem; margin-bottom: 0.35rem; letter-spacing: -0.02em; }
+  .tydt-home-cta p { font-size: 0.9rem; color: var(--gray); line-height: 1.65; }
+  .tydt-home-cta-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  @media (min-width: 540px) {
+    .tydt-home-grid { grid-template-columns: repeat(3, 1fr); }
+    .tydt-home-cta { flex-direction: row; align-items: center; justify-content: space-between; }
+    .tydt-home-cta-text { flex: 1; }
+    .tydt-home-cta-btns { flex-shrink: 0; flex-direction: column; }
+  }
+  @media (max-width: 479px) {
+    .tydt-home-cta-btns .btn-tdt-green,
+    .tydt-home-cta-btns .btn { width: 100%; justify-content: center; }
+  }
+
   /* TYDT FREE BANNER */
   .tydt-free-banner {
     display: flex; align-items: flex-start; gap: 1.25rem;
@@ -1417,6 +1458,120 @@
   @media (max-width: 479px) {
     .tydt-free-banner { flex-direction: column; gap: 0.75rem; }
   }
+  /* TYDT FRAMEWORK — Vision/Mission, Objectives, Years, Methods, Pathways */
+
+  /* Stats - 4 columns */
+  .tdt-stats { grid-template-columns: repeat(4,1fr); }
+  @media (max-width:479px) { .tdt-stats { grid-template-columns: repeat(2,1fr); } }
+
+  /* Vision & Mission */
+  .tydt-vm-grid { display: grid; gap: 1rem; margin-top:1.75rem; }
+  .tydt-vm-card {
+    border-radius: var(--radius-xl); padding: 1.75rem 1.5rem;
+    backdrop-filter: blur(10px);
+  }
+  .tydt-vm-vision {
+    background: linear-gradient(135deg, rgba(22,163,74,0.1) 0%, rgba(6,214,160,0.05) 100%);
+    border: 1px solid rgba(22,163,74,0.2);
+  }
+  .tydt-vm-mission {
+    background: linear-gradient(135deg, rgba(245,183,49,0.08) 0%, rgba(255,154,43,0.04) 100%);
+    border: 1px solid rgba(245,183,49,0.18);
+  }
+  .tydt-vm-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .tydt-vm-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--tdt-green-light); margin-bottom: 0.75rem; }
+  .tydt-vm-mission .tydt-vm-label { color: var(--gold); }
+  .tydt-vm-text { font-size: 0.92rem; color: var(--gray-light); line-height: 1.75; }
+
+  @media (min-width: 600px) { .tydt-vm-grid { grid-template-columns: 1fr 1fr; } }
+
+  /* Objectives */
+  .tydt-objectives { display: grid; grid-template-columns: 1fr; gap: 0.6rem; margin-top: 1.5rem; }
+  .tydt-obj {
+    background: rgba(19,19,31,0.9);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 0.9rem 1.1rem;
+    font-size: 0.9rem; color: var(--gray-light);
+    display: flex; align-items: center; gap: 0.6rem;
+    transition: border-color 0.2s;
+  }
+  .tydt-obj:hover { border-color: rgba(22,163,74,0.3); }
+  @media (min-width: 540px) { .tydt-objectives { grid-template-columns: 1fr 1fr; } }
+
+  /* Pillar outcome tag */
+  .tydt-outcome {
+    margin-top: 0.85rem;
+    font-size: 0.8rem; color: var(--tdt-green-light);
+    padding: 6px 10px;
+    background: rgba(22,163,74,0.08);
+    border-radius: 8px;
+    line-height: 1.5;
+  }
+  .tydt-outcome strong { color: inherit; }
+
+  /* Year cards */
+  .tydt-years { display: grid; gap: 1rem; }
+  .tydt-year-card {
+    border-radius: var(--radius-xl); padding: 1.75rem 1.5rem;
+    backdrop-filter: blur(10px); transition: all 0.25s;
+  }
+  .tydt-year1 { background: linear-gradient(135deg, rgba(22,163,74,0.1) 0%, transparent 100%); border: 1px solid rgba(22,163,74,0.2); }
+  .tydt-year2 { background: linear-gradient(135deg, rgba(245,183,49,0.08) 0%, transparent 100%); border: 1px solid rgba(245,183,49,0.18); }
+  .tydt-year-card:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(0,0,0,0.25); }
+  .tydt-year-badge {
+    display: inline-flex; align-items: center;
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    background: rgba(22,163,74,0.12); color: var(--tdt-green-light);
+    border: 1px solid rgba(22,163,74,0.2);
+    padding: 4px 12px; border-radius: 100px; margin-bottom: 0.85rem;
+  }
+  .tydt-year-title { font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+  .tydt-year-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
+  .tydt-year-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tydt-year-tags span {
+    font-size: 0.78rem; padding: 4px 12px; border-radius: 100px;
+    background: var(--tag-color, rgba(22,163,74,0.1));
+    border: 1px solid var(--tag-border, rgba(22,163,74,0.2));
+    color: var(--tag-text, var(--tdt-green-light));
+  }
+  @media (min-width: 600px) { .tydt-years { grid-template-columns: 1fr 1fr; } }
+
+  /* Training methods */
+  .tydt-methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-top: 1.25rem; }
+  .tydt-method {
+    background: rgba(19,19,31,0.9);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 0.85rem 1rem;
+    font-size: 0.88rem; color: var(--gray-light); font-weight: 600;
+    transition: border-color 0.2s;
+  }
+  .tydt-method:hover { border-color: rgba(22,163,74,0.3); }
+  @media (min-width: 540px) { .tydt-methods-grid { grid-template-columns: repeat(4,1fr); } }
+
+  /* Pathway cards */
+  .tydt-pathway-grid { display: grid; gap: 1rem; margin-bottom: 2rem; }
+  .tydt-pathway-card {
+    background: rgba(19,19,31,0.9);
+    border: 1px solid rgba(22,163,74,0.15);
+    border-radius: var(--radius-xl); padding: 1.75rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    backdrop-filter: blur(10px);
+  }
+  .tydt-pathway-card:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+  .tydt-pathway-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .tydt-pathway-badge {
+    display: inline-flex; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.09em; padding: 4px 12px; border-radius: 100px;
+    background: rgba(22,163,74,0.1); color: var(--tdt-green-light);
+    border: 1px solid rgba(22,163,74,0.2); margin-bottom: 0.85rem;
+  }
+  .tydt-pathway-title { font-size: 1.15rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+  .tydt-pathway-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
+  .tydt-pathway-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .tydt-pathway-list li { font-size: 0.85rem; color: var(--gray-light); display: flex; align-items: center; gap: 8px; }
+  .tydt-pathway-list li::before { content: '✓'; color: var(--tdt-green-light); font-weight: 700; }
+  @media (min-width: 600px) { .tydt-pathway-grid { grid-template-columns: 1fr 1fr; } }
+
 </style>
 </head>
 <body>
@@ -1481,7 +1636,7 @@
         Youth Revival Labour · Forward Thinkers · TYDT · Matthew AI Creators
       </div>
       <h1 class="hero-headline">
-        I help young people grow in <span class="gold">Leadership,</span> Discipleship &amp; Innovation.
+        I help young people grow in <span class="gold">Leadership,</span> Discipleship, &amp; Innovation.
       </h1>
       <p class="hero-sub">Building the next generation of kingdom leaders, thinkers, and builders who create real-life impact — in Nigeria and beyond.</p>
       <div class="hero-buttons">
@@ -1539,6 +1694,46 @@
           <h3 class="pillar-title">Innovation</h3>
           <p class="pillar-desc">Technology, AI, digital strategy, and learning systems — equipping young people to build and influence ahead of their time.</p>
           <div class="pillar-link">View Content →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TYDT INTRO SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="tag" style="background:rgba(22,163,74,0.1);border-color:rgba(22,163,74,0.2);color:var(--tdt-green-light);">Now Enrolling</div>
+      <h2 class="section-title">Teen & Youth Discipleship<br>Training — <span style="color:var(--tdt-green-light);">TYDT</span></h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">A free, holistic formation programme for teenagers (13–19) and young people (20–30) — covering spiritual formation, character, leadership, and life development. Churches, schools, and youth fellowships are welcome to partner with us.</p>
+
+      <div class="tydt-home-grid">
+        <div class="tydt-home-card">
+          <div class="tydt-home-card-icon">🌱</div>
+          <div class="tydt-home-card-title">5 Core Pillars</div>
+          <div class="tydt-home-card-desc">Identity & Purpose · Spiritual Formation · Character · Life Excellence · Leadership & Impact</div>
+        </div>
+        <div class="tydt-home-card">
+          <div class="tydt-home-card-icon">🎁</div>
+          <div class="tydt-home-card-title">Completely Free</div>
+          <div class="tydt-home-card-desc">No fees, no charges — ever. Freely we have received, freely we give. Open to all.</div>
+        </div>
+        <div class="tydt-home-card">
+          <div class="tydt-home-card-icon">🤝</div>
+          <div class="tydt-home-card-title">Open to Partners</div>
+          <div class="tydt-home-card-desc">Churches, youth fellowships, ministries, and schools can partner with TYDT to run the programme in their communities.</div>
+        </div>
+      </div>
+
+      <div class="tydt-home-cta">
+        <div class="tydt-home-cta-text">
+          <h3>Applications are open.</h3>
+          <p>Whether you're a teenager, a young person, a mentor, or a church leader — there's a place for you in TYDT.</p>
+        </div>
+        <div class="tydt-home-cta-btns">
+          <button onclick="showPage('tdt')" class="btn-tdt-green">Explore TYDT →</button>
+          <button onclick="showPage('tdt');setTimeout(()=>document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'}),300)" class="btn btn-outline">Apply Now</button>
         </div>
       </div>
     </div>
@@ -2609,12 +2804,12 @@
   initAnimations();
   // ── TDT FORM ─────────────────────────────────────
   function submitTDT() {
-    const name  = document.getElementById('tdt-name').value.trim();
-    const age   = document.getElementById('tdt-age').value.trim();
-    const gender= document.getElementById('tdt-gender').value;
-    const role  = document.getElementById('tdt-role').value;
-    const phone = document.getElementById('tdt-phone').value.trim();
-    const why   = document.getElementById('tdt-why').value.trim();
+    const name   = document.getElementById('tdt-name').value.trim();
+    const age    = document.getElementById('tdt-age').value.trim();
+    const gender = document.getElementById('tdt-gender').value;
+    const role   = document.getElementById('tdt-role').value;
+    const phone  = document.getElementById('tdt-phone').value.trim();
+    const why    = document.getElementById('tdt-why').value.trim();
 
     if (!name)   { showToast('Please enter your full name.'); return; }
     if (!age)    { showToast('Please enter your age.'); return; }
@@ -2623,31 +2818,41 @@
     if (!phone)  { showToast('Please enter your phone number.'); return; }
     if (!why)    { showToast('Please tell us why you want to join.'); return; }
 
-    // Build WhatsApp message with form data
     const church = document.getElementById('tdt-church').value.trim() || 'Not provided';
     const email  = document.getElementById('tdt-email').value.trim() || 'Not provided';
+
+    // Show loading state
+    const btn = document.querySelector('#tdtForm button[onclick="submitTDT()"]');
+    if (btn) { btn.textContent = 'Submitting...'; btn.disabled = true; }
+
+    // ── FORMSPREE submission (replace YOUR_FORM_ID with your actual ID) ──
+    const FORMSPREE_ID = 'YOUR_FORM_ID'; // ← Replace this after setup
+    fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name, age, gender, role, church, phone, email, message: why })
+    })
+    .catch(() => {}) // silently ignore if not yet set up
+    .finally(() => showSuccess(name, phone, church, email, why, gender, role, age));
+  }
+
+  function showSuccess(name, phone, church, email, why, gender, role, age) {
     const msg = encodeURIComponent(
       `*New TYDT Application* 🙌\n\n` +
-      `*Name:* ${name}\n` +
-      `*Age:* ${age}\n` +
-      `*Gender:* ${gender}\n` +
-      `*Role:* ${role}\n` +
-      `*Church/School:* ${church}\n` +
-      `*Phone:* ${phone}\n` +
-      `*Email:* ${email}\n\n` +
+      `*Name:* ${name}\n*Age:* ${age}\n*Gender:* ${gender}\n` +
+      `*Role:* ${role}\n*Church/School:* ${church}\n` +
+      `*Phone:* ${phone}\n*Email:* ${email}\n\n` +
       `*Why I want to join:*\n${why}`
     );
-
-    // Show success state
     document.getElementById('tdtFormWrap').innerHTML = `
       <div style="text-align:center;padding:2.5rem 1rem;">
         <div style="font-size:3rem;margin-bottom:1rem;">🎉</div>
         <h3 style="margin-bottom:0.6rem;font-size:1.4rem;">Application Received, ${name}!</h3>
         <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1.5rem;max-width:340px;margin-left:auto;margin-right:auto;">
-          We'll reach out to you within 48 hours via WhatsApp or phone. In the meantime, join the community to stay connected.
+          We'll reach out to you within 48 hours via WhatsApp or phone. In the meantime, join the community.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-          <a href="https://wa.me/message/GpYbq2AWQOPBZ6GJFGJMFe?text=${msg}" target="_blank" class="btn-tdt-green">
+          <a href="https://wa.me/2349083387814?text=${msg}" target="_blank" class="btn-tdt-green">
             Send via WhatsApp too →
           </a>
           <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join Community</a>
@@ -2666,18 +2871,18 @@
     <div class="container">
       <div class="tdt-badge">
         <span class="tdt-badge-dot"></span>
-        Teen & Youth Discipleship Training — TYDT
+        Teen &amp; Youth Discipleship Training — TYDT
       </div>
       <h1 class="tdt-hero-headline">
-        Raising Teenagers<br>for <span class="green">God's</span> <span class="gold">Purpose.</span>
+        <span class="green">Know God.</span> Discover Purpose.<br><span class="gold">Make Impact.</span>
       </h1>
       <p class="tdt-hero-sub">
-        TYDT is not just a youth program. It is a holistic discipleship and formation system — designed to help teenagers and young people (ages 13–30) become everything God has purposed them to be, spiritually, mentally, emotionally, and practically. And it is completely <strong>free</strong> — because freely we have received.
+        TYDT is a structured <strong style="color:var(--white);">2-Year Youth Development Program</strong> designed to disciple, mentor, and equip teenagers (13–19) and young adults (20–30) for purposeful living and transformational leadership. <strong style="color:var(--tdt-green-light);">Completely free.</strong>
       </p>
       <div class="tdt-hero-btns">
-        <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">✋ Join the Training</button>
+        <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">✋ Apply Now — It's Free</button>
         <button class="btn-tdt-outline" onclick="document.getElementById('tdt-mentor').scrollIntoView({behavior:'smooth'})">🤝 Become a Mentor</button>
-        <button class="btn btn-outline btn-sm" onclick="document.getElementById('tdt-about').scrollIntoView({behavior:'smooth'})">Learn More ↓</button>
+        <button class="btn btn-outline btn-sm" onclick="document.getElementById('tydt-partners').scrollIntoView({behavior:'smooth'})">Partner With Us ↓</button>
       </div>
       <div class="tdt-verse">
         <div>
@@ -2688,262 +2893,216 @@
     </div>
   </section>
 
-  <!-- STATS -->
+  <!-- QUICK STATS -->
   <div class="container" style="padding-top:2rem;padding-bottom:0;">
     <div class="tdt-stats">
       <div class="tdt-stat">
+        <div class="tdt-stat-num">2</div>
+        <div class="tdt-stat-label">Year Program</div>
+      </div>
+      <div class="tdt-stat">
         <div class="tdt-stat-num">5</div>
-        <div class="tdt-stat-label">Core Pillars</div>
+        <div class="tdt-stat-label">Dev. Areas</div>
       </div>
       <div class="tdt-stat">
-        <div class="tdt-stat-num">4</div>
-        <div class="tdt-stat-label">Training Stages</div>
+        <div class="tdt-stat-num">70%</div>
+        <div class="tdt-stat-label">Physical</div>
       </div>
       <div class="tdt-stat">
-        <div class="tdt-stat-num">12+</div>
-        <div class="tdt-stat-label">Months to Transform</div>
+        <div class="tdt-stat-num">Free</div>
+        <div class="tdt-stat-label">Always</div>
       </div>
     </div>
   </div>
 
-  <!-- ABOUT TDT -->
+  <!-- VISION & MISSION -->
   <section class="section" id="tdt-about">
     <div class="container">
-      <div class="tdt-tag">About TDT</div>
-      <h2 class="section-title">Teenagers are not too young for God.</h2>
-      <p class="section-sub">Purpose requires preparation. TYDT creates the environment where that preparation happens — intentionally. Open to teenagers (13–19) and youth (20–30). <strong style="color:var(--tdt-green-light);">Completely free.</strong></p>
-      <div class="tdt-about-grid">
-        <div class="tdt-about-card">
-          <div class="tdt-about-icon">🔥</div>
-          <div class="tdt-about-title">Spiritually Grounded</div>
-          <div class="tdt-about-desc">TDT builds teenagers on the Word of God, prayer, and a genuine relationship with Jesus — not just church attendance or religious routines.</div>
+      <div class="tdt-tag">Vision &amp; Mission</div>
+      <h2 class="section-title">More than a programme.<br>A journey of transformation.</h2>
+
+      <div class="tydt-vm-grid">
+        <div class="tydt-vm-card tydt-vm-vision">
+          <div class="tydt-vm-icon">👁️</div>
+          <div class="tydt-vm-label">Vision</div>
+          <p class="tydt-vm-text">To raise a generation of spiritually grounded, purpose-driven, academically excellent, innovative, and influential young leaders who impact their generation for Christ.</p>
         </div>
-        <div class="tdt-about-card">
-          <div class="tdt-about-icon">🧠</div>
-          <div class="tdt-about-title">Mentally Developed</div>
-          <div class="tdt-about-desc">We train teenagers to think — critically, creatively, and with a kingdom perspective. A renewed mind is the foundation of a transformed life.</div>
-        </div>
-        <div class="tdt-about-card">
-          <div class="tdt-about-icon">❤️</div>
-          <div class="tdt-about-title">Emotionally Healthy</div>
-          <div class="tdt-about-desc">Teenagers are navigating identity, peer pressure, and pain. TYDT creates safe spaces for emotional growth, healing, and wholeness — for both teenagers and young adults.</div>
-        </div>
-        <div class="tdt-about-card">
-          <div class="tdt-about-icon">⚙️</div>
-          <div class="tdt-about-title">Practically Equipped</div>
-          <div class="tdt-about-desc">Faith without action is incomplete. TYDT trains teenagers and youth in real-life skills — discipline, goal-setting, leadership, and service — to live out their calling.</div>
+        <div class="tydt-vm-card tydt-vm-mission">
+          <div class="tydt-vm-icon">🎯</div>
+          <div class="tydt-vm-label">Mission</div>
+          <p class="tydt-vm-text">To disciple, mentor, and equip teenagers and young adults through intentional training that develops character, leadership, academic excellence, innovation, and practical life skills.</p>
         </div>
       </div>
-      <div style="margin-top:1.75rem;">
-        <p style="font-size:0.85rem;color:var(--gray);margin-bottom:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Inspired by biblical examples:</p>
-        <div class="tdt-bible-row">
-          <span class="tdt-bible-chip">Joseph — Prepared in the pit</span>
-          <span class="tdt-bible-chip">Daniel — Faithful under pressure</span>
-          <span class="tdt-bible-chip">David — Anointed before appointed</span>
-          <span class="tdt-bible-chip">Timothy — Young but exemplary</span>
-          <span class="tdt-bible-chip">Jesus — Grew in wisdom & stature</span>
-        </div>
+
+      <div class="tdt-tag" style="margin-top:2.5rem;">Core Objectives</div>
+      <div class="tydt-objectives">
+        <div class="tydt-obj">🙏 Help young people know God personally</div>
+        <div class="tydt-obj">🪞 Help young people discover their identity and purpose</div>
+        <div class="tydt-obj">🏛️ Build godly character and values</div>
+        <div class="tydt-obj">👑 Develop leadership capacity</div>
+        <div class="tydt-obj">📚 Promote academic excellence</div>
+        <div class="tydt-obj">⚡ Encourage innovation and creativity</div>
+        <div class="tydt-obj">🛠️ Equip participants with practical life skills</div>
+        <div class="tydt-obj">🤝 Create a community of growth, accountability, and mentorship</div>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- 5 PILLARS -->
+  <!-- 5 DEVELOPMENT AREAS -->
   <section class="section">
     <div class="container">
-      <div class="tdt-tag">The 5 Core Pillars</div>
-      <h2 class="section-title">A complete formation framework.</h2>
-      <p class="section-sub">Every pillar is intentional. Together they build a teenager who is ready — not just for church, but for life.</p>
+      <div class="tdt-tag">The 5 Development Areas</div>
+      <h2 class="section-title">A complete framework for<br>whole-person development.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">Every area is intentional. Together they produce a teenager and young adult who is ready — not just for church, but for life and impact.</p>
+
       <div class="tdt-pillars-grid">
+
         <div class="tdt-pillar" style="--pillar-color:#16a34a;">
           <div class="tdt-pillar-num">01</div>
-          <div class="tdt-pillar-icon">🪞</div>
-          <div class="tdt-pillar-title">Identity, Purpose & Vision</div>
-          <div class="tdt-pillar-desc">Helping teenagers discover who they are in Christ, why they exist, and where they are going — before the world defines them first.</div>
-        </div>
-        <div class="tdt-pillar" style="--pillar-color:#22c55e;">
-          <div class="tdt-pillar-num">02</div>
           <div class="tdt-pillar-icon">📖</div>
-          <div class="tdt-pillar-title">Spiritual Formation</div>
-          <div class="tdt-pillar-desc">Building a consistent prayer life, Bible study habit, and sensitivity to the Holy Spirit — turning teenagers into devoted disciples, not just church attenders.</div>
+          <div class="tdt-pillar-title">Discipleship</div>
+          <div class="tdt-pillar-desc">Identity in Christ · Spiritual Growth · Prayer · Bible Study · Character Development · Purpose Discovery</div>
+          <div class="tydt-outcome"><strong>Outcome:</strong> A strong relationship with God and a biblical worldview.</div>
         </div>
-        <div class="tdt-pillar" style="--pillar-color:#D4A843;">
+
+        <div class="tdt-pillar" style="--pillar-color:#3B82F6;">
+          <div class="tdt-pillar-num">02</div>
+          <div class="tdt-pillar-icon">👑</div>
+          <div class="tdt-pillar-title">Leadership</div>
+          <div class="tdt-pillar-desc">Responsibility · Influence · Integrity · Service · Vision · Teamwork</div>
+          <div class="tydt-outcome"><strong>Outcome:</strong> Confident, responsible leaders who influence others positively.</div>
+        </div>
+
+        <div class="tdt-pillar" style="--pillar-color:#F5B731;">
           <div class="tdt-pillar-num">03</div>
-          <div class="tdt-pillar-icon">🏛️</div>
-          <div class="tdt-pillar-title">Character Formation</div>
-          <div class="tdt-pillar-desc">Integrity, discipline, humility, and excellence are not accidents — they are developed. TYDT creates intentional environments for character to be built and tested — whether you are 14 or 24.</div>
+          <div class="tdt-pillar-icon">🎓</div>
+          <div class="tdt-pillar-title">Academic Excellence</div>
+          <div class="tdt-pillar-desc">Study Skills · Learning Strategies · Time Management · Goal Setting · Discipline · Excellence Mindset</div>
+          <div class="tydt-outcome"><strong>Outcome:</strong> Habits that improve academic performance and lifelong learning.</div>
         </div>
-        <div class="tdt-pillar" style="--pillar-color:#5B8FFF;">
+
+        <div class="tdt-pillar" style="--pillar-color:#8B5CF6;">
           <div class="tdt-pillar-num">04</div>
-          <div class="tdt-pillar-icon">🚀</div>
-          <div class="tdt-pillar-title">Life Development & Excellence</div>
-          <div class="tdt-pillar-desc">Goal-setting, study habits, time management, financial basics, and digital literacy — equipping teenagers for real-world success as kingdom representatives.</div>
+          <div class="tdt-pillar-icon">⚡</div>
+          <div class="tdt-pillar-title">Innovation</div>
+          <div class="tdt-pillar-desc">Creativity · Problem Solving · Technology Awareness · Critical Thinking · Opportunity Recognition</div>
+          <div class="tydt-outcome"><strong>Outcome:</strong> Creative thinkers who provide solutions to challenges around them.</div>
         </div>
+
         <div class="tdt-pillar" style="--pillar-color:#FF7850;">
           <div class="tdt-pillar-num">05</div>
-          <div class="tdt-pillar-icon">👑</div>
-          <div class="tdt-pillar-title">Leadership, Service & Impact</div>
-          <div class="tdt-pillar-desc">Every teenager is a leader somewhere. TYDT trains teenagers and young people to lead with servant hearts — in their homes, schools, churches, and communities.</div>
+          <div class="tdt-pillar-icon">🛠️</div>
+          <div class="tdt-pillar-title">Life Skills</div>
+          <div class="tdt-pillar-desc">Communication · Relationships · Emotional Intelligence · Financial Wisdom · Decision Making · Personal Development</div>
+          <div class="tydt-outcome"><strong>Outcome:</strong> Participants equipped for everyday life and responsible adulthood.</div>
         </div>
+
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- TRAINING STAGES -->
+  <!-- PROGRAM STRUCTURE -->
   <section class="section">
     <div class="container">
-      <div class="tdt-tag">Training Structure</div>
-      <h2 class="section-title">Four stages. One destination.</h2>
-      <p class="section-sub">Every teenager enters at the Foundation and progresses through each stage at their own pace — with intentional support at every step.</p>
-      <div class="tdt-stages">
-        <div class="tdt-stage">
-          <div class="tdt-stage-dot">🌱</div>
-          <div class="tdt-stage-body">
-            <div class="tdt-stage-label">Stage 1</div>
-            <div class="tdt-stage-title">Foundation Stage</div>
-            <div class="tdt-stage-desc">Establishing the basics — salvation, identity in Christ, Word and prayer habits. Who am I? Whose am I? Why am I here? Every building starts with a foundation that can hold weight.</div>
+      <div class="tdt-tag">Program Structure</div>
+      <h2 class="section-title">2 Years. Intentional.<br>Transformational.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">TYDT runs on a hybrid model — 70% physical engagement, 30% virtual — combining the depth of in-person community with the reach of digital connection.</p>
+
+      <!-- Year Timeline -->
+      <div class="tydt-years">
+        <div class="tydt-year-card tydt-year1">
+          <div class="tydt-year-badge">Year 1</div>
+          <h3 class="tydt-year-title">Foundation</h3>
+          <p class="tydt-year-desc">Building the base — salvation, identity in Christ, spiritual disciplines, character, and the fundamentals of all 5 development areas. Who am I? Whose am I? Why am I here?</p>
+          <div class="tydt-year-tags">
+            <span>Identity</span><span>Salvation</span><span>Character</span><span>Foundations</span>
           </div>
         </div>
-        <div class="tdt-stage">
-          <div class="tdt-stage-dot">🔨</div>
-          <div class="tdt-stage-body">
-            <div class="tdt-stage-label">Stage 2</div>
-            <div class="tdt-stage-title">Formation Stage</div>
-            <div class="tdt-stage-desc">Character, discipline, and spiritual depth are built here. Teenagers face real challenges — assignments, accountability, mentorship — that shape who they are becoming, not just what they know.</div>
+        <div class="tydt-year-card tydt-year2">
+          <div class="tydt-year-badge" style="background:rgba(245,183,49,0.12);color:var(--gold);border-color:rgba(245,183,49,0.2);">Year 2</div>
+          <h3 class="tydt-year-title">Growth, Leadership &amp; Impact</h3>
+          <p class="tydt-year-desc">Building on the foundation — deepening spiritual maturity, developing leadership capacity, applying academic and life skills, and being activated to impact their generation.</p>
+          <div class="tydt-year-tags" style="--tag-color:rgba(245,183,49,0.1);--tag-border:rgba(245,183,49,0.2);--tag-text:var(--gold);">
+            <span>Leadership</span><span>Excellence</span><span>Innovation</span><span>Impact</span>
           </div>
         </div>
-        <div class="tdt-stage">
-          <div class="tdt-stage-dot">⚡</div>
-          <div class="tdt-stage-body">
-            <div class="tdt-stage-label">Stage 3</div>
-            <div class="tdt-stage-title">Development Stage</div>
-            <div class="tdt-stage-desc">Skills, gifting, and leadership potential are unlocked. Teenagers discover and develop what God placed in them — through practical projects, service, and real-world application.</div>
-          </div>
-        </div>
-        <div class="tdt-stage">
-          <div class="tdt-stage-dot">🚀</div>
-          <div class="tdt-stage-body">
-            <div class="tdt-stage-label">Stage 4</div>
-            <div class="tdt-stage-title">Activation Stage</div>
-            <div class="tdt-stage-desc">Ready to be sent. Teenagers in this stage are deployed — leading others, serving communities, representing Christ in schools, and becoming the next generation of mentors in TYDT itself.</div>
-          </div>
-        </div>
+      </div>
+
+      <!-- Delivery Methods -->
+      <div class="tdt-tag" style="margin-top:2.5rem;">How Training is Delivered</div>
+      <div class="tydt-methods-grid">
+        <div class="tydt-method">📢 Teaching Sessions</div>
+        <div class="tydt-method">🔧 Workshops</div>
+        <div class="tydt-method">💬 Group Discussions</div>
+        <div class="tydt-method">🤝 Mentorship</div>
+        <div class="tydt-method">📝 Assignments</div>
+        <div class="tydt-method">🚀 Practical Projects</div>
+        <div class="tydt-method">✅ Accountability Groups</div>
+        <div class="tydt-method">🌍 Community Learning</div>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- MONTHLY MODEL -->
-  <section class="section">
-    <div class="container">
-      <div class="tdt-tag">Monthly Discipleship Model</div>
-      <h2 class="section-title">Consistent. Intentional. Relational.</h2>
-      <p class="section-sub">Transformation doesn't happen in one meeting. It happens through consistent rhythms — monthly, weekly, and daily.</p>
-      <div class="tdt-monthly-grid">
-        <div class="tdt-monthly-card">
-          <div class="tdt-monthly-icon">📍</div>
-          <div>
-            <div class="tdt-monthly-title">Monthly Physical Gathering</div>
-            <div class="tdt-monthly-desc">One focused in-person session every month — structured teaching, group activities, worship, and community building in a safe, energetic space.</div>
-          </div>
-        </div>
-        <div class="tdt-monthly-card">
-          <div class="tdt-monthly-icon">👥</div>
-          <div>
-            <div class="tdt-monthly-title">Weekly Mentorship Groups</div>
-            <div class="tdt-monthly-desc">Small accountability groups led by mentors — checking in on growth, reviewing assignments, praying together, and building real relationships.</div>
-          </div>
-        </div>
-        <div class="tdt-monthly-card">
-          <div class="tdt-monthly-icon">📝</div>
-          <div>
-            <div class="tdt-monthly-title">Assignments & Challenges</div>
-            <div class="tdt-monthly-desc">Practical tasks given between sessions — scripture memorisation, journaling, service projects, and leadership challenges that make growth tangible.</div>
-          </div>
-        </div>
-        <div class="tdt-monthly-card">
-          <div class="tdt-monthly-icon">🙏</div>
-          <div>
-            <div class="tdt-monthly-title">Prayer & Spiritual Rhythm</div>
-            <div class="tdt-monthly-desc">Teenagers are taught to build their own personal prayer life — not dependent on the group, but deeply connected to God individually and corporately.</div>
-          </div>
-        </div>
-        <div class="tdt-monthly-card">
-          <div class="tdt-monthly-icon">💬</div>
-          <div>
-            <div class="tdt-monthly-title">Digital Community (WhatsApp)</div>
-            <div class="tdt-monthly-desc">An active WhatsApp community keeps the movement alive between sessions — daily devotionals, check-ins, updates, encouragements, and shared victories.</div>
-          </div>
-        </div>
-        <div class="tdt-monthly-card">
-          <div class="tdt-monthly-icon">🎯</div>
-          <div>
-            <div class="tdt-monthly-title">Goal Reviews & Growth Tracking</div>
-            <div class="tdt-monthly-desc">Every teenager sets personal growth goals each month. Mentors review progress, celebrate wins, and help navigate setbacks — because growth is a journey, not an event.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- MENTORS -->
+  <!-- MENTORSHIP -->
   <section class="section" id="tdt-mentor">
     <div class="container">
-      <div class="tdt-tag">Mentors</div>
-      <h2 class="section-title">Every teenager needs someone ahead of them.</h2>
-      <p class="section-sub">Mentors are the backbone of TDT. Not just teachers — guides, friends, and examples of what is possible with God.</p>
+      <div class="tdt-tag">Mentorship Structure</div>
+      <h2 class="section-title">Growth beyond the classroom.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">TYDT emphasises mentorship and accountability at every level. Every participant has access to guides who walk with them — not just teach them.</p>
+
       <div class="tdt-mentor-grid">
+        <div class="tdt-mentor-card">
+          <div class="tdt-mentor-avatar">🎙️</div>
+          <div class="tdt-mentor-role">Role</div>
+          <div class="tdt-mentor-title">Facilitators</div>
+          <div class="tdt-mentor-desc">Trained individuals who lead teaching sessions, workshops, and structured learning. They bring the curriculum to life and create engaging learning environments for participants.</div>
+          <div class="tdt-mentor-tags">
+            <span class="tdt-mentor-tag">Teaching</span>
+            <span class="tdt-mentor-tag">Workshops</span>
+            <span class="tdt-mentor-tag">Curriculum delivery</span>
+          </div>
+        </div>
         <div class="tdt-mentor-card">
           <div class="tdt-mentor-avatar">🔥</div>
           <div class="tdt-mentor-role">Role</div>
-          <div class="tdt-mentor-title">Spiritual Guide</div>
-          <div class="tdt-mentor-desc">Mentors walk alongside teenagers in their faith journey — teaching, modelling, and creating space for genuine encounters with God. They point to Jesus, not themselves.</div>
+          <div class="tdt-mentor-title">Mentors</div>
+          <div class="tdt-mentor-desc">Spiritually mature guides who walk alongside participants in their faith and personal development journey — modelling, discipling, and pointing to Jesus at every step.</div>
           <div class="tdt-mentor-tags">
-            <span class="tdt-mentor-tag">Bible teaching</span>
-            <span class="tdt-mentor-tag">Prayer</span>
             <span class="tdt-mentor-tag">Discipleship</span>
+            <span class="tdt-mentor-tag">Spiritual guidance</span>
+            <span class="tdt-mentor-tag">Modelling</span>
           </div>
         </div>
         <div class="tdt-mentor-card">
-          <div class="tdt-mentor-avatar">🤝</div>
+          <div class="tdt-mentor-avatar">👥</div>
           <div class="tdt-mentor-role">Role</div>
-          <div class="tdt-mentor-title">Accountability Partner</div>
-          <div class="tdt-mentor-desc">Mentors hold teenagers to their commitments with grace — checking in consistently, asking hard questions, and celebrating progress. Accountability is an act of love.</div>
+          <div class="tdt-mentor-title">Cohort Leaders</div>
+          <div class="tdt-mentor-desc">Leaders assigned to specific cohort groups — overseeing the progress, growth, and community health of their group throughout the program duration.</div>
+          <div class="tdt-mentor-tags">
+            <span class="tdt-mentor-tag">Group oversight</span>
+            <span class="tdt-mentor-tag">Progress tracking</span>
+            <span class="tdt-mentor-tag">Community</span>
+          </div>
+        </div>
+        <div class="tdt-mentor-card">
+          <div class="tdt-mentor-avatar">✅</div>
+          <div class="tdt-mentor-role">Role</div>
+          <div class="tdt-mentor-title">Accountability Groups</div>
+          <div class="tdt-mentor-desc">Small peer groups within each cohort where participants check in regularly, share progress, pray together, and hold one another to their growth commitments with grace and honesty.</div>
           <div class="tdt-mentor-tags">
             <span class="tdt-mentor-tag">Weekly check-ins</span>
-            <span class="tdt-mentor-tag">Goal tracking</span>
-            <span class="tdt-mentor-tag">Honest feedback</span>
-          </div>
-        </div>
-        <div class="tdt-mentor-card">
-          <div class="tdt-mentor-avatar">❤️</div>
-          <div class="tdt-mentor-role">Role</div>
-          <div class="tdt-mentor-title">Encourager & Safe Space</div>
-          <div class="tdt-mentor-desc">Many teenagers carry things they cannot tell their parents. Mentors create safe, confidential spaces where young people feel genuinely heard, valued, and not judged.</div>
-          <div class="tdt-mentor-tags">
-            <span class="tdt-mentor-tag">Emotional support</span>
-            <span class="tdt-mentor-tag">Confidentiality</span>
-            <span class="tdt-mentor-tag">Presence</span>
-          </div>
-        </div>
-        <div class="tdt-mentor-card">
-          <div class="tdt-mentor-avatar">👑</div>
-          <div class="tdt-mentor-role">Role</div>
-          <div class="tdt-mentor-title">Leadership Developer</div>
-          <div class="tdt-mentor-desc">Mentors identify and develop leadership potential in every teenager under their care — creating opportunities to lead, fail safely, and grow into their God-given authority.</div>
-          <div class="tdt-mentor-tags">
-            <span class="tdt-mentor-tag">Talent discovery</span>
-            <span class="tdt-mentor-tag">Opportunities</span>
-            <span class="tdt-mentor-tag">Coaching</span>
+            <span class="tdt-mentor-tag">Peer support</span>
+            <span class="tdt-mentor-tag">Prayer</span>
           </div>
         </div>
       </div>
+
       <div style="margin-top:1.75rem;text-align:center;">
         <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Become a Mentor →</button>
       </div>
@@ -2955,7 +3114,7 @@
   <!-- TESTIMONIES -->
   <section class="section">
     <div class="container">
-      <div class="tdt-tag">Impact & Testimonies</div>
+      <div class="tdt-tag">Impact &amp; Testimonies</div>
       <h2 class="section-title">Real lives. Real change.</h2>
       <p class="section-sub">These are the stories TYDT exists to produce — young people who encountered God and were never the same.</p>
       <div class="tdt-testimony-grid">
@@ -2965,27 +3124,27 @@
             <div class="tdt-testimony-avatar">👦</div>
             <div>
               <div class="tdt-testimony-name">Emmanuel, 16</div>
-              <div class="tdt-testimony-detail">Foundation Stage · Lagos</div>
+              <div class="tdt-testimony-detail">Year 1 Cohort · Lagos</div>
             </div>
           </div>
         </div>
         <div class="tdt-testimony">
-          <p class="tdt-testimony-text">"TDT taught me that prayer is not a religious duty — it's a conversation with my Father. My relationship with God completely changed in three months."</p>
+          <p class="tdt-testimony-text">"TYDT taught me that prayer is not a religious duty — it's a conversation with my Father. My relationship with God completely changed in three months."</p>
           <div class="tdt-testimony-author">
             <div class="tdt-testimony-avatar">👧</div>
             <div>
               <div class="tdt-testimony-name">Grace, 15</div>
-              <div class="tdt-testimony-detail">Formation Stage · Ikorodu</div>
+              <div class="tdt-testimony-detail">Year 1 Cohort · Ikorodu</div>
             </div>
           </div>
         </div>
         <div class="tdt-testimony">
-          <p class="tdt-testimony-text">"I used to be the quiet one who never raised my hand anywhere. After the leadership training I led our school Bible study for the first time. I never thought that was possible for me."</p>
+          <p class="tdt-testimony-text">"I used to be the quiet one who never raised my hand anywhere. After the leadership sessions I led our school Bible study. I never thought that was possible for me."</p>
           <div class="tdt-testimony-author">
             <div class="tdt-testimony-avatar">👦</div>
             <div>
               <div class="tdt-testimony-name">David, 17</div>
-              <div class="tdt-testimony-detail">Development Stage · Lagos</div>
+              <div class="tdt-testimony-detail">Year 1 Cohort · Lagos</div>
             </div>
           </div>
         </div>
@@ -2995,7 +3154,7 @@
             <div class="tdt-testimony-avatar">👧</div>
             <div>
               <div class="tdt-testimony-name">Favour, 14</div>
-              <div class="tdt-testimony-detail">Foundation Stage · Ikorodu</div>
+              <div class="tdt-testimony-detail">Year 1 Cohort · Ikorodu</div>
             </div>
           </div>
         </div>
@@ -3008,43 +3167,28 @@
   <!-- GALLERY -->
   <section class="section">
     <div class="container">
-      <div class="tdt-tag">Activities & Gallery</div>
-      <h2 class="section-title">This is what TDT looks like.</h2>
+      <div class="tdt-tag">Activities &amp; Gallery</div>
+      <h2 class="section-title">This is what TYDT looks like.</h2>
       <p class="section-sub">Retreats, Bible sessions, prayer meetings, workshops, outreach — movement, not just meetings.</p>
       <div class="tdt-gallery-grid">
         <div class="tdt-gallery-item">
-          <div class="tdt-gallery-placeholder">
-            <div class="tdt-gallery-icon">🏕️</div>
-            <div class="tdt-gallery-label">Annual Retreat</div>
-          </div>
+          <div class="tdt-gallery-placeholder"><div class="tdt-gallery-icon">🏕️</div><div class="tdt-gallery-label">Annual Retreat</div></div>
           <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Annual Retreat</span></div>
         </div>
         <div class="tdt-gallery-item">
-          <div class="tdt-gallery-placeholder">
-            <div class="tdt-gallery-icon">📖</div>
-            <div class="tdt-gallery-label">Bible Study</div>
-          </div>
+          <div class="tdt-gallery-placeholder"><div class="tdt-gallery-icon">📖</div><div class="tdt-gallery-label">Bible Study</div></div>
           <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Bible Study Session</span></div>
         </div>
         <div class="tdt-gallery-item">
-          <div class="tdt-gallery-placeholder">
-            <div class="tdt-gallery-icon">🙏</div>
-            <div class="tdt-gallery-label">Prayer Meeting</div>
-          </div>
+          <div class="tdt-gallery-placeholder"><div class="tdt-gallery-icon">🙏</div><div class="tdt-gallery-label">Prayer Meeting</div></div>
           <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Prayer Meeting</span></div>
         </div>
         <div class="tdt-gallery-item">
-          <div class="tdt-gallery-placeholder">
-            <div class="tdt-gallery-icon">👑</div>
-            <div class="tdt-gallery-label">Leadership Workshop</div>
-          </div>
+          <div class="tdt-gallery-placeholder"><div class="tdt-gallery-icon">👑</div><div class="tdt-gallery-label">Leadership Workshop</div></div>
           <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Leadership Workshop</span></div>
         </div>
         <div class="tdt-gallery-item">
-          <div class="tdt-gallery-placeholder">
-            <div class="tdt-gallery-icon">🛣️</div>
-            <div class="tdt-gallery-label">Community Outreach</div>
-          </div>
+          <div class="tdt-gallery-placeholder"><div class="tdt-gallery-icon">🛣️</div><div class="tdt-gallery-label">Community Outreach</div></div>
           <div class="tdt-gallery-overlay"><span class="tdt-gallery-caption">Community Outreach</span></div>
         </div>
       </div>
@@ -3053,9 +3197,7 @@
 
   <div class="divider"></div>
 
-  <div class="divider"></div>
-
-  <!-- FREE & PARTNERSHIPS -->
+  <!-- PARTNERSHIP -->
   <section class="section" id="tydt-partners">
     <div class="container">
 
@@ -3068,15 +3210,45 @@
         </div>
       </div>
 
-      <div class="tdt-tag" style="margin-top:2.5rem;">Partnerships</div>
-      <h2 class="section-title">We don't build alone.</h2>
-      <p class="section-sub" style="margin-bottom:1.75rem;">TYDT partners with churches, youth fellowships, ministries, and schools to bring discipleship and formation training directly to where young people already are.</p>
+      <div class="tdt-tag" style="margin-top:2.5rem;">Participation Pathways</div>
+      <h2 class="section-title">Two ways to be part of TYDT.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">Whether you're joining personally or bringing TYDT to your community — there's a pathway for you.</p>
 
+      <div class="tydt-pathway-grid">
+        <div class="tydt-pathway-card">
+          <div class="tydt-pathway-icon">👤</div>
+          <div class="tydt-pathway-badge">Personal Track</div>
+          <h3 class="tydt-pathway-title">Personal Enrollment</h3>
+          <p class="tydt-pathway-desc">Teenagers and young adults can apply directly to join a TYDT cohort. Participants undergo registration, onboarding, and full training through the TYDT structure.</p>
+          <ul class="tydt-pathway-list">
+            <li>Open to ages 13–30</li>
+            <li>Individual registration</li>
+            <li>Full cohort experience</li>
+            <li>Mentor assigned</li>
+          </ul>
+          <button class="btn-tdt-green btn-sm" style="margin-top:1.25rem;" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Apply Now →</button>
+        </div>
+        <div class="tydt-pathway-card" style="border-color:rgba(245,183,49,0.18);">
+          <div class="tydt-pathway-icon">🏛️</div>
+          <div class="tydt-pathway-badge" style="background:rgba(245,183,49,0.1);color:var(--gold);border-color:rgba(245,183,49,0.2);">Institutional Track</div>
+          <h3 class="tydt-pathway-title">Institutional Partnership</h3>
+          <p class="tydt-pathway-desc">Churches, schools, youth ministries, campus fellowships, and Christian organisations can partner with TYDT to run the programme within their community.</p>
+          <ul class="tydt-pathway-list">
+            <li>Structured curriculum provided</li>
+            <li>Training &amp; mentor support</li>
+            <li>Leadership dev. resources</li>
+            <li>Youth development strategy</li>
+          </ul>
+          <a href="mailto:matthewfolaweogunnaike@gmail.com" class="btn btn-outline btn-sm" style="margin-top:1.25rem;display:inline-flex;">Partner With Us →</a>
+        </div>
+      </div>
+
+      <div class="tdt-tag" style="margin-top:2.5rem;">Who Can Partner</div>
       <div class="tydt-partner-grid">
         <div class="tydt-partner-card">
           <div class="tydt-partner-icon">⛪</div>
           <h3 class="tydt-partner-title">Church Partnership</h3>
-          <p class="tydt-partner-desc">We partner with local churches to run TYDT programmes within their congregation — equipping their teenagers and youth with structured discipleship and formation training that complements their existing ministry.</p>
+          <p class="tydt-partner-desc">Run TYDT within your congregation — equipping your teenagers and youth with structured discipleship and formation training that complements your existing ministry.</p>
           <div class="tydt-partner-tags">
             <span class="tdt-mentor-tag">Sunday school integration</span>
             <span class="tdt-mentor-tag">Youth department support</span>
@@ -3085,8 +3257,8 @@
         </div>
         <div class="tydt-partner-card">
           <div class="tydt-partner-icon">🔥</div>
-          <h3 class="tydt-partner-title">Youth Fellowship & Ministry</h3>
-          <p class="tydt-partner-desc">Independent youth fellowships and para-church ministries can run TYDT as a structured track within their programming — giving young people a clear formation pathway alongside their fellowship activities.</p>
+          <h3 class="tydt-partner-title">Youth Fellowship &amp; Ministry</h3>
+          <p class="tydt-partner-desc">Independent youth fellowships and para-church ministries can run TYDT as a structured track — giving young people a clear formation pathway alongside fellowship activities.</p>
           <div class="tydt-partner-tags">
             <span class="tdt-mentor-tag">Training resources</span>
             <span class="tdt-mentor-tag">Mentor support</span>
@@ -3096,7 +3268,7 @@
         <div class="tydt-partner-card">
           <div class="tydt-partner-icon">🏫</div>
           <h3 class="tydt-partner-title">School Partnership</h3>
-          <p class="tydt-partner-desc">Secondary schools and universities can host TYDT sessions through fellowships, clubs, or after-school programmes — bringing leadership, character formation, and discipleship into academic environments.</p>
+          <p class="tydt-partner-desc">Secondary schools and universities can host TYDT sessions through fellowships, clubs, or after-school programmes — bringing leadership and discipleship into academic environments.</p>
           <div class="tydt-partner-tags">
             <span class="tdt-mentor-tag">School fellowships</span>
             <span class="tdt-mentor-tag">Leadership clubs</span>
@@ -3105,8 +3277,8 @@
         </div>
         <div class="tydt-partner-card">
           <div class="tydt-partner-icon">🌍</div>
-          <h3 class="tydt-partner-title">Community & Outreach</h3>
-          <p class="tydt-partner-desc">Community organisations, orphanages, and outreach groups can partner with TYDT to bring structured spiritual and life development training to young people in underserved communities across Lagos and beyond.</p>
+          <h3 class="tydt-partner-title">Community &amp; Outreach</h3>
+          <p class="tydt-partner-desc">Community organisations, orphanages, and outreach groups can partner with TYDT to bring structured spiritual and life development training to underserved communities.</p>
           <div class="tydt-partner-tags">
             <span class="tdt-mentor-tag">Orphanage programmes</span>
             <span class="tdt-mentor-tag">Community centres</span>
@@ -3115,10 +3287,9 @@
         </div>
       </div>
 
-      <!-- PARTNER CTA -->
       <div style="margin-top:2rem;background:rgba(22,163,74,0.06);border:1px solid rgba(22,163,74,0.18);border-radius:var(--radius-lg);padding:1.75rem 1.5rem;text-align:center;">
         <h3 style="margin-bottom:0.5rem;font-size:1.15rem;">Interested in partnering with TYDT?</h3>
-        <p style="font-size:0.9rem;color:var(--gray);margin-bottom:1.25rem;max-width:420px;margin-left:auto;margin-right:auto;">Whether you lead a church, a school fellowship, a youth ministry, or a community group — reach out and let's talk about how we can work together.</p>
+        <p style="font-size:0.9rem;color:var(--gray);margin-bottom:1.25rem;max-width:420px;margin-left:auto;margin-right:auto;">Whether you lead a church, a school fellowship, a youth ministry, or a community group — reach out and let's talk.</p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
           <a href="https://wa.link/xfkh1k" target="_blank" class="btn-tdt-green">💬 Message Matthew Directly</a>
           <a href="mailto:matthewfolaweogunnaike@gmail.com" class="btn btn-outline btn-sm">✉️ Send an Email</a>
@@ -3133,7 +3304,7 @@
   <!-- JOIN FORM -->
   <section class="section" id="tdt-join">
     <div class="container">
-      <div class="tdt-tag">Join TDT</div>
+      <div class="tdt-tag">Apply Now</div>
       <h2 class="section-title">Ready to begin your journey?</h2>
       <p class="section-sub">Fill in the form below and we'll reach out to you with next steps. This decision could change the rest of your life.</p>
       <div class="tdt-form-wrap" id="tdtFormWrap">
@@ -3145,7 +3316,7 @@
             </div>
             <div class="tdt-field">
               <label class="tdt-label">Age *</label>
-              <input type="number" class="tdt-input" id="tdt-age" placeholder="e.g. 15" min="12" max="19">
+              <input type="number" class="tdt-input" id="tdt-age" placeholder="e.g. 15" min="12" max="30">
             </div>
           </div>
           <div class="tdt-form-row">
@@ -3161,14 +3332,16 @@
               <label class="tdt-label">I am joining as *</label>
               <select class="tdt-select" id="tdt-role">
                 <option value="">Select role</option>
-                <option>Teenager (participant)</option>
+                <option>Teenager (13–19)</option>
+                <option>Youth (20–30)</option>
                 <option>Mentor</option>
+                <option>Church / Ministry Partner</option>
                 <option>Parent / Guardian</option>
               </select>
             </div>
           </div>
           <div class="tdt-field">
-            <label class="tdt-label">Church / School</label>
+            <label class="tdt-label">Church / School / Organisation</label>
             <input type="text" class="tdt-input" id="tdt-church" placeholder="e.g. RCCG Youth Church / Lagos State Model College">
           </div>
           <div class="tdt-form-row">
@@ -3182,13 +3355,21 @@
             </div>
           </div>
           <div class="tdt-field">
-            <label class="tdt-label">Why do you want to join TDT? *</label>
+            <label class="tdt-label">Why do you want to join TYDT? *</label>
             <textarea class="tdt-textarea" id="tdt-why" placeholder="Tell us in a few sentences what brought you here and what you're hoping for..."></textarea>
           </div>
           <button class="btn-tdt-green" style="width:100%;justify-content:center;display:flex;font-size:1rem;padding:15px;" onclick="submitTDT()">
             Submit My Application ✋
           </button>
           <p style="font-size:0.78rem;color:var(--gray);text-align:center;">We'll reach out via WhatsApp or phone within 48 hours. No spam, ever.</p>
+          <div style="margin-top:0.75rem;padding:1rem;background:rgba(245,183,49,0.06);border:1px dashed rgba(245,183,49,0.25);border-radius:10px;font-size:0.78rem;color:var(--gray);line-height:1.7;">
+            <strong style="color:var(--gold);">📬 To receive form submissions by email:</strong><br>
+            1. Go to <a href="https://formspree.io" target="_blank" style="color:var(--gold);">formspree.io</a> → create free account<br>
+            2. Click <strong style="color:var(--gray-light);">New Form</strong> → name it "TYDT Applications"<br>
+            3. Copy the Form ID (looks like <code style="background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;">abcdefgh</code>)<br>
+            4. In this file find <code style="background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;">YOUR_FORM_ID</code> and replace it<br>
+            <em>Until then, submissions go to WhatsApp only (still works fine).</em>
+          </div>
         </div>
       </div>
     </div>
@@ -3198,10 +3379,10 @@
   <section class="section-sm">
     <div class="container">
       <div class="tdt-footer-cta">
-        <h2 class="tdt-cta-headline">"Teenage years are not years to waste.<br>They are years to <span style="color:var(--tdt-green-light);">prepare.</span>"</h2>
-        <p class="tdt-cta-sub">Every great leader, every powerful minister, every world-changer was once a teenager who made a decision. This is yours.</p>
+        <h2 class="tdt-cta-headline">"Know God. Discover Purpose.<br><span style="color:var(--tdt-green-light);">Make Impact.</span>"</h2>
+        <p class="tdt-cta-sub">Teenage years and young adult years are not years to waste. They are years to prepare. TYDT exists to make sure that preparation happens — intentionally, communally, and freely.</p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-          <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Join TDT Today →</button>
+          <button class="btn-tdt-green" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">Apply for TYDT — Free →</button>
           <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join WhatsApp Community</a>
         </div>
       </div>
@@ -3216,7 +3397,7 @@
         </a>
       </div>
       <div class="footer-bottom" style="text-align:center;margin-top:1rem;">
-        <p>© 2025 Matthew Folawe O. · Teen & Youth Discipleship Training (TYDT) &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+        <p>© 2025 Matthew Folawe O. · Teen &amp; Youth Discipleship Training (TYDT) &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
       </div>
     </div>
   </footer>
