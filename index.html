@@ -1065,6 +1065,50 @@
   }
   .nav-avatar:hover { transform: scale(1.12); border-color: var(--gold); box-shadow: 0 0 12px rgba(245,183,49,0.4); }
 
+  /* TYDT GAINS STRIP */
+  .tydt-gains {
+    display: flex; flex-direction: column; gap: 0.65rem;
+    margin: 1.25rem 0 1rem;
+  }
+  .tydt-gain {
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(22,163,74,0.07);
+    border: 1px solid rgba(22,163,74,0.15);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .tydt-gain:hover { border-color: rgba(22,163,74,0.3); }
+  .tydt-gain-icon { font-size: 1.2rem; flex-shrink: 0; }
+  .tydt-gain-text { font-size: 0.88rem; color: var(--gray-light); line-height: 1.4; font-weight: 500; }
+
+  /* TYDT MORE TOGGLE */
+  .tydt-more-wrap { margin-bottom: 1.25rem; }
+  .tydt-more-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: none; border: none;
+    color: var(--tdt-green-light);
+    font-size: 0.82rem; font-weight: 700;
+    cursor: pointer; padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: opacity 0.2s;
+  }
+  .tydt-more-btn:hover { opacity: 0.8; }
+  .tydt-more-arrow { transition: transform 0.3s; display: inline-block; }
+  .tydt-more-btn[aria-expanded="true"] .tydt-more-arrow { transform: rotate(180deg); }
+  .tydt-more-content {
+    margin-top: 0.85rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.03);
+    border-left: 2px solid rgba(22,163,74,0.3);
+    border-radius: 0 10px 10px 0;
+  }
+  .tydt-more-content[hidden] { display: none; }
+
+  @media (min-width: 540px) {
+    .tydt-gains { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+
   /* TDT HERO */
   .tdt-hero {
     min-height: 100svh;
@@ -1891,6 +1935,109 @@
     .tydt-popup { padding: 1.5rem 1.25rem; }
     .tydt-popup-title { font-size: 1.2rem; }
   }
+  /* MINISTRY TRACK GRID */
+  .ministry-track-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: 768px) {
+    .ministry-track-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 374px) {
+    .ministry-track-grid { grid-template-columns: 1fr; }
+  }
+
+  .ministry-track-card {
+    background: rgba(19,19,31,0.95);
+    border: 1px solid rgba(192,132,252,0.12);
+    border-radius: 16px;
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+  .ministry-track-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(192,132,252,0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .ministry-track-card:hover {
+    border-color: rgba(192,132,252,0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3), 0 0 20px rgba(192,132,252,0.08);
+  }
+  .ministry-track-card:hover::before { opacity: 1; }
+
+  .mt-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-bottom: 0.15rem;
+  }
+  .mt-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  .mt-desc {
+    font-size: 0.78rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* MINISTRY TRACK STRUCTURE CARDS */
+  .ministry-track-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+  }
+  @media (min-width: 600px) {
+    .ministry-track-structure { flex-direction: row; }
+  }
+
+  .mt-structure-card {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(192,132,252,0.08) 0%, rgba(139,92,246,0.04) 100%);
+    border: 1px solid rgba(192,132,252,0.18);
+    border-radius: 16px;
+    padding: 1.25rem;
+    transition: all 0.25s;
+  }
+  .mt-structure-card:hover { border-color: rgba(192,132,252,0.35); transform: translateY(-2px); }
+
+  .mt-structure-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .mt-structure-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #C084FC;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  .mt-structure-desc {
+    font-size: 0.82rem;
+    color: var(--gray);
+    line-height: 1.65;
+  }
+
 </style>
 </head>
 <body>
@@ -1959,7 +2106,7 @@
       <h1 class="hero-headline">
         I founded <span class="gold">Youth Revival Labour</span> to raise a generation for God's purpose.
       </h1>
-      <p class="hero-sub">Youth Revival Labour is the movement. Through it, we run TYDT, school and church missions, street outreach, and leadership development — building teenagers and young people (13–30) who are spiritually grounded, purpose-driven, and ready to impact their generation for Christ.</p>
+      <p class="hero-sub">Youth Revival Labour is the movement. Through it, we run TYDT (ages 13–30), school and church missions, street outreach, leadership development, and a Ministerial Training track (ages 25–40) for those called into ministry — building a generation that is spiritually grounded, purpose-driven, and ready to impact the world for Christ.</p>
       <div class="hero-buttons">
         <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>
@@ -2031,7 +2178,7 @@
       <div class="tydt-home-cta">
         <div class="tydt-home-cta-text">
           <h3>You don't need to have it all figured out.</h3>
-          <p>That's actually the best time to join. TYDT walks with you — through the questions, the confusion, and the process of becoming who God made you to be. Open to teenagers (13–19), young adults (20–30), mentors, and churches or schools looking to partner. Completely free.</p>
+          <p>That's actually the best time to join. TYDT walks with you — through the questions, the confusion, and the process of becoming who God made you to be. Open to teenagers (13–19) and young adults (20–30) for the standard 2-year track. For those (25–40) called to ministry, the 3-year Ministerial Training track is also available. Open to mentors, churches, and schools too. Completely free.</p>
         </div>
         <div class="tydt-home-cta-btns">
           <button onclick="showPage('tdt')" class="btn-tdt-green">Explore TYDT →</button>
@@ -2083,7 +2230,7 @@
         <div class="pillar-card" style="--pillar-color:#C084FC;" onclick="showPage('tdt')">
           <div class="pillar-icon">🕊️</div>
           <h3 class="pillar-title">Ministerial Training</h3>
-          <p class="pillar-desc">For young people with a calling to ministry — music, apostolic, prophetic, pastoral, evangelism, and more. A 3-year track with structured formation and real fieldwork experience.</p>
+          <p class="pillar-desc">For youth (25–40) God is raising for ministry — Music, Drama, Dance, Apostolic &amp; Prophetic, Pastoral, Evangelism, Intercession, Children's Ministry, Media, Ushering, and Counselling. A 3-year formation path with fieldwork.</p>
           <div class="pillar-link">Learn More →</div>
         </div>
       </div>
@@ -2480,7 +2627,7 @@
         YRL is the movement I lead. Everything flows from it. Through YRL, we run school missions, church partnerships, street outreach, and orphanage visits — taking the Gospel to where young people actually are. We don't wait for them to come to church. We go to them.
       </p>
       <p class="about-bio">
-        Under YRL, I also founded <strong style="color:var(--white);">Teen & Youth Discipleship Training (TYDT)</strong> — a free, structured programme for teenagers (13–19) and young adults (20–30). TYDT runs for 2 years across six development areas, with a <strong style="color:var(--white);">3-year Ministerial Training track</strong> (including fieldwork) for youth who carry a calling into music ministry, apostolic, prophetic, pastoral, or evangelism. It is completely free — because freely we have received.
+        Under YRL, I also founded <strong style="color:var(--white);">Teen & Youth Discipleship Training (TYDT)</strong> — a free, structured programme for teenagers (13–19) and young adults (20–30) across six development areas. For those (25–40) who carry a calling into ministry, TYDT includes a <strong style="color:var(--white);">3-year Ministerial Training track</strong> with fieldwork — covering Music, Drama, Dance, Apostolic &amp; Prophetic, Pastoral, Evangelism, Intercession, Children's Ministry, Media, Ushering, and Counselling. It is all completely free.
       </p>
       <p class="about-bio">
         Alongside YRL, I lead <strong style="color:var(--white);">Forward Thinkers</strong> — a leadership brand raising young people who think, build, and influence ahead of their time. And through <strong style="color:var(--white);">Matthew AI Creators</strong>, I leverage technology and digital tools to extend the reach of the mission.
@@ -2502,7 +2649,7 @@
           <div class="identity-icon">🌱</div>
           <div>
             <div class="identity-name">TYDT — A YRL Initiative</div>
-            <div class="identity-role">The discipleship engine of YRL. A free 2-year structured programme — with a 3-year Ministry Track for those called to ministry. Covering Discipleship, Leadership, Academic Excellence, Innovation, Life Skills, and Ministerial Formation.</div>
+            <div class="identity-role">The discipleship engine of YRL. A free 2-year programme for teenagers (13–19) and young adults (20–30). Includes a 3-year Ministerial Training track (ages 25–40) with fieldwork across 11 ministry areas including Music, Drama, Apostolic, Pastoral, Media, and more.</div>
           </div>
         </div>
         <div class="identity-card">
@@ -2979,6 +3126,21 @@
 <div class="toast" id="toast"></div>
 
 <script>
+  // ── TYDT MORE TOGGLE ─────────────────────────────
+  function toggleTydtMore(btn) {
+    const content = btn.nextElementSibling;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      content.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelector('.tydt-more-label').textContent = 'More about the programme';
+    } else {
+      content.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.querySelector('.tydt-more-label').textContent = 'Show less';
+    }
+  }
+
   // ── TYDT POPUP ───────────────────────────────────
   function closeTydtPopup() {
     document.getElementById('tydtPopup').classList.remove('show');
@@ -3270,7 +3432,7 @@
       ]
     },
     mission: {
-      msg: "The story is simple — and massive. 🔥\n\nI founded Youth Revival Labour (YRL) — and through YRL, everything else flows. We run TYDT (a free 2-year discipleship training programme), school missions, church partnerships, street outreach, and more.\n\nForward Thinkers is my leadership brand running alongside YRL. Matthew AI Creators is how I use technology to extend the mission.\n\nOne founder. One movement. Six pillars — Leadership, Discipleship, Innovation, Academic Excellence, Entrepreneurship & Business, and Ministerial Training.",
+      msg: "The story is simple — and massive. 🔥\n\nI founded Youth Revival Labour (YRL) — and through YRL, everything else flows. We run TYDT — a free programme for ages 13–30 (2-year standard track) and a 3-year Ministerial Training track for ages 25–40 with fieldwork across 11 ministry areas. Plus school missions, church partnerships, street outreach, and more.\n\nForward Thinkers is my leadership brand running alongside YRL. Matthew AI Creators is how I use technology to extend the mission.\n\nOne founder. One movement. Six pillars — Leadership, Discipleship, Innovation, Academic Excellence, Entrepreneurship & Business, and Ministerial Training.",
       options: [
         {label: '🔥 Read Full Story', action: () => {toggleAI(); showPage('about');}},
         {label: '💬 Join the Movement', action: () => window.open('https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe','_blank')},
@@ -3363,6 +3525,9 @@
     const age      = document.getElementById('tdt-age').value.trim();
     const gender   = document.getElementById('tdt-gender').value;
     const role     = document.getElementById('tdt-role').value;
+    const address  = document.getElementById('tdt-address').value.trim();
+    const lga      = document.getElementById('tdt-lga').value.trim();
+    const state    = document.getElementById('tdt-state').value.trim();
     const phone    = document.getElementById('tdt-phone').value.trim();
     const whatsapp = document.getElementById('tdt-whatsapp').value.trim();
     const why      = document.getElementById('tdt-why').value.trim();
@@ -3371,6 +3536,9 @@
     if (!age)      { showToast('Please enter your age.'); return; }
     if (!gender)   { showToast('Please select your gender.'); return; }
     if (!role)     { showToast('Please select your role.'); return; }
+    if (!address)  { showToast('Please enter your home address.'); return; }
+    if (!lga)      { showToast('Please enter your Local Government Area.'); return; }
+    if (!state)    { showToast('Please enter your state.'); return; }
     if (!phone)    { showToast('Please enter your phone number.'); return; }
     if (!whatsapp) { showToast('Please enter your WhatsApp number.'); return; }
     if (!why)      { showToast('Please tell us why you want to join.'); return; }
@@ -3378,52 +3546,84 @@
     const church = document.getElementById('tdt-church').value.trim() || 'Not provided';
     const email  = document.getElementById('tdt-email').value.trim() || 'Not provided';
 
-    // Disable button to prevent double submit
     const btn = document.querySelector('#tdtForm .btn-tdt-green');
     if (btn) { btn.textContent = 'Submitting...'; btn.disabled = true; btn.style.opacity = '0.7'; }
 
-    // Formspree submission
     const FORMSPREE_ID = 'xrevgljv';
     fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ name, age, gender, role, church, phone, whatsapp, email, message: why })
+      body: JSON.stringify({ name, age, gender, role, church, address, lga, state, phone, whatsapp, email, message: why })
     })
     .catch(() => {})
-    .finally(() => showSuccess(name, age, gender, role, church, phone, whatsapp, email, why));
+    .finally(() => showSuccess(name, age, gender, role, church, address, lga, state, phone, whatsapp, email, why));
   }
 
-  function showSuccess(name, age, gender, role, church, phone, whatsapp, email, why) {
-    // Build pre-filled WhatsApp message to Matthew
+  function showSuccess(name, age, gender, role, church, address, lga, state, phone, whatsapp, email, why) {
     const msg = encodeURIComponent(
       `*New TYDT Application 🙌*\n\n` +
-      `*Name:* ${name}\n` +
-      `*Age:* ${age}\n` +
-      `*Gender:* ${gender}\n` +
-      `*Role:* ${role}\n` +
-      `*Church/School:* ${church}\n` +
-      `*Phone:* ${phone}\n` +
-      `*WhatsApp:* ${whatsapp}\n` +
-      `*Email:* ${email}\n\n` +
+      `*Name:* ${name}\n*Age:* ${age}\n*Gender:* ${gender}\n*Role:* ${role}\n` +
+      `*Church/School:* ${church}\n*Address:* ${address}\n*LGA:* ${lga}\n*State:* ${state}\n` +
+      `*Phone:* ${phone}\n*WhatsApp:* ${whatsapp}\n*Email:* ${email}\n\n` +
       `*Why I want to join:*\n${why}`
     );
 
     document.getElementById('tdtFormWrap').innerHTML = `
-      <div style="text-align:center;padding:2.5rem 1.25rem;">
-        <div style="font-size:3.5rem;margin-bottom:1rem;">🎉</div>
-        <h3 style="margin-bottom:0.5rem;font-size:1.5rem;letter-spacing:-0.02em;">Application Received, ${name}!</h3>
-        <p style="color:var(--tdt-green-light);font-size:0.95rem;font-weight:600;margin-bottom:0.75rem;">Welcome to the TYDT family 🔥</p>
-        <p style="color:var(--gray);font-size:0.88rem;margin-bottom:0.5rem;max-width:360px;margin-left:auto;margin-right:auto;line-height:1.7;">
-          Your application has been submitted successfully. We will reach out to you on WhatsApp (<strong style="color:var(--white);">${whatsapp}</strong>) within <strong style="color:var(--white);">48 hours</strong> with your next steps.
-        </p>
-        <p style="color:var(--gray);font-size:0.85rem;margin-bottom:1.75rem;max-width:360px;margin-left:auto;margin-right:auto;">
-          In the meantime, join the WhatsApp community to connect with others already in the movement.
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:1.25rem;">
-          <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join WhatsApp Community →</a>
-          <a href="https://wa.me/2349083387814?text=${msg}" target="_blank" class="btn-tdt-green" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:100px;font-weight:700;font-size:0.9rem;text-decoration:none;">💬 Also Send via WhatsApp</a>
+      <div style="padding:2rem 1.25rem;">
+
+        <!-- Success header -->
+        <div style="text-align:center;margin-bottom:1.75rem;">
+          <div style="font-size:3rem;margin-bottom:0.75rem;">🎉</div>
+          <h3 style="font-size:1.4rem;letter-spacing:-0.02em;margin-bottom:0.4rem;">Application Received, ${name}!</h3>
+          <p style="color:var(--tdt-green-light);font-size:0.88rem;font-weight:600;">Welcome to the TYDT family — we are glad you are here.</p>
         </div>
-        <p style="font-size:0.75rem;color:var(--gray);">Application reference: TYDT-${Date.now().toString().slice(-6)}</p>
+
+        <!-- Commitment notice -->
+        <div style="background:rgba(22,163,74,0.07);border:1px solid rgba(22,163,74,0.2);border-radius:16px;padding:1.5rem;margin-bottom:1.25rem;">
+          <p style="font-size:0.88rem;font-weight:700;color:var(--white);margin-bottom:0.85rem;">📋 Before you begin — please read this carefully:</p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;">
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;color:var(--gray-light);line-height:1.6;">
+              <span style="color:var(--tdt-green-light);font-weight:700;margin-top:1px;">1.</span>
+              <span><strong style="color:var(--white);">TYDT is a commitment, not a casual programme.</strong> You are enrolling for a structured 2-year training journey (3 years for the Ministry Track). Completing the training and graduating requires showing up, doing the work, and staying the course.</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;color:var(--gray-light);line-height:1.6;">
+              <span style="color:var(--tdt-green-light);font-weight:700;margin-top:1px;">2.</span>
+              <span><strong style="color:var(--white);">You will be expected to learn.</strong> TYDT is not entertainment — it is formation. Come ready to be taught, to be challenged, to grow, and to be changed. Those who engage fully will leave different from how they came.</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;color:var(--gray-light);line-height:1.6;">
+              <span style="color:var(--tdt-green-light);font-weight:700;margin-top:1px;">3.</span>
+              <span><strong style="color:var(--white);">It is completely free</strong> — but freedom does not mean low value. TYDT costs you your time, your attention, and your commitment. That is the only price. Pay it well.</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:0.85rem;color:var(--gray-light);line-height:1.6;">
+              <span style="color:var(--tdt-green-light);font-weight:700;margin-top:1px;">4.</span>
+              <span><strong style="color:var(--white);">We will reach out to you on WhatsApp</strong> (${whatsapp}) within 48 hours with your next steps and onboarding details.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verse -->
+        <div style="background:rgba(255,255,255,0.03);border-left:3px solid var(--tdt-green-light);border-radius:0 10px 10px 0;padding:0.85rem 1rem;margin-bottom:1.5rem;font-style:italic;font-size:0.85rem;color:var(--gray-light);line-height:1.65;">
+          "Train up a child in the way he should go, and when he is old he will not depart from it." — Proverbs 22:6
+        </div>
+
+        <!-- Buttons -->
+        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:1rem;">
+          <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">Join WhatsApp Community →</a>
+          <a href="https://wa.me/2349083387814?text=${msg}" target="_blank" class="btn-tdt-green" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:100px;font-weight:700;font-size:0.88rem;text-decoration:none;">💬 Send via WhatsApp</a>
+        </div>
+
+        <!-- Interview nudge -->
+        <div style="background:rgba(245,183,49,0.06);border:1px solid rgba(245,183,49,0.2);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1rem;text-align:left;">
+          <p style="font-size:0.85rem;color:var(--gray-light);line-height:1.7;margin:0;">
+            <strong style="color:var(--gold);">📞 Next step — reach out for your interview:</strong><br>
+            As part of the enrolment process, we would love to have a brief conversation with you before onboarding. Message Matthew directly on WhatsApp to schedule your interview session.
+          </p>
+          <a href="https://wa.link/xfkh1k" target="_blank" style="display:inline-flex;align-items:center;gap:7px;margin-top:0.75rem;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);color:var(--blue-wa);font-size:0.82rem;font-weight:700;padding:8px 14px;border-radius:100px;text-decoration:none;">
+            💬 Message Matthew on WhatsApp →
+          </a>
+        </div>
+
+        <p style="font-size:0.72rem;color:var(--gray);text-align:center;">Application ref: TYDT-${Date.now().toString().slice(-6)}</p>
       </div>
     `;
     showToast('Application submitted! Welcome to TYDT 🔥');
@@ -3444,8 +3644,45 @@
         <span class="green">Know God.</span> Discover Purpose.<br><span class="gold">Make Impact.</span>
       </h1>
       <p class="tdt-hero-sub">
-        If you are a young person who feels like something is missing — like you have potential but no clear direction — this programme was built for you. TYDT is a space where you can grow in your relationship with God, discover your purpose, and build the tools to live it out. It is free, structured, and done in community. Because no one should have to figure life out alone.
+        If you feel like something is missing — like you have potential but no clear direction — this programme was built for you.
       </p>
+
+      <!-- SCANNABLE GAINS STRIP -->
+      <div class="tydt-gains">
+        <div class="tydt-gain">
+          <span class="tydt-gain-icon">🙏</span>
+          <span class="tydt-gain-text">Know God personally — not just about Him</span>
+        </div>
+        <div class="tydt-gain">
+          <span class="tydt-gain-icon">🎯</span>
+          <span class="tydt-gain-text">Discover your purpose and why you are here</span>
+        </div>
+        <div class="tydt-gain">
+          <span class="tydt-gain-icon">🏗️</span>
+          <span class="tydt-gain-text">Build the character, skills and leadership to live it out</span>
+        </div>
+        <div class="tydt-gain">
+          <span class="tydt-gain-icon">🌍</span>
+          <span class="tydt-gain-text">Join a community that grows, prays, and builds together</span>
+        </div>
+      </div>
+
+      <!-- EXPANDABLE DETAIL -->
+      <div class="tydt-more-wrap">
+        <button class="tydt-more-btn" onclick="toggleTydtMore(this)" aria-expanded="false">
+          <span class="tydt-more-label">More about the programme</span>
+          <span class="tydt-more-arrow">↓</span>
+        </button>
+        <div class="tydt-more-content" hidden>
+          <p style="font-size:0.88rem;color:var(--gray-light);line-height:1.75;margin-bottom:0.75rem;">
+            TYDT is free, structured, and done in community. The standard track runs <strong style="color:var(--white);">2 years (ages 13–30)</strong> across 6 development areas — Discipleship, Leadership, Academic Excellence, Innovation, Life Skills, and Entrepreneurship.
+          </p>
+          <p style="font-size:0.88rem;color:var(--gray-light);line-height:1.75;">
+            For those called to ministry, there is a <strong style="color:#C084FC;">3-year Ministerial Training track (ages 25–40)</strong> covering 11 ministry areas including Music, Drama, Dance, Apostolic, Prophetic, Pastoral, Evangelism, Intercession, Children's Ministry, Media, and more. Because no calling should go unequipped.
+          </p>
+        </div>
+      </div>
+
       <div class="tdt-hero-btns">
         <button class="btn-tdt-green btn-tdt-apply" onclick="document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'})">✋ Apply Now — It's Free</button>
         <button class="btn-tdt-outline" onclick="document.getElementById('tdt-mentor').scrollIntoView({behavior:'smooth'})">🤝 Become a Mentor</button>
@@ -3571,8 +3808,13 @@
           <div class="tdt-pillar-num">06</div>
           <div class="tdt-pillar-icon">🕊️</div>
           <div class="tdt-pillar-title">Ministerial Training Track</div>
-          <div class="tdt-pillar-desc">For those called to ministry — Music Ministry · Apostolic · Prophetic · Pastoral · Evangelism · Teaching Ministry · Worship Leadership</div>
+          <div class="tdt-pillar-desc">For youth (25–40) called to ministry — Music · Drama · Dance/Movement · Apostolic &amp; Prophetic · Pastoral · Evangelism · Intercession &amp; Prayer · Children's Ministry · Media &amp; Communications · Ushering &amp; Protocol · Counselling Ministry</div>
           <div class="tydt-outcome"><strong>Outcome:</strong> Young ministers formed, equipped, and deployed with real fieldwork experience. This track extends the journey to 3 years.</div>
+          <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:6px;">
+            <span style="display:inline-flex;align-items:center;font-size:0.73rem;font-weight:700;color:#C084FC;background:rgba(192,132,252,0.1);border:1px solid rgba(192,132,252,0.2);padding:4px 10px;border-radius:100px;">⏱️ 3-Year Track</span>
+            <span style="display:inline-flex;align-items:center;font-size:0.73rem;font-weight:700;color:#C084FC;background:rgba(192,132,252,0.1);border:1px solid rgba(192,132,252,0.2);padding:4px 10px;border-radius:100px;">🌍 Includes Fieldwork</span>
+            <span style="display:inline-flex;align-items:center;font-size:0.73rem;font-weight:700;color:#C084FC;background:rgba(192,132,252,0.1);border:1px solid rgba(192,132,252,0.2);padding:4px 10px;border-radius:100px;">👤 Ages 25–40</span>
+          </div>
         </div>
 
       </div>
@@ -3595,6 +3837,16 @@
           <div class="mt-desc">Worship leading, choir direction, instrument ministry, and the theology of worship.</div>
         </div>
         <div class="ministry-track-card">
+          <div class="mt-icon">🎭</div>
+          <div class="mt-title">Drama Ministry</div>
+          <div class="mt-desc">Using drama and theatre to communicate the Gospel — creative storytelling as a tool for evangelism and discipleship.</div>
+        </div>
+        <div class="ministry-track-card">
+          <div class="mt-icon">💃</div>
+          <div class="mt-title">Dance & Movement Ministry</div>
+          <div class="mt-desc">Ministering through dance as an act of praise, intercession, and proclamation in worship and outreach.</div>
+        </div>
+        <div class="ministry-track-card">
           <div class="mt-icon">🔥</div>
           <div class="mt-title">Apostolic & Prophetic</div>
           <div class="mt-desc">Understanding apostolic and prophetic gifts, function, and responsibility in the body of Christ.</div>
@@ -3602,7 +3854,7 @@
         <div class="ministry-track-card">
           <div class="mt-icon">🐑</div>
           <div class="mt-title">Pastoral Ministry</div>
-          <div class="mt-desc">Shepherding, counselling, care, and the heart of servant leadership in ministry.</div>
+          <div class="mt-desc">Shepherding, care, and the heart of servant leadership — walking with people through life and faith.</div>
         </div>
         <div class="ministry-track-card">
           <div class="mt-icon">📢</div>
@@ -3610,14 +3862,29 @@
           <div class="mt-desc">Personal evangelism, outreach strategies, and carrying the Gospel beyond the four walls of the church.</div>
         </div>
         <div class="ministry-track-card">
-          <div class="mt-icon">📖</div>
-          <div class="mt-title">Teaching Ministry</div>
-          <div class="mt-desc">Biblical exposition, hermeneutics, and the discipline of communicating the Word of God with clarity and authority.</div>
+          <div class="mt-icon">🙏</div>
+          <div class="mt-title">Intercession & Prayer</div>
+          <div class="mt-desc">Raising young intercessors — prayer patterns, spiritual warfare, and building a consistent prayer life that sustains ministry.</div>
         </div>
         <div class="ministry-track-card">
-          <div class="mt-icon">🙌</div>
-          <div class="mt-title">Worship Leadership</div>
-          <div class="mt-desc">Leading congregations in Spirit-led worship, understanding the role of the worship leader as a minister — not just a performer.</div>
+          <div class="mt-icon">👶</div>
+          <div class="mt-title">Children's Ministry</div>
+          <div class="mt-desc">Communicating the Gospel to children, managing children's church, and discipling the youngest members of the body.</div>
+        </div>
+        <div class="ministry-track-card">
+          <div class="mt-icon">📱</div>
+          <div class="mt-title">Media & Communications</div>
+          <div class="mt-desc">Using digital media, content creation, and design to advance the Gospel and serve the church's media needs.</div>
+        </div>
+        <div class="ministry-track-card">
+          <div class="mt-icon">🤲</div>
+          <div class="mt-title">Ushering & Protocol</div>
+          <div class="mt-desc">Excellence and order in the house of God — hospitality, protocol, and creating an atmosphere where people feel welcomed.</div>
+        </div>
+        <div class="ministry-track-card">
+          <div class="mt-icon">💙</div>
+          <div class="mt-title">Counselling Ministry</div>
+          <div class="mt-desc">Biblical counselling, active listening, and pointing people to the healing that only Christ can give.</div>
         </div>
       </div>
 
@@ -3872,7 +4139,8 @@
           <h3 class="tydt-pathway-title">Personal Enrollment</h3>
           <p class="tydt-pathway-desc">Teenagers and young adults can apply directly to join a TYDT cohort. Participants undergo registration, onboarding, and full training through the TYDT structure.</p>
           <ul class="tydt-pathway-list">
-            <li>Open to ages 13–30</li>
+            <li>Standard track: ages 13–30</li>
+            <li>Ministry track: ages 25–40</li>
             <li>Individual registration</li>
             <li>Full cohort experience</li>
             <li>Mentor assigned</li>
@@ -3997,6 +4265,20 @@
             <label class="tdt-label">Church / School / Organisation</label>
             <input type="text" class="tdt-input" id="tdt-church" placeholder="e.g. RCCG Youth Church / Lagos State Model College">
           </div>
+          <div class="tdt-field">
+            <label class="tdt-label">Home Address *</label>
+            <input type="text" class="tdt-input" id="tdt-address" placeholder="e.g. 12 Bello Street, Agric, Ikorodu">
+          </div>
+          <div class="tdt-form-row">
+            <div class="tdt-field">
+              <label class="tdt-label">Local Government Area (LGA) *</label>
+              <input type="text" class="tdt-input" id="tdt-lga" placeholder="e.g. Ikorodu">
+            </div>
+            <div class="tdt-field">
+              <label class="tdt-label">State *</label>
+              <input type="text" class="tdt-input" id="tdt-state" placeholder="e.g. Lagos">
+            </div>
+          </div>
           <div class="tdt-form-row">
             <div class="tdt-field">
               <label class="tdt-label">Phone Number *</label>
@@ -4016,7 +4298,7 @@
             <label class="tdt-label">Why do you want to join TYDT? *</label>
             <textarea class="tdt-textarea" id="tdt-why" placeholder="Tell us in a few sentences what brought you here and what you're hoping for..."></textarea>
           </div>
-          <button class="btn-tdt-green" style="width:100%;justify-content:center;display:flex;font-size:1rem;padding:15px;" onclick="submitTDT()">
+          <button class="btn-tdt-green btn-tdt-apply" style="width:100%;justify-content:center;display:flex;font-size:1rem;padding:15px;" onclick="submitTDT()">
             Submit My Application ✋
           </button>
           <p style="font-size:0.78rem;color:var(--gray);text-align:center;">We'll reach out via WhatsApp or phone within 48 hours. No spam, ever.</p>
