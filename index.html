@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Youth Revival Labour — Raising a Generation for God's Purpose</title>
-<meta name="description" content="Youth Revival Labour is a community of disciples raising disciples for Christ — through TYDT, school outreach, church outreach, and ministerial training. Join the movement.">
-<meta property="og:title" content="Youth Revival Labour — Raising a Generation for God's Purpose">
+<title>Matthew Folawe O. — Discipleship · Leadership · Innovation</title>
+<meta name="description" content="Matthew Folawe O. — Minister, Leadership Coach, Innovation Trainer and Web Developer. Training people in Discipleship, Leadership, and Innovation. Based in Lagos, Nigeria.">
+<meta property="og:title" content="Matthew Folawe O. — Discipleship · Leadership · Innovation">
 <meta property="og:description" content="Helping young people grow in leadership, discipleship, and innovation for real-life impact.">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2055,6 +2055,88 @@
     line-height: 1.65;
   }
 
+  /* THREE AREA PAGES */
+  .three-pillars { grid-template-columns: repeat(3,1fr) !important; }
+  @media (max-width:767px) { .three-pillars { grid-template-columns: 1fr !important; } }
+
+  .three-area-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+  @media (min-width:540px) { .three-area-grid { grid-template-columns: repeat(3,1fr); } }
+
+  .area-card {
+    border-radius: var(--radius-lg); padding: 1.4rem 1.25rem;
+    display: flex; flex-direction: column; gap: 0.5rem;
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    backdrop-filter: blur(10px);
+  }
+  .area-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+  .area-green { background: rgba(22,163,74,0.07); border-color: rgba(22,163,74,0.15); }
+  .area-green:hover { border-color: rgba(22,163,74,0.35); }
+  .area-gold  { background: rgba(212,168,67,0.07); border-color: rgba(212,168,67,0.15); }
+  .area-gold:hover  { border-color: rgba(212,168,67,0.35); }
+  .area-blue  { background: rgba(91,143,255,0.07); border-color: rgba(91,143,255,0.15); }
+  .area-blue:hover  { border-color: rgba(91,143,255,0.35); }
+
+  .area-icon { font-size: 1.6rem; margin-bottom: 0.2rem; }
+  .area-title { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; }
+  .area-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.65; }
+
+  /* WAITLIST BUTTONS */
+  .btn-area-gold {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--gold); color: #000;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 11px 22px; border-radius: 100px;
+    border: none; cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-area-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-area-blue {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #5B8FFF; color: #000;
+    font-weight: 700; font-size: 0.9rem;
+    padding: 11px 22px; border-radius: 100px;
+    border: none; cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-area-blue:hover { background: #7EB3FF; transform: translateY(-1px); }
+
+  /* INNOVATION SPLIT LAYOUT */
+  .innovation-split { display: flex; flex-direction: column; gap: 2.5rem; }
+  @media (min-width: 900px) {
+    .innovation-split { flex-direction: row; align-items: flex-start; }
+    .innovation-side { flex: 1; }
+  }
+
+  /* SERVICES GRID */
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: 1.25rem; }
+  @media (max-width:479px) { .services-grid { grid-template-columns: 1fr; } }
+
+  .service-card {
+    background: rgba(19,19,31,0.9);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 1.1rem;
+    transition: all 0.25s;
+  }
+  .service-card:hover { border-color: rgba(245,183,49,0.25); transform: translateY(-2px); }
+  .service-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .service-title { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.35rem; }
+  .service-desc { font-size: 0.78rem; color: var(--gray); line-height: 1.6; }
+
+  /* YRL HERO ICON / NAV BADGE */
+  .nav-yrl-badge {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--gold); color: #000;
+    font-size: 0.72rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; letter-spacing: -0.02em;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .nav-yrl-badge:hover { transform: scale(1.1); box-shadow: 0 0 12px rgba(245,183,49,0.4); }
+
 </style>
 </head>
 <body>
@@ -2065,14 +2147,14 @@
   <div class="nav-links">
     <a onclick="showPage('home')">Home</a>
     <a onclick="showPage('about')">About</a>
-    <a onclick="showPage('programs')">Programs</a>
-    <a onclick="showPage('tdt')">TYDT</a>
+    <a onclick="showPage('discipleship')">Discipleship</a>
+    <a onclick="showPage('leadership')">Leadership</a>
+    <a onclick="showPage('innovation')">Innovation</a>
     <a onclick="showPage('content')">Content</a>
     <a onclick="showPage('community')">Community</a>
-    <a onclick="showPage('books')">Books</a>
   </div>
   <div style="display:flex;align-items:center;gap:8px;">
-    <div class="nav-yrl-badge" onclick="showPage('home')" title="Youth Revival Labour">🔥</div>
+    <div class="nav-yrl-badge" onclick="showPage('about')" title="Matthew Folawe O.">MF</div>
     <a class="nav-wa" href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="#000"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>
       Join WhatsApp
@@ -2097,11 +2179,11 @@
   </div>
   <a onclick="showPage('home');closeMobileNav()">Home</a>
   <a onclick="showPage('about');closeMobileNav()">About</a>
-  <a onclick="showPage('programs');closeMobileNav()">Programs</a>
-  <a onclick="showPage('tdt');closeMobileNav()">TYDT</a>
+  <a onclick="showPage('discipleship');closeMobileNav()">Discipleship</a>
+  <a onclick="showPage('leadership');closeMobileNav()">Leadership</a>
+  <a onclick="showPage('innovation');closeMobileNav()">Innovation</a>
   <a onclick="showPage('content');closeMobileNav()">Content</a>
   <a onclick="showPage('community');closeMobileNav()">Community</a>
-  <a onclick="showPage('books');closeMobileNav()">Books</a>
   <div style="padding-top:0.5rem;border-top:1px solid rgba(255,255,255,0.07);margin-top:0.5rem;">
     <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" style="color:var(--blue-wa);">Join WhatsApp Community →</a>
   </div>
@@ -2114,26 +2196,26 @@
   <section class="hero">
     <div class="container">
 
-      <!-- YRL MOVEMENT BADGE -->
+      <!-- EYEBROW -->
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-dot"></span>
-        Youth Revival Labour &nbsp;·&nbsp; Disciples Raising Disciples for Christ
+        Minister · Leadership Coach · Innovation Trainer · Web Developer
       </div>
 
-      <!-- YRL MOVEMENT ICON -->
-      <div class="yrl-hero-icon">🔥</div>
+      <!-- PROFILE PHOTO -->
+      <div class="profile-wrap">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAEEAQQDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAgMABAEFBgcI/8QAQBAAAQMCBAMFBQYFAwMFAAAAAQACAwQRBRIhMQZBUQcTImFxMoGRobEUQlLB0eEWIzNichUkgjQ18ENTkqLx/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAIBEBAQACAwACAwEAAAAAAAAAAAECEQMhMRJBBDJRIv/aAAwDAQACEQMRAD8A5kIwFGtumAK0hAsjaplRtagMgJgCw0I2tQYmBGAoAiAQSAKZUwBS2qAANUyplkJCAAhLlkjhbmkcGt6lIxLEIaFnjIMhGjVzz56mvk7xxOXkNvh0U5ZSeqxxuXUbKsxpjA4QtFh9536LT1ONTybSO69E4YY6TdzrE6hMkwmJw0aRYWFisrzYtp+Pm1jMTlBBzuBPU7q1BjksJFpnA7WJuFl2FMG/yKqzYaLeF5BTnNCvBlHRUPEbHHJVNym/tBb2GWOdgfE4OaeYXnhpZGMc4vzHSwsrOH4tLRyXY6x5tOxWkylZXGz134CmVVMMr4q+HPGbOHtNPI/orwVJBlQ5dU1SyBsAAWHBMssWQCHBIcFaeEh4QKruCDKnFuqEhAKtZQi6MtWLIBdlEzKogKrRYJjQhCY1BsgIgFLImhAQCyY0LAGiY0aIITWpgahCMIDICllkLNkANlWxGqZRUsk7/ujwjqeStrmOL5S+elpGnSxe4D5JXqHJtp4u+r6nvJ3F2Y3K6Cmpg0AAeir4dS2A9NlvqKmzEEhcXJlcq9HhwmEVW05teyF8LhyXTw0Q7vUBVamjDb6KLNNZlty1RERewVCVu639bDYLVTRXulKMsemqkCoVMVzmG4W2litdUpmaFb41y5zavQYjLRVLJYnG7TqOoXpNLMyqpYp4zdsjQQvK52Fjr21XbcBVZqMNlhcbmKTQE7AhdON25Mpp0YCIBZIUAVJC4IU1A4IIpwuElzVYKW4INXLUJanELGUILROVCQnliAtQCrKJuVRMKDU1qBoTG7pGMBZsstCPKgMNCYAoGowCgIEYCFoTAEBkBZtoiAUQYQ1chixE/EUrSf6bGt1HkuyXGVgLeI6zMDqRa/SwWfL+tacU3nG4w9jY22v6LoKCMBl+a5+ksS0nQBb2nxGnpdazNEzkS06rix3a9HLUjbRmwS6gAtJO6rt4hwmQBkZfnPMjRFNUskYHMNwdk8rr0sJvxpsRjudFppm2uuhnfG51nELTYhVU0OYuF/RZY3trlqTtqZBqqkrQrMmIUkhNg4HzCrTuBGmnTzXRN/blys+q19VEHNOmq3HZ3Jkra2HkWB3wP7rVycwVf7PwTjdWR7Ih1t6hb8d7cvK79YR5VLLZiCyF2yYhIQCSsEXTCLIbIGyi1YypxCxZAAW6IS1Py6ISEAi3komEaqIDUhMYLlAAmxoM1gTWhAxG3dBGNYiyqMOqYgwhqY2NRg1T2IBWSywWqyRdBlQCQ1chid3442cMIZLHob3uRou2DVyVTTGIxl/tulkdbkASsObLWo6Px8Plbf4uxSx0kbXvFzvZSfEoauE96AwEeFr3gF3o0XPyWwoqCKrgu5p8I3vuqtVhdJFQyUrIpWF7s5fCTcn/APCRuuXGT7duduunLx4gwyk05BbfcEOC6KjqZ5oAGsLiei1dDgUjssAgcIQ8uDnixH7eS7CgjbTt7tkTRltY2HJLk+P0OP5fbmK2qmp3Fr2EOHVaN881bK5jG3tqTyA6knZdDxK9xnLhY3OoWowxjIapk0jXOaw5mt0LSepB3Tw16XJ8t6Vi+npXZHuiL7XPj/OyD7QybQR5R7iFbrqaCeudVdzNne7MbHc7/wDgS48Nhju9kZjDtxdaf5Y6z+4oz25bq1wRXRYdUzmWB7nVL2RMcHAAXdr6qvUtyvt00Q0jSamk7ttzHUM0960xumeWMyepFtroCNU941KXZdLkBbRCQmEISEDRRClkZCxZBBss5bckbWrJagFHZLKa4WQFqAXZRZUTNqQExoQN3TBukDWJgCWxPYEGy3RNCFrExrSgMt0TmHVJsjaUA9Zshabokgllz2L5ZK6FjW2yAgn3roxqtBj7hFK29h4rjzuP2WH5E/zHT+LdZWOkwGGJ9NkG9uqbVUEcAMkj2hu9yuawrGe4aLOAS8UxGfEZ46YPIEh3vyXHj3NO+9XbeumgmiIpszxe126BBS08tQbRtdcbgoaannw+BslARnaPZfq11voqv8UYlC/PNTNhbs4x7FO42iZSNdjtITmuPECtRHC6mgbM5mYHUi+oT8W4jBOaM5nOOostf/qFTVMMbsjI/wALRqUYY3RZ547bilbDOwSMd7jyWain8JyhaaCV1GL3IHMb6KzNiREBcCNdtU/jdl85Y1eIsySlO4YAl4gpo8t25xf1Fz+So1E5mf1JK6TgWl73EXTFhyQMJDrWs46WPnuujCbscnJZNu1cxBlT3IHDRdTjJcLICmuF0BaUAuyy1l0wNRAIAA3qsOCYUDkApwSinO2SSgi1ERCiZtU1qY1qJrU5kd0gFjFZjaoyNOa3RI2AFmyKyiYDZZARht0WVAA0m6c0XCANTGnkkGWiyoY/CJsNkOUFzLOBtr5rYLDmCRjmO2cLFGU3NHjdXbhmsyuHQ6o6aeOnrX1VY4tAJa19rhjRy/O6OVphmfTS6PjcQtjhDI5ZQHtGnULz51Xp/tJYdS8Q4fVPDIZJJhscnVW66aKoYIW4bVSEnLbun79PVWcPhjwKqkmw6nhaJ/6gLdLrrKfHpImCWejblu54c031KuSfScrlHlFZRPAcRhdR3bT4nOjcbFUKmJ9Mxzn0M7MrspOUix6L1zE+Im/Y5AyBnjde7hpyPv2XBY9jdZUPcBkZnOazG7EixRIVuV9mnINroKhxiYXuk2yhtyFJ43Qw5Cd3afD9Vep4Yqdr3taA55JLuZWvqZTLJ5DQKuvpPf2bgtIanFKSG1y+Vt/S9162QNbAC5voFwfANE6bEJaxzfBAzK0n8R/b6rvbLo45qOTlu6WRdCQnZVgtWjIgt8kJYrGVCQgEhqhAsjKE6oMBQP2TCEJCCKISnhOISnoBaiiiZKbArDAkNVhgSUa1MCW1MCQQoVm6Epgxp0RJTU0IAmrNkQCw4IDIWbKNRhIOf4jwx8tqynF3tH8xo5gc/ctThlSRM0XsSu1kF43jq0/RcIaaQWlhGo1I6rm5sZt18Gd1p2UB72IZjpyI5KpiMtdAzJTWcwi1r2VbCMUjfGGvNnDRwPJbiSaF0BJIOl1h46525CpqsRkj7twytHmVrSyQE94b35Loa+aMcxZaWqqYmAkEXGyctpZSSKNW8hhF9FrBdzw0bk2T55+8fkbqpTMH2qBo1vI2/wAQtpHNlf49XwjDosLoIqWHXKLvdzc47lXbIihXTHHUCwUdkJamAErDrWRlqEhMiSFLXTLITokAOGiWU0pbkAt6Q9PckuQKWooomNKrQnsSmbprQkZgKJC1qYGpABWAmFqwWoDF0bSeaADVMGyAYHLIQtTAAgMhEFgBaTGuIoKEOhpnNlqfLVrPXz8lUxtuoVum/wAPdFVY5SYafE6XNJIAfZjaLkn12965eBjbubt4jZbTscppcRxzF8QqHOfkpu5zu/E8/o1aejc4ulhmGWeCR0UrTyc02XP+Tj8bI6fxLvaliOH+IyROLH9Qd/cqElXiELSLZ2gcnWK6SpsY7ahaypjyi5A94XPL/XVcbO45+fFZJBlMMpd00sqR+0SvvJZjegWxrGszgMsetknISFpNa6ZWW3uktiDdgrmFNLsUog0XPfx2H/IJWSw10XSdnuEPxHHBWlv+0oTmLraOkPsj3b/BOd1OXUdDU4oML4srMJrHgU8rhNSSOPstfrlPkDcLdhec9rkjouJKN4OppbH/AOZVvhHiwsjZSYm7NENGTblvkfLzXb8dzccO9XTvgpZDG9krBJE4PYRcOabgolmtgiyWU0oLJgsoCmlA7dALKUSmOKUUEB5SXFNeku3QAE6qKKICs3dPZsktCewWSM5myOyW02TAUwillmyyCGtu4gDqUgCyzZU6rGcOprh9Q1x6M8S5/EOKpX3ZRsETfxu1d+yuYZUrlI6maeGnZnnlbG3q42WmruKYIrtpWGQ/jdoFx9RWSzuL5ZHPcdy4quC55zO2C2x4pPUXOtxXY7XVbSHzODD91nhC1Ljd11AfNYvutNSIe2dh9O2PhapqAPFPWOufJoAH5rRdpuG/6HxLHikTbUmJeGW2zZQN/ePouj7FGvbwa7NoDWSEfBq6HjfAWcRYBPROsHkZon/geNWn/wA6rh5sflbHTw5fGyvJ2PbLFfQgjdVJ2XaQP1WswuskhkfR1Tck0Tix7HciDYhbOUZm3adV593K9Saym4000FnnQJQiANzyV6aNwJJVOUOyhrAS5xsABckq5doskSkw+pxnEoMNw9uaaZ1r8mjm4+QGq9nwnCqXA8Mhw2jB7uIavO73Hdx8yq3AXC38NYU+trmWxOrb4wd4WbhnrzP7LaPJN3FdXHhqOHlz+V6eJ9r7xJxRHGD/AEqZoPkSSVxjHXsS5wI6Fbfi+tdiXEVfUk3BmLW+QGg+i07PC667MZqOW10eFY1W0DQ6nnkjtuM1wfcuuwvjbNlbiEQIP/qRafJease8uuTcKxDMWOLR7PRVqX0pbHtdDiVHXszUk7JP7b2cPcrJXjFPVujeHMcWkHRwNiF0+F8X1lPZtTaoi/v0cPf+qi8P8XM/67wpbt1Qocew+uYCydsb+ccpsf3V82IBBuDzCxss9XuUpyUU5+iQ5BBelOGiYUp5QAKKKJkS1PakNKaw3SUYshwaCXGwGpKg2Wk4trDS4S5jDZ87sg9NynJu6K9FYhxVFE90dJGJDsJHHT1sucrcXqqs/wC4mc4fhvYD3LVlxc63RqIN6rpxwkZW2nGRzjoh15qDQKXVkFQSa5XadDyKza6yWA6EXvyQBX5DUqM9rzWNhZEzdAe8djwtwVGetTL9QtrjHEZpaw0lOxpDdJJHC9j0AWl7OqtmHdnVNOdXuklyN6uzlHhOGS1/eyT3JJLiT94lceU/1W2PjmuNuCKqsrX8R4IxsgmYH1FKPbzAaub105b+q5GKW1rXGmtyvdqOF8dO2IOIDdr8lwfadw7HSxMxqliDM0gbUhns3Ozreuh9y5ubi33HXwc2r8a4uOCSqmZDC10j3us1rW3JPku54c4YjwKUYjXBk1aB/JZ7TYD+Lzd8grvBOCimwqOudABU1DbtdzbGdh5X3PuW5rYiISZDYdOqfDxam6Ofm+V+OI/9QfWQubJbvGjUjmOqo4tUCjwisqXG3dQPdf3I8Pp5PtAcW2GxHUFaPtOnNHwhWNa4XmLYWnrc6/IFdEnbkrwj2yXO1LiSfehfF8E4NRN6Lo0xJaA0IGSZ5Q1nisdSNgmSU/e2cXHL+HkUxjWtADRa3JHZiHkmMkc0IQFkgK4R7KggraYdjVZROvTzuDebCbtPuWi5rIcW80b31Q9AouLYJLNro+6P42at+G4W9ZLHNGJInte1wuC03XksUviu/VrRcjr5KxhGOyYfi8U2c905wbK3kWn9Flnx463FTK/b1ByU5OdrtslPWDQtRYN77qICuxyexypNJunMeg11rtFx3G1SJKqnpmnWNpc71O3yC6pr151idQarEqmYm+aQ29BoFpxTeSM70rAfzrdW/mmhKfpNGeoITF0RmyVhZCiYZadCoN7rDdyEQQGb9FGe0FCo3dAez9k7Y8Q4diZP4m0r3tY3kLuJJ+a9DiiZH7DQAvOexX/sdR5zFekDZcmXtbTwOUNeTyd9UjFMNgxPDqiiqBeGdhY4dL8/Ubqw7XRGx+WLM7luoNosFjnw3BaKiqrGeCERvI2NtAfhZYe01NUM2rW6+9PmcZHOdzcfgm0sWUkWTg2ZHC2OMvtsF5d2uVLG8O0EFvHNVvk9zQf1C9Ur3d1RvP8AavDe1mr7zEqCkB0p6XMfV5v9AFeE3UZXpwIGqIacrlCExq3Zo0aJVS8RRFxGo29U+wVOsPeTxQjYeJyL1Dh8ZJjaXbkaoysCwCwXaJkwSo46IL3KGQnLYbk2CWwyXWhJ/EfkqEhLnXVuqIb4Rs0WVImxU5U49mwWo+14PRT3uXwtJ9bWP0Vl2q0/Brr8MURvezXD/wCxW2cVz31qEjVRYuomGuBTGlV2uTmlI2ambuaWaU/cYT8l52Dc3XZ8Szd1g8gBsZHBn6/RcY3Zb8U62zz9YnNu7d0cE0FIqbmFwHIXTYnZmg9QtZ6gy6nJYKymEb7SIIb6gokBFG+0ost3QHsnYqb4HOBuJ3L0heXdiMw+x1sXMTX+IC9ScFyZ/s1x8ATqlVT8sYYPvFNcq0oMk4/tUqBBES4k2PorMLMpJPVMjjDG+Z3WWaoDX40S6n7tu7jYL5246q/tnFOIyA3Y2UxN9GDL+S+g8cqW0sT53nwwsdIf+IJ/JfMdVIZpXyvJLnuLifM6rXjjPMkI2oWhG0LaIGdAtfS/zZ5ZjsTYKzWS93TvI3IsEqnb3UDR5apX0/oyR4A1Sw4lLlcSbI49kEM6IWeKZvRgLj+Skpyi6GDWGR5+8bD0CQV53ZnFIcE6Q9AluCiqjuezfEc0FThzzqw97H6HRw+i7BxXlXClV9jx+kkvZr39270dp+i9Udus7O2kCTqopZRINY1OYNULGFPYyxUm5zjKWzKaEcyXkfJc23ZbTiqbvcXkZfSJoZ+Z+q1Y0XVxzWLHL1iTVpv0QUTs0TQeWiy86FIonWlkZ53Cr7JfHqoVgLN1QTcIydiEAWb+FAFe6yEIWboD03sUktVV7PNp+S9juvEexmTLi1a2+7GH6r20bBcnJ+zXHwuU62QRNu9x81iU/wAxObooUM7LDQGtWUMpysJQThe1Cs+zcMV7gbOlaIW/8jY/K68CdqV6920VmXD6CkB1lldK4eTRYfNy8fO66OOdM8vRBMCWEZNmk9AtIlSqz3lRHENm+Ip0jrNVenPePkmP3jp6IpnGymf06XmuU9g0VZmrlYabBEIqqflCMgx0zG+Vyqk5zytaDuQFen19Ep3T+lTLc3OyW/dPeRawSHpURiOQxva9u7CHD3L2WCZtRTxTNNxIwPHvF14uN16nwlOZuHaMu3a0s+BIWeTSNvdRYuopNXYE9gAsksRyPDIJH/hYT8kjedV8vf19RL+OVx+aSUAN9euqzddc8YAc6x1VeF1qwW2IITptlVZdtQx39ymnG0B6rIKBpRAqyEFlutwhustNigDB0UQ8ysgoDteyafu+JZGX9uIfI/uvex7I9F859nEvd8Y0gv8A1LtX0VmFsvkubk/Zpj4rTnxhWQLlVZj/ADGjzCubFQoQGir1r8kJVjktdiryTHGN3OASnYeJdr1YZuJI6YHSnpmNI83XcfqFwQ3W941rft/FGJzg3a6oc1vo3wj6LSNC6seoyvrICRXyd3AQ06u0CsBUKomapa1trM1N0ZXoT0UQyRNaEMp01WXdMx9wSpLdL+qKTMbhmGt0x7rXCS0kDp6LF9HHmUtmCLxVbPIq5OVRpj/ubq+9oAu7dLHw8lcgnVBINEwm+yB6dKEr0rge/wDDkN//AHH2+K80JXoXAFT3uDyQE6wSm3o7X9Vlk0jpSdVEKilRTSl4i/JhtU7pC76IgVR4hmEWDVBO72hg95SnpXxwo0CxyUvohza6LqYo46brXzSOM7WjQBwV558lr6jwyXCjPxWPrcNKK6VEczQeoR3WqRrN7W9UAKLkgGE2KxdS92gqXsEBueDZe54swx43738l9H0knetzr5l4ekEPEOHyHYTC/vBX0Xw7UCeia4G4sufl9aYeLb9ahv8AkPqrjnHMTa+mgVIazj/IK80a3WaxNvlF1z/ENa2kkMzjpBC+U+5pK6Aleb9qVaabDqyx1fF3Q/5ED6XTxnZWvEZ3ufK57jq43PqULVh5u4qN0XSxSRwYwk8hda6nJcXPO7jdOxCTwZBu4/JLjGVoU/avoROtyhfc+izeyBxRS0wdAgLvCVl2yU46KaqM0mtQFdmfc2Cp0XtucrJva9t0YeFn6FouUMuiYwH0QTCwVUp6rrqOz+pMeI1FOTpLFmHq0/uuX5rb8Jy9zxBSm9g4uZ8QVnWkel51ErMos1MNWh4yny0lPAD7by4+4fut40rk+Lps+JRx3/pxj4lVhP8AScvGlOyXm1RnZJJ8S6GQnu5qjVXJ1Vw6qnUnxKM/FY+thROzQMPlZPKo4a68Jb0crl1eF3iWXo27Ir6JbDofIolRGMN2kdFLoYz4iDzU5lAHFIYaiGRpsWvBC+hOzuV03DsczjcuXzq86j1C+hezo5eE6Mf23PxWHIvB0seszf8AJbAaBa6D/qG9Lq/dZLR50uvH+2efK2niB/qPuR/iP3Xr0h0K8L7ZarvMfgpwf6UFz6uJ/IBXhOyy8eek6qZrAlCUqqkyRE87LdmpSv72pJ3DdAnjZVoBrcqzewUY/wBPIDnWKl0t/tXTHeEIAH7JDzonSHRV3nXVRlV4w6k5q04qrSbJzzdVh+qMvRNNzusTDRHENEM26q+JiqdCrOGS9ziNLLtllafmq790LTlcD0N1m1erl2p1USIpO8iY8feaD8QoslLIXEcQOLsaqL8iAPgooteP1GfjXnZKeootmbAVSo9pRRRn4rH07Dfvj0V8bqKJ8f6DP1lux9UYUUVpRm4WSoogBk2Xv3Z24/w1Tf4qKLLkXg6qmP8ANafNXuaiixaBf7JXzt2nyOk41xEON8hY0eQDQootOP1GTkXHWyo4g43aOW6ii0y8Tj6CFNKiiU8Oku3RuUUUgmRKcoopyXD6b2UwalRRXj+sZ5erI0CTLzUUV1Ku5AVFFlWr0fDHF2G0pO/dN+iiiiyqn//Z" class="profile-hero" alt="Matthew Folawe O.">
+      </div>
 
       <h1 class="hero-headline">
-        Raising a generation to <span class="gold">Know God,</span><br>Discover Purpose &amp; Make Impact.
+        I am <span class="gold">Matthew Folawe O.</span>
       </h1>
-      <p class="hero-sub">Youth Revival Labour is a community of disciples — united to take the revival to every platform, stage, and sphere. Through TYDT, school outreach, church outreach, and ministerial training, we are building young people who are spiritually grounded, purpose-driven, and ready to impact the world for Christ.</p>
+      <p class="hero-sub">I train people in Discipleship, Leadership, and Innovation — and I build websites and brands. Based in Lagos, Nigeria, I help individuals and organisations grow spiritually, lead effectively, and build with technology.</p>
 
       <div class="hero-buttons">
-        <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>
-          Join the Movement
-        </a>
-        <button class="btn btn-outline" onclick="showPage('tdt')">Explore TYDT →</button>
+        <button class="btn btn-gold" onclick="showPage('discipleship')">Discipleship →</button>
+        <button class="btn btn-outline" onclick="showPage('leadership')">Leadership →</button>
+        <button class="btn btn-outline" onclick="showPage('innovation')">Innovation →</button>
       </div>
 
       <!-- TYDT HERO BANNER -->
@@ -2154,8 +2236,8 @@
   <div class="stats-strip">
     <div class="stats-grid">
       <div>
-        <div class="stat-num" id="counter-pillars">6</div>
-        <div class="stat-label">Core Pillars</div>
+        <div class="stat-num" id="counter-pillars">3</div>
+        <div class="stat-label">Training Areas</div>
       </div>
       <div>
         <div class="stat-num" id="counter-platforms">6+</div>
@@ -2211,45 +2293,27 @@
   <!-- PILLARS -->
   <section class="section">
     <div class="container">
-      <div class="tag">The DNA of Youth Revival Labour</div>
-      <h2 class="section-title">One movement. Six dimensions.</h2>
-      <p class="section-sub" style="margin-bottom:2rem;">Youth Revival Labour is built on six pillars. Every programme, mission, and initiative we run flows from these six convictions.</p>
-      <div class="pillars-grid">
-        <div class="pillar-card" style="--pillar-color:#D4A843;" onclick="showPage('about')">
-          <div class="pillar-icon">👑</div>
-          <h3 class="pillar-title">Leadership</h3>
-          <p class="pillar-desc">YRL raises young people who lead — in their schools, homes, churches, and communities. Leadership is not a position. It is a responsibility.</p>
-          <div class="pillar-link">Explore →</div>
-        </div>
-        <div class="pillar-card" style="--pillar-color:#2ECC71;" onclick="showPage('programs')">
+      <div class="tag">Three Areas. One Mission.</div>
+      <h2 class="section-title">What I do &amp; what I train.</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">Everything I do flows through three disciplines — Discipleship, Leadership, and Innovation. Each has its own training programme, community, and path forward.</p>
+      <div class="pillars-grid three-pillars">
+        <div class="pillar-card" style="--pillar-color:#2ECC71;" onclick="showPage('discipleship')">
           <div class="pillar-icon">✝️</div>
           <h3 class="pillar-title">Discipleship</h3>
-          <p class="pillar-desc">The heartbeat of YRL. We exist to make disciples — through school missions, church partnerships, street outreach, and structured training that roots young people deeply in Christ.</p>
-          <div class="pillar-link">See Programs →</div>
+          <p class="pillar-desc">Making disciples who make disciples. Through personal training, school outreach, church outreach, and TYDT — I help people grow deep in God and live out their calling.</p>
+          <div class="pillar-link">Explore Discipleship →</div>
         </div>
-        <div class="pillar-card" style="--pillar-color:#5B8FFF;" onclick="showPage('content')">
+        <div class="pillar-card" style="--pillar-color:#D4A843;" onclick="showPage('leadership')">
+          <div class="pillar-icon">👑</div>
+          <h3 class="pillar-title">Leadership</h3>
+          <p class="pillar-desc">Raising leaders who think, build, and influence ahead of their time. The Forward Thinkers cohort is a structured training programme for emerging leaders ready to go to the next level.</p>
+          <div class="pillar-link">Join the Cohort →</div>
+        </div>
+        <div class="pillar-card" style="--pillar-color:#5B8FFF;" onclick="showPage('innovation')">
           <div class="pillar-icon">⚡</div>
           <h3 class="pillar-title">Innovation</h3>
-          <p class="pillar-desc">YRL believes faith and innovation belong together. We equip young people with digital skills, creative thinking, and learning systems so they can build and influence ahead of their time — and do business in it too.</p>
-          <div class="pillar-link">View Content →</div>
-        </div>
-        <div class="pillar-card" style="--pillar-color:#F59E0B;" onclick="showPage('tdt')">
-          <div class="pillar-icon">🎓</div>
-          <h3 class="pillar-title">Academic Excellence</h3>
-          <p class="pillar-desc">YRL believes excellence is a kingdom value. We develop habits of learning, discipline, and goal-setting that help young people thrive academically and professionally.</p>
-          <div class="pillar-link">Learn More →</div>
-        </div>
-        <div class="pillar-card" style="--pillar-color:#EC4899;" onclick="showPage('tdt')">
-          <div class="pillar-icon">💼</div>
-          <h3 class="pillar-title">Entrepreneurship & Business</h3>
-          <p class="pillar-desc">We raise young people who don't just get jobs — they create them. YRL equips the next generation with business thinking, financial wisdom, and the courage to build.</p>
-          <div class="pillar-link">Learn More →</div>
-        </div>
-        <div class="pillar-card" style="--pillar-color:#C084FC;" onclick="showPage('tdt')">
-          <div class="pillar-icon">🕊️</div>
-          <h3 class="pillar-title">Ministerial Training</h3>
-          <p class="pillar-desc">For youth (25–40) God is raising for ministry — Music, Drama, Dance, Apostolic &amp; Prophetic, Pastoral, Evangelism, Intercession, Children's Ministry, Media, Ushering, and Counselling. A 3-year formation path with fieldwork.</p>
-          <div class="pillar-link">Learn More →</div>
+          <p class="pillar-desc">Technology, AI, digital tools, web development, and brand building. I train people to build and influence in the digital space — and I build websites and brands for clients.</p>
+          <div class="pillar-link">Explore Innovation →</div>
         </div>
       </div>
     </div>
@@ -2269,8 +2333,8 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.858L.054 23.445a.75.75 0 00.902.902l5.587-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.717 9.717 0 01-4.9-1.327l-.351-.21-3.638.964.964-3.547-.228-.364A9.718 9.718 0 012.25 12C2.25 6.61 6.61 2.25 12 2.25S21.75 6.61 21.75 12 17.39 21.75 12 21.75z"/></svg>
           WhatsApp
         </div>
-        <h3 class="community-title">Join the Youth Revival Labour Community.</h3>
-        <p class="community-sub">Connect with a growing family of young people across Nigeria who are being discipled, trained, and activated through YRL. Two ways in — both free, both active.</p>
+        <h3 class="community-title">Join the Community.</h3>
+        <p class="community-sub">Connect with a growing community of disciples, leaders, and builders. Two ways in — both free, both active.</p>
         <div class="wa-buttons">
           <a href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank" class="btn btn-wa">
             Join the Community
@@ -2576,28 +2640,28 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">Matthew Folawe O.</div>
-        <p class="footer-tagline">Youth Revival Labour.<br>Disciples raising disciples for Christ.</p>
+        <p class="footer-tagline">Matthew Folawe O.<br>Discipleship · Leadership · Innovation.</p>
       </div>
       <div class="footer-grid">
         <div>
           <div class="footer-col-title">Pages</div>
           <a class="footer-link" onclick="showPage('about')">About</a>
-          <a class="footer-link" onclick="showPage('programs')">Programs</a>
-          <a class="footer-link" onclick="showPage('tdt')">TYDT</a>
+          <a class="footer-link" onclick="showPage('discipleship')">Discipleship</a>
+          <a class="footer-link" onclick="showPage('leadership')">Leadership</a>
+          <a class="footer-link" onclick="showPage('innovation')">Innovation</a>
           <a class="footer-link" onclick="showPage('content')">Content Hub</a>
           <a class="footer-link" onclick="showPage('community')">Community</a>
-          <a class="footer-link" onclick="showPage('books')">Books</a>
         </div>
         <div>
           <div class="footer-col-title">Community</div>
           <a class="footer-link" href="https://chat.whatsapp.com/GpYbq2AWQOPBZ6GJFGJMFe" target="_blank">WhatsApp Community</a>
           <a class="footer-link" href="https://whatsapp.com/channel/0029VbAeTELKmCPWDYJqIC2M" target="_blank">WhatsApp Channel</a>
-          <div class="footer-col-title" style="margin-top:1.25rem;">YRL Initiatives</div>
-          <a class="footer-link">Youth Revival Labour</a>
-          <a class="footer-link" onclick="showPage('tdt')" style="cursor:pointer;">TYDT — Free 2-Year Programme</a>
-          <a class="footer-link">School &amp; Church Missions</a>
-          <a class="footer-link">Forward Thinkers</a>
-          <a class="footer-link">Matthew AI Creators</a>
+          <div class="footer-col-title" style="margin-top:1.25rem;">My Work</div>
+          <a class="footer-link" onclick="showPage('discipleship')" style="cursor:pointer;">Discipleship Training</a>
+          <a class="footer-link" onclick="showPage('leadership')" style="cursor:pointer;">Leadership Cohort</a>
+          <a class="footer-link" onclick="showPage('innovation')" style="cursor:pointer;">Innovation Training</a>
+          <a class="footer-link" onclick="showPage('discipleship')" style="cursor:pointer;">TYDT</a>
+          <a class="footer-link" onclick="showPage('innovation')" style="cursor:pointer;">Web Dev &amp; Brand Services</a>
         </div>
         <div>
           <div class="footer-col-title">Contact</div>
@@ -2664,7 +2728,7 @@
         <div class="identity-card">
           <div class="identity-icon">🌱</div>
           <div>
-            <div class="identity-name">TYDT — A YRL Initiative</div>
+            <div class="identity-name">TYDT — A Matthew Folawe Initiative</div>
             <div class="identity-role">The discipleship engine of YRL. A free 2-year programme for teenagers (13–19) and young adults (20–30). Includes a 3-year Ministerial Training track (ages 25–40) with fieldwork across 11 ministry areas including Music, Drama, Apostolic, Pastoral, Media, and more.</div>
           </div>
         </div>
@@ -3195,6 +3259,47 @@
     }
   }, { passive: true });
 
+  // ── WAITLIST FORMS ────────────────────────────────
+  function submitLeadershipWaitlist() {
+    const name  = document.getElementById('lw-name').value.trim();
+    const phone = document.getElementById('lw-phone').value.trim();
+    if (!name)  { showToast('Please enter your name.'); return; }
+    if (!phone) { showToast('Please enter your WhatsApp number.'); return; }
+    const msg = encodeURIComponent(`*Forward Thinkers Waitlist* 👑\n\n*Name:* ${name}\n*WhatsApp:* ${phone}\n\nI want to join the Leadership Cohort when it launches.`);
+    fetch('https://formspree.io/f/xrevgljv', {
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({ name, phone, _subject:'Forward Thinkers Waitlist', form:'leadership-waitlist' })
+    }).catch(()=>{});
+    document.getElementById('leadershipWaitlistForm').innerHTML = `
+      <div style="text-align:center;padding:1rem;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">👑</div>
+        <p style="font-weight:700;margin-bottom:0.4rem;">You're on the list, ${name}!</p>
+        <p style="font-size:0.85rem;color:var(--gray);margin-bottom:1rem;">I'll message you personally on WhatsApp when the cohort opens.</p>
+        <a href="https://wa.me/2349083387814?text=${msg}" target="_blank" class="btn-area-gold">Also Message Me Now →</a>
+      </div>`;
+    showToast('Added to waitlist! 👑');
+  }
+
+  function submitInnovationWaitlist() {
+    const name  = document.getElementById('iw-name').value.trim();
+    const phone = document.getElementById('iw-phone').value.trim();
+    if (!name)  { showToast('Please enter your name.'); return; }
+    if (!phone) { showToast('Please enter your WhatsApp number.'); return; }
+    const msg = encodeURIComponent(`*Innovation Training Waitlist* ⚡\n\n*Name:* ${name}\n*WhatsApp:* ${phone}\n\nI want to join the Innovation Training when it launches.`);
+    fetch('https://formspree.io/f/xrevgljv', {
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({ name, phone, _subject:'Innovation Training Waitlist', form:'innovation-waitlist' })
+    }).catch(()=>{});
+    document.getElementById('innovationWaitlistForm').innerHTML = `
+      <div style="text-align:center;padding:1rem;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">⚡</div>
+        <p style="font-weight:700;margin-bottom:0.4rem;">You're on the list, ${name}!</p>
+        <p style="font-size:0.85rem;color:var(--gray);margin-bottom:1rem;">I'll reach out on WhatsApp when the first cohort opens.</p>
+        <a href="https://wa.me/2349083387814?text=${msg}" target="_blank" class="btn-area-blue">Also Message Me Now →</a>
+      </div>`;
+    showToast('Added to waitlist! ⚡');
+  }
+
   // ── ANIMATED COUNTER ─────────────────────────────
   function animateCounter(el, target, duration, suffix) {
     const start = performance.now();
@@ -3646,6 +3751,286 @@
   }
 
 </script>
+<!-- ============ DISCIPLESHIP PAGE ============ -->
+<div id="page-discipleship" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="tag">Discipleship</div>
+      <h1>Making disciples who make disciples.</h1>
+      <p>The Gospel goes wherever people are. I train individuals in discipleship — and through TYDT, I run a structured 2-year programme for teenagers and young adults.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="tag">What Discipleship Means to Me</div>
+      <h2 class="section-title">It's not a programme.<br>It's a way of life.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">Discipleship is not just attending a class — it is a transformation of identity, values, and direction. I believe every believer has a responsibility to be discipled and to disciple others. That conviction is what drives everything I do in this space.</p>
+
+      <div class="three-area-grid">
+        <div class="area-card area-green">
+          <div class="area-icon">📖</div>
+          <h3 class="area-title">Personal Discipleship</h3>
+          <p class="area-desc">One-on-one and small group discipleship — helping individuals grow in their relationship with God, understand the Word, develop prayer lives, and discover purpose.</p>
+        </div>
+        <div class="area-card area-green">
+          <div class="area-icon">🏫</div>
+          <h3 class="area-title">School Outreach</h3>
+          <p class="area-desc">Taking the Gospel and discipleship teaching directly into secondary schools and campuses — meeting students where they are before the world defines them.</p>
+        </div>
+        <div class="area-card area-green">
+          <div class="area-icon">⛪</div>
+          <h3 class="area-title">Church Outreach</h3>
+          <p class="area-desc">Going out to local churches and communities — delivering discipleship teaching and training using the TYDT curriculum for their teenagers and young people.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TYDT EMBEDDED -->
+  <section class="section">
+    <div class="container">
+      <div class="tag" style="background:rgba(22,163,74,0.1);border-color:rgba(22,163,74,0.2);color:var(--tdt-green-light);">Flagship Programme</div>
+      <h2 class="section-title">TYDT — Teen &amp; Youth<br>Discipleship Training</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">My most structured discipleship initiative. A free, 2-year programme for teenagers (13–19) and young adults (20–30) covering Discipleship, Leadership, Academic Excellence, Innovation, Life Skills, and Ministerial Training. Completely free.</p>
+      <div class="tydt-home-grid">
+        <div class="tydt-home-card">
+          <div class="tydt-home-card-icon">🌱</div>
+          <div class="tydt-home-card-title">6 Development Areas</div>
+          <div class="tydt-home-card-desc">Discipleship · Leadership · Academic Excellence · Innovation · Life Skills · Ministerial Training</div>
+        </div>
+        <div class="tydt-home-card">
+          <div class="tydt-home-card-icon">🎁</div>
+          <div class="tydt-home-card-title">Completely Free</div>
+          <div class="tydt-home-card-desc">No fees, no charges — ever. Freely we have received, freely we give.</div>
+        </div>
+        <div class="tydt-home-card">
+          <div class="tydt-home-card-icon">📅</div>
+          <div class="tydt-home-card-title">2-Year Journey</div>
+          <div class="tydt-home-card-desc">Year 1: Foundation · Year 2: Growth, Leadership & Impact. Ministry Track extends to 3 years.</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:10px;">
+        <button class="btn-tdt-green btn-tdt-apply" onclick="showPage('tdt')">Explore TYDT in Full →</button>
+        <button class="btn btn-outline" onclick="showPage('tdt');setTimeout(()=>document.getElementById('tdt-join').scrollIntoView({behavior:'smooth'}),300)">Apply Now — Free</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="tdt-footer-cta">
+        <h2 class="tdt-cta-headline">"Go therefore and make disciples<br><span style="color:var(--tdt-green-light);">of all nations."</span></h2>
+        <p class="tdt-cta-sub">Matthew 28:19. That is the mandate. Discipleship is not optional — it is the mission. If you want to be discipled, trained, or connected, reach out directly.</p>
+        <a href="https://wa.link/xfkh1k" target="_blank" class="btn-tdt-green">💬 Connect on WhatsApp →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="text-align:center;">
+        <p>© 2025 Matthew Folawe O. · Discipleship &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+      </div>
+    </div>
+  </footer>
+</div><!-- end discipleship page -->
+
+<!-- ============ LEADERSHIP PAGE ============ -->
+<div id="page-leadership" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="tag">Leadership</div>
+      <h1>Raising leaders who think ahead.</h1>
+      <p>Forward Thinkers is my leadership training brand — a structured cohort for emerging leaders ready to build, lead, and influence ahead of their time.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="tag">The Vision</div>
+      <h2 class="section-title">Leaders don't just emerge.<br>They are developed.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">The world needs leaders who are not just talented — but grounded, intentional, and ahead of the curve. Forward Thinkers exists to develop exactly that kind of leader. Through a structured cohort model, I train emerging leaders in the principles, skills, and mindset needed to lead in any sphere.</p>
+
+      <div class="three-area-grid">
+        <div class="area-card area-gold">
+          <div class="area-icon">🧠</div>
+          <h3 class="area-title">Think Ahead</h3>
+          <p class="area-desc">Strategic thinking, vision development, and the capacity to anticipate what's next. Leaders who think ahead make better decisions and build more lasting impact.</p>
+        </div>
+        <div class="area-card area-gold">
+          <div class="area-icon">🏗️</div>
+          <h3 class="area-title">Build With Purpose</h3>
+          <p class="area-desc">From personal development to team building — learning how to construct systems, organisations, and movements that actually last and produce fruit.</p>
+        </div>
+        <div class="area-card area-gold">
+          <div class="area-icon">🌍</div>
+          <h3 class="area-title">Influence Ahead of Time</h3>
+          <p class="area-desc">Leadership is about influence. The Forward Thinkers cohort trains emerging leaders to position themselves and carry influence in their sphere before the world requires it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FORWARD THINKERS COHORT -->
+  <section class="section">
+    <div class="container">
+      <div class="tag" style="background:rgba(212,168,67,0.1);border-color:rgba(212,168,67,0.2);color:var(--gold);">Forward Thinkers Cohort</div>
+      <h2 class="section-title">Structured. Intentional.<br>Transformational.</h2>
+      <p class="section-sub" style="margin-bottom:1.75rem;">The Forward Thinkers cohort is a structured leadership training programme running in small groups — combining teaching, mentorship, assignments, and real-world application. Both physical and online.</p>
+
+      <div class="tydt-home-grid">
+        <div class="tydt-home-card" style="border-color:rgba(212,168,67,0.15);">
+          <div class="tydt-home-card-icon">👥</div>
+          <div class="tydt-home-card-title">Cohort Format</div>
+          <div class="tydt-home-card-desc">Small groups. Deep learning. Accountability built in from day one.</div>
+        </div>
+        <div class="tydt-home-card" style="border-color:rgba(212,168,67,0.15);">
+          <div class="tydt-home-card-icon">🔄</div>
+          <div class="tydt-home-card-title">Online &amp; Physical</div>
+          <div class="tydt-home-card-desc">Sessions run both physically and online — accessible wherever you are.</div>
+        </div>
+        <div class="tydt-home-card" style="border-color:rgba(212,168,67,0.15);">
+          <div class="tydt-home-card-icon">📋</div>
+          <div class="tydt-home-card-title">Assignments &amp; Projects</div>
+          <div class="tydt-home-card-desc">Real work. Real growth. Not just theory — application that produces results.</div>
+        </div>
+      </div>
+
+      <!-- WAITLIST -->
+      <div style="margin-top:2rem;background:linear-gradient(135deg,rgba(212,168,67,0.1) 0%,rgba(245,183,49,0.05) 100%);border:1px solid rgba(212,168,67,0.25);border-radius:var(--radius-xl);padding:1.75rem 1.5rem;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">👑</div>
+        <h3 style="margin-bottom:0.5rem;font-size:1.3rem;">The cohort is launching soon.</h3>
+        <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1.25rem;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.7;">Join the waitlist now and be the first to know when applications open. Drop your name and WhatsApp number and I'll reach out personally when it's time.</p>
+        <div class="tdt-form-wrap" id="leadershipWaitlistWrap">
+          <div id="leadershipWaitlistForm" style="display:flex;flex-direction:column;gap:0.75rem;max-width:400px;margin:0 auto;">
+            <input type="text" class="tdt-input" id="lw-name" placeholder="Your full name">
+            <input type="tel" class="tdt-input" id="lw-phone" placeholder="Your WhatsApp number">
+            <button class="btn-area-gold" style="width:100%;justify-content:center;padding:13px;" onclick="submitLeadershipWaitlist()">Join the Waitlist →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="text-align:center;">
+        <p>© 2025 Matthew Folawe O. · Forward Thinkers — Leadership &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+      </div>
+    </div>
+  </footer>
+</div><!-- end leadership page -->
+
+<!-- ============ INNOVATION PAGE ============ -->
+<div id="page-innovation" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="tag">Innovation</div>
+      <h1>Build. Create. Influence digitally.</h1>
+      <p>I train people in AI, digital tools, content creation, and web development — and I build websites and brands for clients. This is Matthew AI Creators.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- TWO SECTIONS: TRAINING + SERVICES -->
+      <div class="innovation-split">
+
+        <!-- TRAINING SIDE -->
+        <div class="innovation-side">
+          <div class="tag" style="background:rgba(91,143,255,0.1);border-color:rgba(91,143,255,0.2);color:#7EB3FF;">Training</div>
+          <h2 style="font-size:1.5rem;letter-spacing:-0.02em;margin-bottom:0.75rem;">I train people to build<br>in the digital space.</h2>
+          <p style="font-size:0.9rem;color:var(--gray);line-height:1.75;margin-bottom:1.25rem;">Whether you want to use AI tools effectively, create content, understand digital strategy, build a website, or establish a brand — I train individuals in these skills practically and hands-on.</p>
+
+          <div class="three-area-grid" style="grid-template-columns:1fr;">
+            <div class="area-card area-blue">
+              <div class="area-icon">🤖</div>
+              <h3 class="area-title">AI Tools Training</h3>
+              <p class="area-desc">Using AI practically — ChatGPT, Claude, image generation, automation tools, and how to integrate them into your work and ministry.</p>
+            </div>
+            <div class="area-card area-blue">
+              <div class="area-icon">📱</div>
+              <h3 class="area-title">Content Creation</h3>
+              <p class="area-desc">Creating digital content that communicates clearly and builds an audience — for ministry, business, or personal brand.</p>
+            </div>
+            <div class="area-card area-blue">
+              <div class="area-icon">💻</div>
+              <h3 class="area-title">Web &amp; Brand Basics</h3>
+              <p class="area-desc">Understanding websites, brand identity, and digital presence — the foundations every builder needs in this age.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;background:linear-gradient(135deg,rgba(91,143,255,0.1) 0%,rgba(91,143,255,0.04) 100%);border:1px solid rgba(91,143,255,0.2);border-radius:var(--radius-xl);padding:1.5rem;text-align:center;">
+            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;">Training is launching soon.</h3>
+            <p style="font-size:0.87rem;color:var(--gray);margin-bottom:1rem;line-height:1.7;">Join the waitlist and I'll notify you personally when the first cohort opens.</p>
+            <div id="innovationWaitlistForm" style="display:flex;flex-direction:column;gap:0.65rem;max-width:360px;margin:0 auto;">
+              <input type="text" class="tdt-input" id="iw-name" placeholder="Your full name">
+              <input type="tel" class="tdt-input" id="iw-phone" placeholder="Your WhatsApp number">
+              <button class="btn-area-blue" style="width:100%;justify-content:center;padding:12px;" onclick="submitInnovationWaitlist()">Join the Waitlist →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES SIDE -->
+        <div class="innovation-side">
+          <div class="tag" style="background:rgba(245,183,49,0.1);border-color:rgba(245,183,49,0.2);color:var(--gold);">Services</div>
+          <h2 style="font-size:1.5rem;letter-spacing:-0.02em;margin-bottom:0.75rem;">I build websites<br>and brands for clients.</h2>
+          <p style="font-size:0.9rem;color:var(--gray);line-height:1.75;margin-bottom:1.25rem;">If you need a professional website, a brand identity, or a digital presence that actually represents you — I build it. Clean, modern, and built to convert.</p>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🌐</div>
+              <div class="service-title">Website Design &amp; Development</div>
+              <div class="service-desc">Custom websites built from scratch — personal brands, ministries, businesses, portfolios, and landing pages.</div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🎨</div>
+              <div class="service-title">Brand Identity</div>
+              <div class="service-desc">Logo, colour palette, typography, and brand guidelines — giving your work a visual identity that communicates who you are.</div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">📲</div>
+              <div class="service-title">Digital Presence Setup</div>
+              <div class="service-desc">Getting your work online — social media setup, link-in-bio pages, and digital strategy to match your goals.</div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🤖</div>
+              <div class="service-title">AI Integration</div>
+              <div class="service-desc">Adding AI-powered features to your website or workflow — chatbots, automation, and smart tools that save time.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;background:rgba(245,183,49,0.06);border:1px solid rgba(245,183,49,0.2);border-radius:var(--radius-xl);padding:1.5rem;text-align:center;">
+            <h3 style="font-size:1.1rem;margin-bottom:0.4rem;">Ready to work together?</h3>
+            <p style="font-size:0.87rem;color:var(--gray);margin-bottom:1rem;">Pricing is based on the scope of your project. Send me a message and let's talk about what you need.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+              <a href="https://wa.link/xfkh1k" target="_blank" class="btn-tdt-green">💬 Message Me on WhatsApp</a>
+              <a href="mailto:matthewfolaweogunnaike@gmail.com" class="btn btn-outline btn-sm">✉️ Send an Email</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="text-align:center;">
+        <p>© 2025 Matthew Folawe O. · Matthew AI Creators — Innovation &nbsp;|&nbsp; <span style="cursor:pointer;color:var(--gold);" onclick="showPage('home')">Home</span></p>
+      </div>
+    </div>
+  </footer>
+</div><!-- end innovation page -->
+
 <!-- ============ TYDT PAGE ============ -->
 <div id="page-tdt" class="page">
 
